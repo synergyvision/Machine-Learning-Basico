@@ -12,7 +12,7 @@ Una de las primeras cosas a verificar antes de realizar el análisis de regresi�
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg.svg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg.svg)
 
 
 - Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el indice de correlacion, el cualn varía entre -1 y 1 , entre mas cerca de -1 o 1 esta el indice de correlacción entre variables mayor es su relación, en general, decimos que si el índice de correlacion entre variables es mayor a $0.5$ o menor a $-0.5$
@@ -24,58 +24,58 @@ Usaremos el conjunto de datos *mtcars* en *R* para ilustrar de ahora en adelante
 
 - Visual: Usamos la función *plot()* vista previamente para grificar el cruce enntre variables, por ejemplo, entre las variables *mpg* y *disp* notamos un cierto comportamiento lineal.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg3.png)
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg2.png)
 
 Con la función $plot()$ tenemos la ventaja de que simplemente pasando como argumento el conjunto de datos no arroja una imagen con todos los cruces posibles.
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg5.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg4.png)
 
 - Cuantitativa: La función *cor()* nos permite hallar la correlación entre variables
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg6.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg6.png)
 Este valor de $-0.84$ nos confirma la posible relacion que existe entre las variables *mpg* *disp*. De igual manera podemos aplicar la función *cor()* a todo el cojunto de datos arrojando una matriz con todo los valores posibles de correlaciones 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg7.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg7.png)
 
 ### Identificando relación entre variables con *python*
 
 - Visual: En *Python* usaremos de nuevo la librería *Matplotlib*, para abtener el gráfico del cruce entre variables, de igual manera notamos el comportamiento lineal entre las variables. 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg9.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg9.png)
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg8.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg8.jpg)
 
 Ahora, si queremos realizar un solo grafico con el cruce de todas las variables, como no los permite la función *cor()* en *R*, debemos implementar una librería llamada *Seaborn*, la cual nos dara el resultado deseado haciendo uso de la función *.pairplot()*, la cual le ingresaremos como argumentos: *kind* (para el tipo de grafico) y *palette* (para el color)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg11.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg11.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg10.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg10.jpg)
 
 - Cuantitativo: Para obtener la matriz de correlación entre las variables de nuestro conjunto de datos, hacemos uso de la función *.cor()* de la librería *Pandas*. En el caso que queramos alguna correlación en especifico filtramos los elementos de la matriz anterior.
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg12.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg12.png)
 
 ## Transformando variables
 
 Una de las principales hipótesis en la regresión lineal es la normalidad de las variables implicadas, es decir, que las variables provengan de una distribución normal. Pero, ¿como identificamos este comportamiento en una variable? La forma mas sencilla es inspeccionando el histograma proveniente de dicha variable y corroborar un comportamiento acampanado, como por ejemplo:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg13.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg13.png)
 
 
 Pero en muchos casos, las variables no poseen este comportamiento, por lo tanto debo aplicar transformaciones que imiten el comportamiento acampanado de la gráfica anterior, las transformaciones más comunes son: $y=x^2$, $y=\sqrt{x}$, $y=ln(x)$ y $y=\frac{1}{x}$, en la siguiente gráfica podemos apreciar el efecto de estas transformaciones.
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg14.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg14.png)
 
 
 Esta última imagen nos da una idea de cuando debemos aplicar alguna de las transformaciones anteriores. Ahora veremos como aplicarlas en los respectivos lenguajes.
@@ -85,14 +85,14 @@ Esta última imagen nos da una idea de cuando debemos aplicar alguna de las tran
 
 Esta tarea es muy facil de ejecutar en *R*, supongamos que estamos trabajando con la variable x del conjunto de datos df, el código para realizar estas transformaciones son:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg15.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg15.png)
 
 
 ### Aplicando transformaciones de variables en *Python*
 
 En python es facil realizar las transformaciones menos la del logaritmo, para la cual usaremos la librería *Math* en especifico la función *.log()* junto a la función *.apply*, pues la función *.log()* se aplica a números y queremos aplicarla a una variable completa.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg16.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg16.png)
 
 ## Eliminando el efecto de colinealidad entre variables independientes.
 
@@ -110,14 +110,14 @@ En los modelos de regresión lineal las variables categóricas no cumplen las hi
 
 Supongamos que tenemos un conjunto de datos llamados *Datos* la variable *Var1*, si deseamos eliminarla usamos el siguiente código, en el cual el simbolo ! se un inducador de que queremos eliminar dicha variable.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg17.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg17.png)
 
 ### Eliminación de variables en *Python*
 
 
 De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma variable a eliminar en *Python*, usamos la función *.drop()* para eliminar la variable, *axis=1*hace referencia que estamos eliminando una columna.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg18.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg18.png)
 
 
 
@@ -145,16 +145,16 @@ primero describiremos los parametros mas importantes que debemos ingresar:
 
 Ahora supongamos que tenemun conjunto de datos llamados *irisP* el cual cuenta con la variable dependiente *Sepal.Length* y las variables independientes *Sepal.Width *, *Petal.Length*, *Petal.Width*, para realizar el modelo con los parámetros ya mencionados tenemos dos opciones, la primera colocando el nombre de todas las variables o haciendo uso de la abreviación de la formula ya mencionado.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg19.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg19.png)
 
 Si hacemos uso del codigo anterior obtendremos la informacion básica del modelo, la cual se presenta en la siguiente imagen:
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg20.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg20.png)
 
 En esta imagen se nos proporciona el valor que se introdujo en el modelo y los coeficientes de la regresión. Si queremos los datos del modelo usamos la función *summary()* 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg23.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg23.png)
 
 
 
@@ -166,9 +166,9 @@ Para crear el modelo usando la librería *StatsModels*, debemos impotar la libre
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg21.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg21.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg22.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg22.png)
 
 ## Como interpretar los resultados del modelo
 
@@ -181,9 +181,9 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg25.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg25.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg24.jpeg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg24.jpeg)
 
 - *Coeficients*: Luego se muestran los coecicientes del modelo en forma de matriz:
     - En la primera columna se muestran los coeficientes del modelo.
@@ -207,7 +207,7 @@ El *summary* en este caso nos da mucha mas información que en *R* nos concentra
 
 - Este summary no nos aporta información clara sobre los residuos del modelo, para poder obtener un histograma para ver su comportamiento usamos el siguiente código, tomando en cuenta que nuestro modelo se llama *modelo*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg26.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg26.png)
 
 ## Realizando predicciones con nuestro modelo.
 
@@ -217,13 +217,13 @@ El objetivo principal de crear modelos es usarlos para predecir valores a partir
 
 Para realizar predicciones con *R* haremos uso de la función *predict()*. Debemos ser cuidados con los conjunto de datos que usaremos para predecir, estos datos deben tener las columnad con el mismo nombre y no tener valores faltantas o espacios en blanco. ahora se anexa el codigo para hacer la predicción.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg27.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg27.png)
 
 ### Realizando predicciones con *Python*
 
 Al realizar predicciones en python debemos tener en claro el orden del conjunto de datos, es decir, debemos tener las variables independientes en el mismo orden con el que se entreno el modelo, ademas, debemos agregar una variable intercep para que el modelo tenga todos los parámetros establecidos.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg28.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg28.png)
 
 
 

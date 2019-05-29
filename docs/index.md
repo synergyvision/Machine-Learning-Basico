@@ -110,7 +110,7 @@ Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros re
 Para poder trabajar y usar todas las herramientas y métodos que nos proporciona los conocimientos provenientes de la estadística y la matemática, los científicos de datos usan lenguajes de programación que estan orientados o que permiten debido a su arquitectura ahorrarnos el trabajo de programar paso por pasos los algoritmos que aplicarán los métodos a usar, esto es debido a que la comunidad que integra y usa activamente estos lenguajes ya lo han hecho y nos los proporcionan a traves de paquetes y librerias a las que podemos acceder generalmente de manera gratiuta. En una encuesta hecha en el portal web sobre los lenguajes preferidos por los cientificos de datos se obtuvieron los siguientes resultados.
 
 
-![\label{fig:"sd"}](~/Machine-learning-basic/bookdown/images/languages.png)
+![\label{fig:"sd"}](~/Machine-Learning-Basico/bookdown/images/languages.png)
 
 Los lenguajes preferidos por esta comunidad fue *Python* y *R*. Ambos son open source, *Python* por un lado es un lenguaje facil de aprender flexible y de proposito general, generalmente el mas usado por ser el mas adaptable a propositos industriales, por otro lado *R* es un lenjuega funcional orientado a la comunidad científica que trabaja con estadística, *R* a diferencia de python tiene infinidad de librerias dispuesta para los científicos de datos, pero debido a su enfoque, no es tan adaptable a propositos industriales, sin embargo, la comunidad ha hecho intentos por mejorar esto, librias como *Shiny* permiten crear páginas web en los cuales podemos aplicar practicamente todas las herramientas que nos ofrece *R* y ofrecer resultados adecuados para los usuarios. 
 
@@ -121,21 +121,21 @@ Todo científico de datos debe conocer estos dos lenguajes y usar dependiendo se
 
 Al descagar estos lenguajes lo primero que veremos es: en el caso de *Python* 
 
-![\label{fig:"Python"}](~/Machine-learning-basic/bookdown/images/python.png)
+![\label{fig:"Python"}](~/Machine-Learning-Basico/bookdown/images/python.png)
 
 y en el caso de *R*
 
-![\label{fig:"R"}](~/Machine-learning-basic/bookdown/images/R.png)
+![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/R.png)
 
 
 Con esto ya los científicos de datos pueden empezar a trabajar, pero existen entornos de desarrollo que nos permiten trabajar de forma mas amigable con en estos lenguajes, las mas famosas son: para *Python*: *Spyder, Jupyter notebook* y para *R*: *RStudio*. Las cuales tienen la siguiente presentación:  
 
-![\label{fig:"spyder"}](~/Machine-learning-basic/bookdown/images/spyder.png)
+![\label{fig:"spyder"}](~/Machine-Learning-Basico/bookdown/images/spyder.png)
 
-![\label{fig:"R"}](~/Machine-learning-basic/bookdown/images/jupyter.png)
+![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/jupyter.png)
 
 
-![\label{fig:"R"}](~/Machine-learning-basic/bookdown/images/rstudio.png)
+![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/rstudio.png)
 
 Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incoveniente de que muchas de las librerias para la ciencia de los datos, debemos instalarlas por nuestra cuenta, este problema se solventa con la existencia de ambientes de desarrollo para cientificos de datos que incluyan todos estos factores.
 
@@ -143,7 +143,7 @@ Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incov
 
 Anaconda es una distribución libre y abierta que incluye los lenguajes *R* y *Python* que permite a los cientificos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerias orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar *Rstudio* con un simple clik. La presentacion que veremos cuando abramos *Anaconda* es :
 
-![\label{fig:"R"}](~/Machine-learning-basic/bookdown/images/Anaconda.png)
+![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/Anaconda.png)
 
 Se recomienda el uso de Anaconda para el público en general, para los principiantes debido a que permite un rapido inicio sin tener que descargar programas y paquetes por su propia cuenta y de esta forma concentrarse en el aprendizaje y para los avanzados ya que permite un trabajo mas centralizado y eficiente al poder tener un ambiente con todo los requerimientos que se necesiten para poder trabajar de una forma mas comoda. *Anaconda* se puede descargar en el siguiente enlace: <https://www.anaconda.com>
 
@@ -155,7 +155,7 @@ A pesar de que al descargar *Anaconda* vienen por defecto una gran cantidad de l
 
 Para descargar librerias en *R* lo haremos directamente desde *RStudio*. Haremos click en la pestaña *Package* subrayada en rojo (se encuentra en la seccion inferior derecha), luego haremos click la palabra *Install*
 
-![\label{fig:"R1"}](~/Machine-learning-basic/bookdown/images/packa1.png)
+![\label{fig:"R1"}](~/Machine-Learning-Basico/bookdown/images/packa1.png)
 
 
 A continuación se desplegara un cuadro en el cual se pedirá la siguiente información: 
@@ -168,19 +168,19 @@ A continuación se desplegara un cuadro en el cual se pedirá la siguiente infor
 
 + *Install dependencies*: Algunos paquetes necesitan del uso de otros paquetes para su correcto funcionamiento, al tildar esta opción estamos dandole permiso a *RStudio* para que instale las librerias que necita el paquete que deseamos instalar.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/packa2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa2.png)
 
 ### Instalando librerias en python
 
 Descargar librerias en python no estan facil como en *R* pero gracias a *Anaconda* se facilita esta tarea. En el navegador de *Anaconda* vamos a la sección *Envoirements* y al lado del buscador seleccionamos la ación *All*, una vez ahi colocamos el nombre del paquete que deseamos instalar se nos desplegara en la parte inferior derecha dos opciones *Apply* y *Clear*. Selecionamos la opcion *Apply* y se instalara el paquete.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/packa3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa3.png)
 
 En el caso de que el paquete no este disponible en el abiente tenemos la opción de intentar instalarlo desde la terminal que nos ofrece *Anaconda*, en la sección *Enviroment* hacemos click en la flecha al lado de la palabara *base* y seleccionamos *Open terminal*, una vez en la consola esribimos el comando *conda install "Nombre del paquete"*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/packa4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa4.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/packa5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa5.png)
 
  
 
@@ -211,7 +211,7 @@ En general hay tres tipos de datos basicos con los cuales nos enfrentaremos, los
 
 + Archivos *csv* o *txt*: Primero buscamos en las opciones que se encuentran disponibles en la parte superior de *RStudio* y selecionamos *archivo* o *file*, luego se desplegaramn varias opciones de las cuales debemos seleccionar *Import Dataset* o *importar datos*, recomendamos utilizar la opción *From Text (readr)...*, debido a su alta variedad de opciones para cargar los datos.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat.png)
 
 El paquete *readr* nos permite seleccionar las siguientes opciones 
 
@@ -237,20 +237,20 @@ El paquete *readr* nos permite seleccionar las siguientes opciones
 (x) Identificar de alguna forma en particular los valores *Na*  
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat1.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat1.png)
 
 
 + Archivos *.csv* o *.txt* (opcion básica): *R* pase de manera predeterminada formas de leer archivos *.csv* y *.txt*, pero con menos opciones como las que nos ofrece el paquete *readr*. Aunque no paresca en algunas ocaciones desearemos usar esta opción debido a que ya hemos realizado algun análisis previo con los datos y para evitar que la versión de *RStudio* pueda cambiar algun componente de nuestros datos es preferible usar la versión base. De igual forma que la forma de cargar los datos presentados previamente tendremos varias opciones, las cuales se resentaran en la parte derecha del cuadro una vez seleccionemos la opcion *base*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat2.png)
 
 + Archivos *.xls* (excel): Para cargar archivos *.xls* debemos seleccionar la opción *From excel* que se encuentra en la misma ubucación de las anteriores. Esta opción usa el paquete *readxl*. La ventaja de este paquete es que posee practicamente las mismas opciones que los paquetes anteriores y ademas nos permite  seleccionar la hoja de cálculo a usar del documento *excel*. Por ejemplo la siguiente imagen representa lo que en general encontraremos al cargar el archivo
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat3.png)
 
 Gracias a *readxl* podemos simplicar y mejorar los datos como represent la siguiente imagen.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat4.png)
 
 Como vimos, *RStudio* nos permite leer archivos *.txt*, *.csv* y *.xlx* con dos paquetes *readr*, *readxl*, ahora nos concentraremos en entender como funcionan estos paquetes, existen funciones que vienen por defecto con *R* tales como: *read.csv*,  *read.csv2*, *read.table*, *read.delim*, entre otras pero con los dos primeros paquetes tendremos todo lo que necesitamos para iniciar.
 
@@ -281,7 +281,7 @@ Como se ha mencionado antes, debido a la gran variedad para lo cual esta destina
 
 + dtype: Tipo de dato de cada columna, por ejemplo {‘a’: np.float64, ‘b’: np.int32, ‘c’: ‘Int64’}
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat5.png)
 
 
 (ii) Leer archivos *.xlx* con *pandas.read_excel()*: Practicamente usa los mismos parametros que la función anterior, con la diferencia de que no acepta el parametro *sep* y usa un parametro adicional llamado *sheet_name*, este parametro debe ser una lista con los números de columnas a usar o con los nombres. 
@@ -297,7 +297,7 @@ Estos valores suelen generarse por diversas razones, entre las cuales se encuent
 
 (i) Missing values en *Python*: Para identificar valores en python a traves de ls libreria pandas existen diversas funciones que nos ayudaran. Lo primero que debemos hacer es contar la cantidad de datos faltantes, esto lo hacemos con las funciónes isnull() y sum() de la libreria *pandas*, el resultado final será el numero de missing values por columnas, la primera función los identifica y la segunda función los cuenta,en la siguiente imagen se muestra como hacerlo.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat6.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat6.png)
 
 En general, los valores faltantes tienden a eliminarse, pero esto no se puede hacer a la ligera, en otros cosos suelen sustituirse por un valor comun del conjunto de datos (esto se hace cuando tenemos distintas entradas para un individuo y alguna característica esta vacía). Tambien algo que se debe chequear es si la distribución de datos faltantes es aleatorio, fuera muy extraño que cada 100 datos exactamentes halla un dato faltante en un lugar en específico, este tipo de comportamiento hace pensar en que estamos en presencia de dato artificiales. 
 
@@ -307,23 +307,23 @@ Para eliminar los datos faltates sin riesgo a perder información vital, lo prim
 
 Ahora si decidimos elimar los datos, realizar esto en python es sencillo, primero calculamos el porcentaje de datos faltantes usaremos las funciones *pandas.shape*, *pandas.product()*, la primera nos dice la dimension del dataframe y la segunda realiza la multiplicación para poder saber la cantidad de celdas que existe.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat7.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat7.png)
 
 Ahora, dependiendo como esten organizados los datos, es decir, registros por columnas o por filas, sabremos como eliminar los registros con valores faltantes. La función *df.dropna()*, si colocamos como parámetros *axis=0* se eliminaran los registros por fila que contengan valores faltantes y *axis=1* por columnas.
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat8.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat8.png)
 
 
 Ahora, la otra alternativa con los datos faltantes es imputarlos, existen diversas técnicas para esto, solo veremos las mas comunes; imputacion por la media, por la mediana, por la moda. Existen técnicas para estimarlos a traves de modelos estadísticos, pero esto pudiera ser complicado y es tema de un curso mas especializado a este tópico.
 
 * Sustitución por la media: Cuando los datos poseen un comportamiento uniforme alrededor de una region del plano se suele sustituir por el valor medio de que presentan los datos.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/Rplot.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/Rplot.png)
 
 Para sustituir por el valor medio la función *.mean()* para calcular el valor medio de la columna y la función *.replace()* para realizar el cambio. 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat11.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat11.png)
 
 
 * Sustitución por la mediana:
@@ -332,25 +332,25 @@ El problema de sustituir por la media es que esta se puede ver afectada por valo
 
 Para realizar el cambio usamos *.median()*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat12.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat12.png)
 
 
 * Sustitución por la moda:  La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categoricos, recordemos que la moda no es mas que el dato que mas se repite en el conjunto de datos.
 
 Para realizar el cambio usamos *.median()*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat13.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat13.png)
 
 
 
 
 (ii) Missing values en *R*: Ya hemos mencionado en la parte anterior como trabajar con datos perdidos, al igual que en *R* contaremos la cantidad de datos faltantes, para ello usaremos la función *sapply* la cual permite aplicar funciones columnas de manera explicita, en nuestro caso applicaremos la función *is.na()* la cual cuenta la cantidad de valores faltantes por columnas y la función *sum()* suma todos estos valores y nos de el resultado final, la función *dim()* nos da como resultado las dimensiones de la data.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat9.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat9.png)
 
 Para eliminar los valores faltantes de la data por filas, usamos la función *na.omit()*,  si queremos eliminar por columnas usamos la función *t()*  la cual nos traspone los datos, el problema es que se nos modificara el indice por lo que debemos solventar este problema con la función *rownames*, otro detalle es que la función *na.omit()* cambia el formato de los datos, por lo que con la función *as.data.frame()* solucionamos este problema.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat10.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat10.png)
 
 
 Ahora imputaremos los datos faltantes al igual que en *python*:
@@ -358,17 +358,17 @@ Ahora imputaremos los datos faltantes al igual que en *python*:
 
 * Sustitución por la media: En *R* el comando para calcular la media de un conjunto de datos es *mean()* y con la función *is.na()* la cual retorna las pocisiciones donde se encuentran los vaklores faltantes.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat14.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat14.png)
 
 
 * Sustitución por la mediana: De forma similar es con la mediana, solo que en este caso la función para hallar la mediana es *median()*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat15.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat15.png)
 
 
 * Sustitución por la moda:  En este caso no existe una función que venga por defecto en *R* que calcule la moda, sin embargo, descargando la libreria *moodest* y usando la función *mfv()* logramos nuestro proposito:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/dat16.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat16.png)
 
 
 
@@ -391,16 +391,16 @@ Estudiaremos los dos enfoques mas populares: el visual y el cuantitativo
 - Visual: Como su nombre lo indica consiste en analisar los datos de manera visual para identificar los valores atípicos. Por ejemplo, en la siguiente imagen podremos notar claramente un par de valores atípicos:
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out.png)
 
 El problema se complica cuando aumenta la dimensionalidad del conjunto de datos, es decir, aumenta las categorias que poseen las observaciones. Por ejemplo, supongamos que tenemos un conjunto de datos con tres categorias x1, x2, x3, x4, en este caso lo estandar es graficar el cruce de las variables para encontrar valores atipicos, el problema es que algunos cruces pueden no mostrar nada anormal, como es el cruce entre las variables x1 y x2.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out2.png)
 
 Pero al observar el cruce ente las variables x1 y x3 se puede detectar rapidamente el punto atípico
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out3.png)
 
 Ahora, es claro que este método puede ser muy inifeciente a la hora de tener que trabajar con una gran cantidad de atributos, es por eso que existe la necesidad del uso de algun método cuantitativo para poder medir de alguna forma si un dato es atipico o no. Veremos solamente el meétodo basado en la medida o distancia $D^2$ de *Mahalanobis*
 
@@ -412,37 +412,37 @@ En general, debemos tener un punto de referencia para poder medir la proximidad 
 
 - Visual: Supongamos que tenemos el conjunto *Data* previamente cargado y compuesto por tres variables x1, x2 y x3. Usaremos la funcion *plot()*, si queremos observar la variable *x1*. Usamos el siguiente comando:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out5.png)
 
 Dando como resultado:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out4.png)
 
 A primera vista no hay ningún valor atípico, sin embargo, si realizamos el mismo grafico para la variable x3, obtenemos claramente un outlier:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out6.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out6.png)
 
 Ahora si queremos hacer el cruce de variables, usamos igual el mismo comando, por ejemplo,  el de las variables x1 y x2, hacemos:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out7.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out7.png)
 
 No se observan outliers aparentes, como muestran la siguiente imagen.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out8.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out8.png)
 
 Ahora, si realizamos el cruce de las variables x1 y x3 obtenemos: 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out9.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out9.png)
 
 
 Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia $D^2$ de *Mahalanobis*.
 
 - la distancia $D^2$ de *Mahalanobis*: Para calcular la distancia de mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función *apply*, la función *cov()* para calcular la matriz de covarianza, al final usamos la función *mahalanobis()* indicandole los datos a calcular. Luego usamos la función *plot()* para ver la existencia de valores atipicos.
  
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out10.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out10.png)
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out11.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out11.png)
 
 ### Deteccion de outliers en Python
 
@@ -452,31 +452,31 @@ Para ver la grafica de la variable x1, primero debemos seleccionar la variable, 
 
 Al graficar la variable x1 no notamos ningún valor particular
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out14.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out14.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out16.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out16.png)
 
 Pero cuando realizamos el plot de la variable x3 notamos el valor atípico:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out15.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out15.png)
 
 Para realizar el grafico del cruce de variables, simplemente agregamos la variable adicional como parametro en *plt.plot()*, podremos notar que no se ve valor atípico.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out17.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out17.png)
 
 Pero al realizar el cruce con las variables x2 y x3 notamos el valor atípico.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out18.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out18.png)
 
 
 - la distancia $D^2$ de *Mahalanobis*: Para calcular la distancia de Mahalanobis de un conjunto de datos usando python usaremos la librería *Scipy* la cual trae por defecto un función para calcular la distancia de Mahalanobis, debemos calcular la media de las columnas, para ello usamos la función *.mean()* de *Pandas*, a diferencia de *R* debemos calcular la inversa de la matriz de covarianza, para ello usamos la funciones *.cov()* (calcula la matriz de covarianza), *.linalg()* y *.inv()* (calcula la inversa), finalizamos usando la función *apply* de *Pandas* para poder aplicar la función *mahalanobis()* de la libreria *Scipy* a todo el conjunto de datos, en la función *.apply()* debemos colocar el nombre de la función, *axis* indica si la función aplica a las columnas o filas, el valor de 0 para las columnas y 1 para las filas, finbalizamos con *args* que contiene los parametros que necesite la función a utilizar, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.
  
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out21.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out21.png)
 
 Podremos notar claramente un valor atípico en la siguiente imagen.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/out20.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out20.png)
 
 
 
@@ -497,7 +497,7 @@ Una de las primeras cosas a verificar antes de realizar el análisis de regresi�
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg.svg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg.svg)
 
 
 - Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el indice de correlacion, el cualn varía entre -1 y 1 , entre mas cerca de -1 o 1 esta el indice de correlacción entre variables mayor es su relación, en general, decimos que si el índice de correlacion entre variables es mayor a $0.5$ o menor a $-0.5$
@@ -509,58 +509,58 @@ Usaremos el conjunto de datos *mtcars* en *R* para ilustrar de ahora en adelante
 
 - Visual: Usamos la función *plot()* vista previamente para grificar el cruce enntre variables, por ejemplo, entre las variables *mpg* y *disp* notamos un cierto comportamiento lineal.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg3.png)
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg2.png)
 
 Con la función $plot()$ tenemos la ventaja de que simplemente pasando como argumento el conjunto de datos no arroja una imagen con todos los cruces posibles.
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg5.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg4.png)
 
 - Cuantitativa: La función *cor()* nos permite hallar la correlación entre variables
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg6.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg6.png)
 Este valor de $-0.84$ nos confirma la posible relacion que existe entre las variables *mpg* *disp*. De igual manera podemos aplicar la función *cor()* a todo el cojunto de datos arrojando una matriz con todo los valores posibles de correlaciones 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg7.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg7.png)
 
 ### Identificando relación entre variables con *python*
 
 - Visual: En *Python* usaremos de nuevo la librería *Matplotlib*, para abtener el gráfico del cruce entre variables, de igual manera notamos el comportamiento lineal entre las variables. 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg9.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg9.png)
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg8.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg8.jpg)
 
 Ahora, si queremos realizar un solo grafico con el cruce de todas las variables, como no los permite la función *cor()* en *R*, debemos implementar una librería llamada *Seaborn*, la cual nos dara el resultado deseado haciendo uso de la función *.pairplot()*, la cual le ingresaremos como argumentos: *kind* (para el tipo de grafico) y *palette* (para el color)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg11.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg11.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg10.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg10.jpg)
 
 - Cuantitativo: Para obtener la matriz de correlación entre las variables de nuestro conjunto de datos, hacemos uso de la función *.cor()* de la librería *Pandas*. En el caso que queramos alguna correlación en especifico filtramos los elementos de la matriz anterior.
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg12.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg12.png)
 
 ## Transformando variables
 
 Una de las principales hipótesis en la regresión lineal es la normalidad de las variables implicadas, es decir, que las variables provengan de una distribución normal. Pero, ¿como identificamos este comportamiento en una variable? La forma mas sencilla es inspeccionando el histograma proveniente de dicha variable y corroborar un comportamiento acampanado, como por ejemplo:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg13.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg13.png)
 
 
 Pero en muchos casos, las variables no poseen este comportamiento, por lo tanto debo aplicar transformaciones que imiten el comportamiento acampanado de la gráfica anterior, las transformaciones más comunes son: $y=x^2$, $y=\sqrt{x}$, $y=ln(x)$ y $y=\frac{1}{x}$, en la siguiente gráfica podemos apreciar el efecto de estas transformaciones.
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg14.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg14.png)
 
 
 Esta última imagen nos da una idea de cuando debemos aplicar alguna de las transformaciones anteriores. Ahora veremos como aplicarlas en los respectivos lenguajes.
@@ -570,14 +570,14 @@ Esta última imagen nos da una idea de cuando debemos aplicar alguna de las tran
 
 Esta tarea es muy facil de ejecutar en *R*, supongamos que estamos trabajando con la variable x del conjunto de datos df, el código para realizar estas transformaciones son:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg15.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg15.png)
 
 
 ### Aplicando transformaciones de variables en *Python*
 
 En python es facil realizar las transformaciones menos la del logaritmo, para la cual usaremos la librería *Math* en especifico la función *.log()* junto a la función *.apply*, pues la función *.log()* se aplica a números y queremos aplicarla a una variable completa.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg16.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg16.png)
 
 ## Eliminando el efecto de colinealidad entre variables independientes.
 
@@ -595,14 +595,14 @@ En los modelos de regresión lineal las variables categóricas no cumplen las hi
 
 Supongamos que tenemos un conjunto de datos llamados *Datos* la variable *Var1*, si deseamos eliminarla usamos el siguiente código, en el cual el simbolo ! se un inducador de que queremos eliminar dicha variable.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg17.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg17.png)
 
 ### Eliminación de variables en *Python*
 
 
 De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma variable a eliminar en *Python*, usamos la función *.drop()* para eliminar la variable, *axis=1*hace referencia que estamos eliminando una columna.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg18.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg18.png)
 
 
 
@@ -630,16 +630,16 @@ primero describiremos los parametros mas importantes que debemos ingresar:
 
 Ahora supongamos que tenemun conjunto de datos llamados *irisP* el cual cuenta con la variable dependiente *Sepal.Length* y las variables independientes *Sepal.Width *, *Petal.Length*, *Petal.Width*, para realizar el modelo con los parámetros ya mencionados tenemos dos opciones, la primera colocando el nombre de todas las variables o haciendo uso de la abreviación de la formula ya mencionado.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg19.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg19.png)
 
 Si hacemos uso del codigo anterior obtendremos la informacion básica del modelo, la cual se presenta en la siguiente imagen:
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg20.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg20.png)
 
 En esta imagen se nos proporciona el valor que se introdujo en el modelo y los coeficientes de la regresión. Si queremos los datos del modelo usamos la función *summary()* 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg23.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg23.png)
 
 
 
@@ -651,9 +651,9 @@ Para crear el modelo usando la librería *StatsModels*, debemos impotar la libre
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg21.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg21.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg22.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg22.png)
 
 ## Como interpretar los resultados del modelo
 
@@ -666,9 +666,9 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
 
 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg25.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg25.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg24.jpeg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg24.jpeg)
 
 - *Coeficients*: Luego se muestran los coecicientes del modelo en forma de matriz:
     - En la primera columna se muestran los coeficientes del modelo.
@@ -692,7 +692,7 @@ El *summary* en este caso nos da mucha mas información que en *R* nos concentra
 
 - Este summary no nos aporta información clara sobre los residuos del modelo, para poder obtener un histograma para ver su comportamiento usamos el siguiente código, tomando en cuenta que nuestro modelo se llama *modelo*
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg26.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg26.png)
 
 ## Realizando predicciones con nuestro modelo.
 
@@ -702,13 +702,13 @@ El objetivo principal de crear modelos es usarlos para predecir valores a partir
 
 Para realizar predicciones con *R* haremos uso de la función *predict()*. Debemos ser cuidados con los conjunto de datos que usaremos para predecir, estos datos deben tener las columnad con el mismo nombre y no tener valores faltantas o espacios en blanco. ahora se anexa el codigo para hacer la predicción.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg27.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg27.png)
 
 ### Realizando predicciones con *Python*
 
 Al realizar predicciones en python debemos tener en claro el orden del conjunto de datos, es decir, debemos tener las variables independientes en el mismo orden con el que se entreno el modelo, ademas, debemos agregar una variable intercep para que el modelo tenga todos los parámetros establecidos.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/reg28.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg28.png)
 
 
 
@@ -737,7 +737,7 @@ Una de las primeras cosas que debemos ver es la independecia entre las variables
 
 Una tabla de contogencia es la forma mas facíl de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contigencia.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log.jpg)
 
 En las columnas la variable hace referencia al uso del internet y en las filas las variables hacen referencia al sexo.
 
@@ -745,7 +745,7 @@ Para detectar si dos variables estan o no correlacionadas usaremos la prueba chi
 
 En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplicaremos la prueba chi-cuadrado, para contrastar la independencia entre el uso de internet y el estar empleado.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2.png)
 
 
 
@@ -755,7 +755,7 @@ En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplica
 
 Para realizar la prueba usamos la función * chisq.test()* y obtenemos el siguiente resultado
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log3.png)
 
 
 El valor que nos interesa es el $p$-valor, el cual a no ser menor a $0.05$ nos indica una posible relación entre las variables, en general, si el $p$-valor es cercano a uno podemos pensar en la posible relación entre las variables.
@@ -765,113 +765,62 @@ El valor que nos interesa es el $p$-valor, el cual a no ser menor a $0.05$ nos i
   
 Para realizar la prueba chi-cuadrado en *Python* usaremos la librería *scipy* y usaremos la función *.chi2_contingency()*. A continuación mostramos como hacerlo: 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log4.png)
 
 
 
 ## Detectar correlación entre variables categóricas y variables cuantitativas.
 
-Para detectar un posible efecto entre la correlación de una variable categorica y una variable continua usaremos un estadístico llamado $d$ de Cohen, el cual se construye a partir de las diferencias de las medias de la segmentación a traves de la variable categórica. De pendiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa, en general si el valor es menor $0,5$ diremos que hay un efecto debil, si el valor esta entre $0,5$ y $0,8$ diremos que hay un efecto moderado y si es mayor a $0.8$ diremos que hay un efecto fuerte. 
+Para detectar un posible efecto entre la correlación de una variable categorica y una variable continua usaremos un estadístico llamado $d$ de Cohen, el cual se construye a partir de las diferencias de las medias de la segmentación a traves de la variable categórica. De pendiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa, en general si el valor es menor $0,5$ diremos que hay un efecto debil, si el valor esta entre $0,5$ y $0,8$ diremos que hay un efecto moderado y si es mayor a $0.8$ diremos que hay un efecto fuerte. En general este estadístico es util cuando la variable categórica posee dos categorias, en otro caso, el estadístico pierde utilidad, se suele usar una herramienta estadística conocida como *Anova*, no nos enficaremos en esto este curso.
 
 
 
 
+### Medida de $d$ de cohen en *R*.
 
+Deberemos instalar la librería *effsize* y usaremos la función *cohen.d()*, crearemos una variable artificial para  mostrar el uso del estadístico
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log5.png)
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log6.png)
 
+Podemos notar que el valor del estadístico $d$ de Cohen es alto mostrando un posible efecto de las variables categóricas en la variable continua.
 
+### Medida de $d$ de cohen en *Python*.
 
+En *Python* no existe una función para calcular la $d$ de cohen de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías *statistics* y *math* las cuales nos permitirán calcular las métricas que necesita el estadístico de Cohen.
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log7.png)
 
+## Codificando variables castegóricas.
 
+Antes de ingresar una variable categórica no podemos simplemente ingresarla al modelo, pues se sobre entendera que esta variable es continua dando una interpretación erronea del comportamiento de la variable, el procedimiento estandar es crear variables auxiliares binarias que nos indique la presencia o no de cierto atributo. Por ejemplo, si tenemos una variable categórica con tres categorias: rojo, azul y verde, deberiamos crear dos variables auxiliares: la primera que este compuesta por 0 si es roja 1 si no, la segundo que este compuesta por 1 si es azul 0 si no, no hace falta crear una tercera variable para el color verde, pues se entiende que si las primeras variables son 0 y 0, se concluye que debe ser verde, por lo que si una variable categórica esta compuesta por $n$ categorias deberemos crear $n-1$ variables auxiliares, en algunas fuentes esto tambien se conoce como creación de variables *Dummies*
 
+### Creación de variables auxiliares en *R*
 
+Debemos descargar y usar la librería *fastDummies*, la cual tiene la función del mismo nombre *dummy_cols()* esta función es la que crea las variables auxiliares. Por ejemplo, supongamos que tenemos la variable color, la cual esta compuesta por: ("azul","rojo","amarillo","blanco","amarillo", "azul","azul","rojo"), en la cual tenemos 4 categorías. Para aplicar la función *dummy_cols()* realizaremos el siguiente código:
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log8.png)
 
+Y obtenemos como resultado:
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log9.png)
 
 
+Por ejemplo el septimo registro observamos que tenemos una fila de números ceros, por lo dicho anteriormente esto significa que el atributo de esta observación es azul.
 
 
+### Creación de variables auxiliares en *Python*
 
+Para crear variables auxiliares en python, podremos realizar esto directamente con el paquete pandas, usando la función *get_dummies*, acontinuación mostramos el código y el resultado.
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log10.png)
 
+## Aplicando el modelo de regresión logística.
 
+Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar la construcción del modelo como tal. Iniciaremos con el lenguaje *R*:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Modelo logístico en R.
 
 
 

@@ -16,7 +16,7 @@ Una de las primeras cosas que debemos ver es la independecia entre las variables
 
 Una tabla de contogencia es la forma mas facíl de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contigencia.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log.jpg)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log.jpg)
 
 En las columnas la variable hace referencia al uso del internet y en las filas las variables hacen referencia al sexo.
 
@@ -24,7 +24,7 @@ Para detectar si dos variables estan o no correlacionadas usaremos la prueba chi
 
 En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplicaremos la prueba chi-cuadrado, para contrastar la independencia entre el uso de internet y el estar empleado.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log2.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2.png)
 
 
 
@@ -34,7 +34,7 @@ En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplica
 
 Para realizar la prueba usamos la función * chisq.test()* y obtenemos el siguiente resultado
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log3.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log3.png)
 
 
 El valor que nos interesa es el $p$-valor, el cual a no ser menor a $0.05$ nos indica una posible relación entre las variables, en general, si el $p$-valor es cercano a uno podemos pensar en la posible relación entre las variables.
@@ -44,7 +44,7 @@ El valor que nos interesa es el $p$-valor, el cual a no ser menor a $0.05$ nos i
   
 Para realizar la prueba chi-cuadrado en *Python* usaremos la librería *scipy* y usaremos la función *.chi2_contingency()*. A continuación mostramos como hacerlo: 
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log4.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log4.png)
 
 
 
@@ -59,9 +59,9 @@ Para detectar un posible efecto entre la correlación de una variable categorica
 
 Deberemos instalar la librería *effsize* y usaremos la función *cohen.d()*, crearemos una variable artificial para  mostrar el uso del estadístico
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log5.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log5.png)
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log6.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log6.png)
 
 Podemos notar que el valor del estadístico $d$ de Cohen es alto mostrando un posible efecto de las variables categóricas en la variable continua.
 
@@ -69,7 +69,7 @@ Podemos notar que el valor del estadístico $d$ de Cohen es alto mostrando un po
 
 En *Python* no existe una función para calcular la $d$ de cohen de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías *statistics* y *math* las cuales nos permitirán calcular las métricas que necesita el estadístico de Cohen.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log7.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log7.png)
 
 ## Codificando variables castegóricas.
 
@@ -79,11 +79,11 @@ Antes de ingresar una variable categórica no podemos simplemente ingresarla al 
 
 Debemos descargar y usar la librería *fastDummies*, la cual tiene la función del mismo nombre *dummy_cols()* esta función es la que crea las variables auxiliares. Por ejemplo, supongamos que tenemos la variable color, la cual esta compuesta por: ("azul","rojo","amarillo","blanco","amarillo", "azul","azul","rojo"), en la cual tenemos 4 categorías. Para aplicar la función *dummy_cols()* realizaremos el siguiente código:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log8.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log8.png)
 
 Y obtenemos como resultado:
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log9.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log9.png)
 
 
 Por ejemplo el septimo registro observamos que tenemos una fila de números ceros, por lo dicho anteriormente esto significa que el atributo de esta observación es azul.
@@ -93,7 +93,7 @@ Por ejemplo el septimo registro observamos que tenemos una fila de números cero
 
 Para crear variables auxiliares en python, podremos realizar esto directamente con el paquete pandas, usando la función *get_dummies*, acontinuación mostramos el código y el resultado.
 
-![\label{fig:"R2"}](~/Machine-learning-basic/bookdown/images/log10.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log10.png)
 
 ## Aplicando el modelo de regresión logística.
 
