@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Capítulo 5 Regresión logística | Machine Learning Básico</title>
+  <meta name="description" content="Capítulo 5 Regresión logística | Machine Learning Básico">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Capítulo 5 Regresión logística | Machine Learning Básico" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
+  <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 5 Regresión logística | Machine Learning Básico" />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2019-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="regresion-lineal.html">
+<link rel="next" href="analisis-de-cluster.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos"><i class="fa fa-check"></i><b>3.1</b> Lectura de datos</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-r"><i class="fa fa-check"></i><b>3.1.1</b> Lectura de datos con <em>R</em></a></li>
+<li class="chapter" data-level="3.1.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-python"><i class="fa fa-check"></i><b>3.1.2</b> Lectura de datos con <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#tratamiento-previo-de-los-datos"><i class="fa fa-check"></i><b>3.2</b> Tratamiento previo de los datos</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#missing-values-o-valores-faltantes"><i class="fa fa-check"></i><b>3.2.1</b> Missing Values o valores faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
+<li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.2.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-python"><i class="fa fa-check"></i><b>4.2.2</b> Aplicando transformaciones de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminando-el-efecto-de-colinealidad-entre-variables-independientes."><i class="fa fa-check"></i><b>4.3</b> Eliminando el efecto de colinealidad entre variables independientes.</a></li>
+<li class="chapter" data-level="4.4" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-las-variables-categoricas"><i class="fa fa-check"></i><b>4.4</b> Eliminación de las variables categoricas</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-r"><i class="fa fa-check"></i><b>4.4.1</b> Eliminación de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
+<li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
+<li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
+<li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
+<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
+<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning Básico</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regresion-logistica" class="section level1">
+<h1><span class="header-section-number">Capítulo 5</span> Regresión logística</h1>
+<p>La regresión logística nos da respuesta a la siguiente interrogante, ¿Que hacer cuando la variable dependiente es dicotómica?. Claramente en los modelos lineales esto no se puede aplicar pues la variable dependiente debe ser continua. De igual manera la otra interrogante importante es ¿Que hacer cuando las variables independiente son categóricas?. La regresión logística nos da la flexibilidad necesaria para incluir este tipo de variables. La regresión logística a diferencia de la regresión lineal no calcula directamente el valor de la variable categórica, sino la probilidad de que el evento ocurra, por ejemplo, si estamos interesados en el evento cara o cruz, un modelo logístico para este tipo de modelos nos dará la probabilida de que ocurra cara o cruz.</p>
+<div id="supuestos-de-la-regresion-logistica." class="section level2">
+<h2><span class="header-section-number">5.1</span> Supuestos de la regresión logística.</h2>
+<p>La regresión logística es flexible con respecto a supuestos como normalidad o la continuidad de las variables. Una de las hipotesis que debemos verificar es la de no existencia de multicolinealidad entre las distintas variables continuas y la correlación entre las variables independientes y la variable dependiente. A continuación veremos como responder a estas interrogativas.</p>
+</div>
+<div id="multicolinealidas-entre-variables-independientes." class="section level2">
+<h2><span class="header-section-number">5.2</span> Multicolinealidas entre variables independientes.</h2>
+<p>Al igual que en la regresión lineal debemos evitar, variables independientes con alta correlación. Debemos realizar el mismo procedimiento visto en el capítulo anterior.</p>
+</div>
+<div id="detectar-correlacion-entre-variables-categoricas" class="section level2">
+<h2><span class="header-section-number">5.3</span> Detectar correlación entre variables categóricas</h2>
+<p>Una de las primeras cosas que debemos ver es la independecia entre las variables independientes categoricas y la dependencia entre la variable dependiente y las variables categóricas independientes. Para ver esto haremos uso de las tablas de contigencia.</p>
+<p>Una tabla de contogencia es la forma mas facíl de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contigencia.</p>
+<div class="figure">
+<img src="images/log.jpg" alt="" />
+<p class="caption"></p>
+</div>
+<p>En las columnas la variable hace referencia al uso del internet y en las filas las variables hacen referencia al sexo.</p>
+<p>Para detectar si dos variables estan o no correlacionadas usaremos la prueba chi-cuadrado que contraste la independencia entre las variables, es decir, si el <span class="math inline">\(p\)</span>-valor es bajo estamos encontrando evidencia de inpendecia entre los factores, en caso contrario podemos suponer la existencia de cierta relación entre las variables.</p>
+<p>En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplicaremos la prueba chi-cuadrado, para contrastar la independencia entre el uso de internet y el estar empleado.</p>
+<div class="figure">
+<img src="images/log2.png" alt="" />
+<p class="caption"></p>
+</div>
+<div id="prueba-chi-cuadrado-en-r" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Prueba chi-cuadrado en <em>R</em></h3>
+<p>Para realizar la prueba usamos la función * chisq.test()* y obtenemos el siguiente resultado</p>
+<div class="figure">
+<img src="images/log3.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>El valor que nos interesa es el <span class="math inline">\(p\)</span>-valor, el cual a no ser menor a <span class="math inline">\(0.05\)</span> nos indica una posible relación entre las variables, en general, si el <span class="math inline">\(p\)</span>-valor es cercano a uno podemos pensar en la posible relación entre las variables.</p>
+</div>
+<div id="prueba-chi-cuadrado-en-python" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Prueba chi-cuadrado en <em>Python</em></h3>
+<p>Para realizar la prueba chi-cuadrado en <em>Python</em> usaremos la librería <em>scipy</em> y usaremos la función <em>.chi2_contingency()</em>. A continuación mostramos como hacerlo:</p>
+<div class="figure">
+<img src="images/log4.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas." class="section level2">
+<h2><span class="header-section-number">5.4</span> Detectar correlación entre variables categóricas y variables cuantitativas.</h2>
+<p>Para detectar un posible efecto entre la correlación de una variable categorica y una variable continua usaremos un estadístico llamado <span class="math inline">\(d\)</span> de Cohen, el cual se construye a partir de las diferencias de las medias de la segmentación a traves de la variable categórica. De pendiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa, en general si el valor es menor <span class="math inline">\(0,5\)</span> diremos que hay un efecto debil, si el valor esta entre <span class="math inline">\(0,5\)</span> y <span class="math inline">\(0,8\)</span> diremos que hay un efecto moderado y si es mayor a <span class="math inline">\(0.8\)</span> diremos que hay un efecto fuerte.</p>
+
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regresion-lineal.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analisis-de-cluster.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/202-Regresion_logistica.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Riesgo-de-Credito.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

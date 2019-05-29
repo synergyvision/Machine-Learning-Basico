@@ -1,0 +1,70 @@
+# Análisis de cluster
+
+
+El análisis de cluster o análisis de conglomerados es un método estadístico no parámetrico, es decir, no se basa en el cálculo de parámetros como la regresión lineal, el cual tiene como objetivo hallar grupos que a partir de los datos y que estos grupos estén claramente divididos.
+
+Para poder agrupar las observaciones se deben compararusando alguna medida de distacia o similitud, esto dependera de como sean los datos en si, por ejemplo no es el mismo problema comparar oservaciones en que todas las variables son cuantitativas a variables que possen variables categóricas.
+
+## Supuetos del análisis de cluster.
+
+Debido a que el análisis de cluster como ya se menciono es un metódo no parámetrico, no posee hipotesis estadísticas tan fuertes como es el caso e la regresión lineal, pero si debemos gaarantizar que cada variable a usar sea significativa y tengamos en mente que esta puede dividir de algún modo nuestro conjunto de datos.
+
+El análisis de cluster es sensible a los valores atípicos, mas aún, se puede suponer que es indispensable corroborar la existencia de datos atípicos, pues podremos tener resuldos significativamente diferentes al no eliminarlos. Por lo que aconsejamos siempre iniciar haciendo un estudio de los valores atípicos.
+
+## Medidas o similitudes
+
+Una vez hemos hecho una adecuada selección de las variables a considerar, cada uno de los individuos sujetos al análisis nos vendrá representado por los valores que tomen estas variables en cada uno de ellos. Este es el punto de partida de la clasificación. Para clasificar adecuadamente los individuos deberemos determinar lo similares o disimilares (divergentes) que son entre sí, en función de lo diferentes que resulten ser sus representaciones en el espacio de las variables.
+
+Para medir lo similares ( o disimilares) que son los individuos existe una enorme cantidad de índices de similaridad y de disimilaridad o divergencia. Todos ellos tienen propiedades y utilidades distintas y habrá que ser consciente de ellas para su correcta aplicación al caso que nos ocupe.
+
+La mayor parte de estos índices serán o bien, indicadores basados en la distancia (considerando a los individuos como vectores en el espacio de las variables) (en este sentido un elevado valor de la distancia entre dos individuos nos indicará un alto grado de disimilaridad entre ellos); o bien, indicadores basados en coeficientes de correlación ; o bien basados en tablas de datos de posesión o no de una serie de atributos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

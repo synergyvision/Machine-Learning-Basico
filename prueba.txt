@@ -1,0 +1,3 @@
+"","Usa Internet","No usa internet"
+"Trabaja",20,36
+"No trabaja",30,32

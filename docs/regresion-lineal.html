@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Capítulo 4 Regresión Lineal | Machine Learning Básico</title>
+  <meta name="description" content="Capítulo 4 Regresión Lineal | Machine Learning Básico">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Capítulo 4 Regresión Lineal | Machine Learning Básico" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
+  <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Regresión Lineal | Machine Learning Básico" />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2019-05-29">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="uso-y-preparacion-de-los-datos.html">
+<link rel="next" href="regresion-logistica.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos"><i class="fa fa-check"></i><b>3.1</b> Lectura de datos</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-r"><i class="fa fa-check"></i><b>3.1.1</b> Lectura de datos con <em>R</em></a></li>
+<li class="chapter" data-level="3.1.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-python"><i class="fa fa-check"></i><b>3.1.2</b> Lectura de datos con <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#tratamiento-previo-de-los-datos"><i class="fa fa-check"></i><b>3.2</b> Tratamiento previo de los datos</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#missing-values-o-valores-faltantes"><i class="fa fa-check"></i><b>3.2.1</b> Missing Values o valores faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
+<li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.2.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-python"><i class="fa fa-check"></i><b>4.2.2</b> Aplicando transformaciones de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminando-el-efecto-de-colinealidad-entre-variables-independientes."><i class="fa fa-check"></i><b>4.3</b> Eliminando el efecto de colinealidad entre variables independientes.</a></li>
+<li class="chapter" data-level="4.4" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-las-variables-categoricas"><i class="fa fa-check"></i><b>4.4</b> Eliminación de las variables categoricas</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-r"><i class="fa fa-check"></i><b>4.4.1</b> Eliminación de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
+<li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
+<li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
+<li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
+<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
+<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning Básico</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regresion-lineal" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Regresión Lineal</h1>
+<p>La regresión lineal es un método estadístico que intenta predecir una variable de interes (dependiente) a partir de otras variables que se consideran influyentes (independientes) y se relacionan directamente con ella. Por ejemplo, hay estudios que sugieren la relacion entre el tamallo del pétalo (<span class="math inline">\(P\)</span>) y el sépalo de una flor (<span class="math inline">\(S\)</span>), en algunal flores se aproxima el tamaño del pétalo multiplicando por 3 el tamaño del sépalo, es decir, <span class="math inline">\(P=3*S\)</span>, esta relación es un ejemplo simple de lo que es la regresión lineal de solo dos variables.</p>
+<p>En general si tenemos una variable <span class="math inline">\(y\)</span> dependiente y <span class="math inline">\(n\)</span> variables independientes <span class="math inline">\(x1, x_2, ..., x_n\)</span> un modelo de regresión lineal tiene la forma <span class="math display">\[y=c+c_1x_1+c_2x_2+...+c_nx_n\]</span> donde los coeficientes <span class="math inline">\(c_j\)</span> son los coeficientes del modelo y <span class="math inline">\(c\)</span> es el coeficiente independiente, en algunos casos es llamado intercept.</p>
+<div id="identificando-relacion-entre-variables" class="section level2">
+<h2><span class="header-section-number">4.1</span> Identificando relación entre variables</h2>
+<p>Una de las primeras cosas a verificar antes de realizar el análisis de regresión es la relación existente entre la variable dependiente con las variables independientes, existen diversas manerar de comprobarlo, entre las que veremos están:</p>
+<ul>
+<li>Visual: Se realiza un gráfico entre la variable dependiente y la variable independiente a estudiar, si se nota un tipo de linealidad entre los datos podemos pensar en incluir la variable independiente en el modelo. Por ejemplo, en el siguiente ejemplo se nota una cierta linealidad entre las variables.</li>
+</ul>
+<div class="figure">
+<img src="images/reg.svg" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li>Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el indice de correlacion, el cualn varía entre -1 y 1 , entre mas cerca de -1 o 1 esta el indice de correlacción entre variables mayor es su relación, en general, decimos que si el índice de correlacion entre variables es mayor a <span class="math inline">\(0.5\)</span> o menor a <span class="math inline">\(-0.5\)</span></li>
+</ul>
+<p>Usaremos el conjunto de datos <em>mtcars</em> en <em>R</em> para ilustrar de ahora en adelante el proceso de regresión lineal.</p>
+<div id="identificando-relacion-entre-variables-con-r" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Identificando relación entre variables con <em>R</em></h3>
+<ul>
+<li>Visual: Usamos la función <em>plot()</em> vista previamente para grificar el cruce enntre variables, por ejemplo, entre las variables <em>mpg</em> y <em>disp</em> notamos un cierto comportamiento lineal.</li>
+</ul>
+<div class="figure">
+<img src="images/reg3.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg2.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Con la función <span class="math inline">\(plot()\)</span> tenemos la ventaja de que simplemente pasando como argumento el conjunto de datos no arroja una imagen con todos los cruces posibles.</p>
+<div class="figure">
+<img src="images/reg5.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg4.png" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li>Cuantitativa: La función <em>cor()</em> nos permite hallar la correlación entre variables</li>
+</ul>
+<p><img src="images/reg6.png" alt="" /> Este valor de <span class="math inline">\(-0.84\)</span> nos confirma la posible relacion que existe entre las variables <em>mpg</em> <em>disp</em>. De igual manera podemos aplicar la función <em>cor()</em> a todo el cojunto de datos arrojando una matriz con todo los valores posibles de correlaciones</p>
+<div class="figure">
+<img src="images/reg7.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="identificando-relacion-entre-variables-con-python" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Identificando relación entre variables con <em>python</em></h3>
+<ul>
+<li>Visual: En <em>Python</em> usaremos de nuevo la librería <em>Matplotlib</em>, para abtener el gráfico del cruce entre variables, de igual manera notamos el comportamiento lineal entre las variables.</li>
+</ul>
+<div class="figure">
+<img src="images/reg9.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg8.jpg" alt="" />
+<p class="caption"></p>
+</div>
+<p>Ahora, si queremos realizar un solo grafico con el cruce de todas las variables, como no los permite la función <em>cor()</em> en <em>R</em>, debemos implementar una librería llamada <em>Seaborn</em>, la cual nos dara el resultado deseado haciendo uso de la función <em>.pairplot()</em>, la cual le ingresaremos como argumentos: <em>kind</em> (para el tipo de grafico) y <em>palette</em> (para el color)</p>
+<div class="figure">
+<img src="images/reg11.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg10.jpg" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li>Cuantitativo: Para obtener la matriz de correlación entre las variables de nuestro conjunto de datos, hacemos uso de la función <em>.cor()</em> de la librería <em>Pandas</em>. En el caso que queramos alguna correlación en especifico filtramos los elementos de la matriz anterior.</li>
+</ul>
+<div class="figure">
+<img src="images/reg12.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="transformando-variables" class="section level2">
+<h2><span class="header-section-number">4.2</span> Transformando variables</h2>
+<p>Una de las principales hipótesis en la regresión lineal es la normalidad de las variables implicadas, es decir, que las variables provengan de una distribución normal. Pero, ¿como identificamos este comportamiento en una variable? La forma mas sencilla es inspeccionando el histograma proveniente de dicha variable y corroborar un comportamiento acampanado, como por ejemplo:</p>
+<div class="figure">
+<img src="images/reg13.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Pero en muchos casos, las variables no poseen este comportamiento, por lo tanto debo aplicar transformaciones que imiten el comportamiento acampanado de la gráfica anterior, las transformaciones más comunes son: <span class="math inline">\(y=x^2\)</span>, <span class="math inline">\(y=\sqrt{x}\)</span>, <span class="math inline">\(y=ln(x)\)</span> y <span class="math inline">\(y=\frac{1}{x}\)</span>, en la siguiente gráfica podemos apreciar el efecto de estas transformaciones.</p>
+<div class="figure">
+<img src="images/reg14.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Esta última imagen nos da una idea de cuando debemos aplicar alguna de las transformaciones anteriores. Ahora veremos como aplicarlas en los respectivos lenguajes.</p>
+<div id="aplicando-transformaciones-de-variables-en-r" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Aplicando transformaciones de variables en <em>R</em></h3>
+<p>Esta tarea es muy facil de ejecutar en <em>R</em>, supongamos que estamos trabajando con la variable x del conjunto de datos df, el código para realizar estas transformaciones son:</p>
+<div class="figure">
+<img src="images/reg15.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="aplicando-transformaciones-de-variables-en-python" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Aplicando transformaciones de variables en <em>Python</em></h3>
+<p>En python es facil realizar las transformaciones menos la del logaritmo, para la cual usaremos la librería <em>Math</em> en especifico la función <em>.log()</em> junto a la función <em>.apply</em>, pues la función <em>.log()</em> se aplica a números y queremos aplicarla a una variable completa.</p>
+<div class="figure">
+<img src="images/reg16.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="eliminando-el-efecto-de-colinealidad-entre-variables-independientes." class="section level2">
+<h2><span class="header-section-number">4.3</span> Eliminando el efecto de colinealidad entre variables independientes.</h2>
+<p>Otra hipotesis importante antes de realizar el modelo de regresión, es la no colinealidad entre las variables, es decir no debe haber una relación lineal entre variables independientes, en caso de descubrir este efecto deberiamos eliminar una de estas variables y quedarnos con la otra.</p>
+<p>La forma de identificar colinealidad es exactamente igual a la forma de encontrar correlaciones entre las variables vista al principio de este capítulo, primero debemos calcular el índice de correlación entre variables, si se encuentra un alta correlación entre un par de variables independientes se procede a revisar la gráfica del cruce de dichas variable, si se observa una clara relación linea procedemos a eliminar alguna de ellas.</p>
+</div>
+<div id="eliminacion-de-las-variables-categoricas" class="section level2">
+<h2><span class="header-section-number">4.4</span> Eliminación de las variables categoricas</h2>
+<p>En los modelos de regresión lineal las variables categóricas no cumplen las hipotesis del modelo, pues no cumplen con la hipotesis de normalidad. Recordemos que una variable categorica es una variable que toma unos valores fijos ya conocidos, por ejemplo, la variable que toma los valores <span class="math inline">\(1, 2, 3, 4, 5, 6\)</span> que representa los posibles valores que toma el lanzamiento de un dado es una variable categórica, o la variable que toma los valores de <em>Si</em> o <em>No</em> que se refiere al consumo de un producto en especifico. Por lo tanto debemos saber como eliminar variables de nuestro conjunto de datos.</p>
+<div id="eliminacion-de-variables-en-r" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Eliminación de variables en <em>R</em></h3>
+<p>Supongamos que tenemos un conjunto de datos llamados <em>Datos</em> la variable <em>Var1</em>, si deseamos eliminarla usamos el siguiente código, en el cual el simbolo ! se un inducador de que queremos eliminar dicha variable.</p>
+<div class="figure">
+<img src="images/reg17.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="eliminacion-de-variables-en-python" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Eliminación de variables en <em>Python</em></h3>
+<p>De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma variable a eliminar en <em>Python</em>, usamos la función <em>.drop()</em> para eliminar la variable, <em>axis=1</em>hace referencia que estamos eliminando una columna.</p>
+<div class="figure">
+<img src="images/reg18.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="aplicando-el-modelo-de-regresion-lineal" class="section level2">
+<h2><span class="header-section-number">4.5</span> Aplicando el modelo de regresión lineal</h2>
+<p>Una vez que elejimos las variables que deseamos usar en el modelo debemos conocer que funciones usar y que parámetros.</p>
+<div id="aplicando-el-modelo-de-regresion-lineal-en-r" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Aplicando el modelo de regresion lineal en <em>R</em></h3>
+<p>Em <em>R</em> existen varias formas de aplicar este modelo, gracias al gran número de librerias existentes, sin embargo, ya <em>R</em> trae por defecto la funcíon <em>lm()</em> la cual nos permite construir el modelo de una forma sencilla.</p>
+<p>primero describiremos los parametros mas importantes que debemos ingresar:</p>
+<ul>
+<li><p><em>formula</em>: Sin duda el parámetro mas importante, es el que le indica a la función cuales son las variables independientes y la variable dependiente, por ejemplo si tenemos las variables <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span> donde las variables independientes son <span class="math inline">\(x_2\)</span> y <span class="math inline">\(x_3\)</span> y la variable dependiente es <span class="math inline">\(x_1\)</span>, el paramétro formula debe ser : <span class="math inline">\(x_1 \sim x_2 + x_3\)</span>. En el caso de que deseamos usar todas las variables del conjunto de datos como independientes, simplemente usamos <span class="math inline">\(x_1 \sim .\)</span></p></li>
+<li><p><em>data</em>: El conjunto de datos a utilizar para realizar el modelo.</p></li>
+<li><p><em>subset</em>: Un vector donde se especifican las filas a usar del modelo.</p></li>
+<li><p><em>weights</em>: En el ajuste del modelo se calculan los parámetros que representan a cada variable independiente.Para realizar dicho ajuste se realiza un metodo de optimización para optener los parametros que mejor se ajuste a la recta de regresión, el parámetro <em>weights</em> es un vector numerico que se encarga de mejorar esta aproximacion y debe coincidir con el número de observaciones</p></li>
+<li><p><em>na.action</em>: En el caso de que halla valores <em>NAs</em>, este parámetro acepata una función que indica que hacer con estos valores problemas, lo usual es utilizar <em>nn.fail</em>, <em>na.omit</em> o <em>na.exclude</em></p></li>
+<li><p><em>method</em>: Hace referecia al método de aproximación de los parámetros de los coeficientes, el metodo por defecto es el de los mínimos cuadrados, el cual se denota por <em>qr</em></p></li>
+</ul>
+<p>Ahora supongamos que tenemun conjunto de datos llamados <em>irisP</em> el cual cuenta con la variable dependiente <em>Sepal.Length</em> y las variables independientes <em>Sepal.Width </em>, <em>Petal.Length</em>, <em>Petal.Width</em>, para realizar el modelo con los parámetros ya mencionados tenemos dos opciones, la primera colocando el nombre de todas las variables o haciendo uso de la abreviación de la formula ya mencionado.</p>
+<div class="figure">
+<img src="images/reg19.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Si hacemos uso del codigo anterior obtendremos la informacion básica del modelo, la cual se presenta en la siguiente imagen:</p>
+<div class="figure">
+<img src="images/reg20.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>En esta imagen se nos proporciona el valor que se introdujo en el modelo y los coeficientes de la regresión. Si queremos los datos del modelo usamos la función <em>summary()</em></p>
+<div class="figure">
+<img src="images/reg23.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="aplicando-el-modelo-de-regresion-lineal-en-python" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Aplicando el modelo de regresion lineal en <em>Python</em>:</h3>
+<p>Existen varias librerías para aplicar modelos lineales en <em>Python</em> entre las mas populares estan <em>StatsModels</em> y <em>sklearn</em>, usaremos la primera por ser la que nos proporciona unas funciones parecidas a las que tenemos en <em>R</em>. Como el objetivo de este curso es aprender a usar la herramienta no incluiremos algunos parámetros como los que describimos en <em>R</em>.</p>
+<p>Para crear el modelo usando la librería <em>StatsModels</em>, debemos impotar la libreria de la manera usual, luego seleccionamos la variable dependiente e independientes, a diferencia de <em>R</em> <em>StatsModel</em> no calcula el valor del intercept por defecto, por lo tanto debemos espicificarlo de manera explicita, esto lo hacemos con la función <em>add_constant()</em> de la misma librería, luego usando la función <em>.OLS()</em> para crear el modelo y la función <em>.fit()</em> para entrenarlo, finalmente imprimimos los datos del modelo usando la función <em>.summary()</em></p>
+<div class="figure">
+<img src="images/reg21.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg22.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="como-interpretar-los-resultados-del-modelo" class="section level2">
+<h2><span class="header-section-number">4.6</span> Como interpretar los resultados del modelo</h2>
+<p>Ya vimos que una vez construido el modelo usando funciones con el nombre de <em>summary</em> obtenemos información sobre caracteristicas del los modelos. Describiremos las mas importantes y como entender su efecto en el modelo.</p>
+<div id="interpretar-con-summary-en-r" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Interpretar con <em>summary</em> en <em>R</em>:</h3>
+<ul>
+<li><em>Residuals</em>: Al calcular el modelo la función <em>Summary</em> calcula las predicciones para los mismos datos con los que se entreno el modelo, la variable <em>residuals</em> nos da los errores de predicción. En esta variable el menor, el mayor, la mediana, primer cuantil y tercer cuantil de los errores. Debemos realizar un hostograma de los errores del modelo, si este histograma no muestra un comportmiento normal, debemos pensar rapidamente que nuestro modelo no es el adecuado. Acontinuación se meuestra el codigo y un histograma ideal, suponiendo que creamos un modelo con nombre modelo</li>
+</ul>
+<div class="figure">
+<img src="images/reg25.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="images/reg24.jpeg" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li><em>Coeficients</em>: Luego se muestran los coecicientes del modelo en forma de matriz:
+<ul>
+<li>En la primera columna se muestran los coeficientes del modelo.</li>
+<li>En la segunda columna se muestran las desviaciones estandar de cada coeficientes.</li>
+<li>Luego se muestran los valores correspondientes al estadístico <span class="math inline">\(t\)</span>, con el fin de realizar una prueba de hipotesis a los coeficiente.</li>
+<li>En la cuarta columna se muestran los <span class="math inline">\(p\)</span>-valors de la prueba de hipotesis, los resultados de estos valores deben ser lo mas pequeño posibles, en general, se esperan que sean menores a 0.05, en caso de que esto no ocurra debemos pensar en eliminar la variable del modelo, o realizar alguna transformación adecuada.</li>
+</ul></li>
+<li><p><em>Residual standar error</em>: Nos da una idea de como varia el error de precisión del modelo, es decir, nos dice como varian las predicciones de las observaciones.</p></li>
+<li><p><em>Multiple R-squared and Adjuste R-squared </em>: En ambos casos ambas valores explican el valor de la varianza explicada del modelo, la diferencia en la segunda se considera el número de variables involucradas en el modelo, debido a esto la mayoría de los casos se considera es la segunda, se buscan valore mayores a 0.7 o 0.8.</p></li>
+<li><p><em>F-statistic</em>: Nos presenta el valor del estadístico F, luego los grado de libertas y por ultimo el <span class="math inline">\(p\)</span>-valor de la prueba de hipotesis que consiste en constrastar el modelo resultante con el modelo que únicamente consta de un termino intercept.</p></li>
+</ul>
+</div>
+<div id="interpretar-con-summary-en-python" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> Interpretar con <em>summary</em> en <em>Python</em>:</h3>
+<p>El <em>summary</em> en este caso nos da mucha mas información que en <em>R</em> nos concentraremos en las mismas variables del <em>summary</em> y mencionaremos algunas otras que pueden ser de utilidad, este summary se dividen en dos cuadros:</p>
+<ul>
+<li><p>Información estadística del modelo: en esta primera matriz la información mas destacada es el nombre de la variable dependiente, el número de observaciones, <em>Multiple R-squared</em>, <em>Adjuste R-squared </em>, el valor de <em>F-statistic</em></p></li>
+<li><p>Información estadística acerca de los coeficientes del modelo: en esta matriz se encuentra practicamente la misma información concerniente a los valores de los coeficientes del modelo con la información extra que consiste en los intervalos de confianza de los coeficientes.</p></li>
+<li><p>Este summary no nos aporta información clara sobre los residuos del modelo, para poder obtener un histograma para ver su comportamiento usamos el siguiente código, tomando en cuenta que nuestro modelo se llama <em>modelo</em></p></li>
+</ul>
+<div class="figure">
+<img src="images/reg26.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="realizando-predicciones-con-nuestro-modelo." class="section level2">
+<h2><span class="header-section-number">4.7</span> Realizando predicciones con nuestro modelo.</h2>
+<p>El objetivo principal de crear modelos es usarlos para predecir valores a partir de las variables independientes, a continuación presentaremos los códigos para realizar dicha predicción.</p>
+<div id="realizando-predicciones-con-r" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> Realizando predicciones con <em>R</em></h3>
+<p>Para realizar predicciones con <em>R</em> haremos uso de la función <em>predict()</em>. Debemos ser cuidados con los conjunto de datos que usaremos para predecir, estos datos deben tener las columnad con el mismo nombre y no tener valores faltantas o espacios en blanco. ahora se anexa el codigo para hacer la predicción.</p>
+<div class="figure">
+<img src="images/reg27.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="realizando-predicciones-con-python" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> Realizando predicciones con <em>Python</em></h3>
+<p>Al realizar predicciones en python debemos tener en claro el orden del conjunto de datos, es decir, debemos tener las variables independientes en el mismo orden con el que se entreno el modelo, ademas, debemos agregar una variable intercep para que el modelo tenga todos los parámetros establecidos.</p>
+<div class="figure">
+<img src="images/reg28.png" alt="" />
+<p class="caption"></p>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="uso-y-preparacion-de-los-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regresion-logistica.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/201-Regresion_lineal.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Riesgo-de-Credito.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
