@@ -4,7 +4,7 @@
 title: "Machine Learning Básico"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2019-05-29"
+date: "2019-05-30"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -822,13 +822,21 @@ Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar 
 
 ### Modelo logístico en R.
 
+Para el cálculo del modelo logístico haremos uso de la función *glm()* que esta disponible como función base en *R*, esta función tiene practicamente la misma sintaxis que la función *lm()* asi que no describiremos en detalle sus parámetros. 
 
+Usaremos los datos *Default* que nos proporciona el paquete *ISLR*, los cuales podemos observar en la siguiente imagen:
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log11.png)
 
+Si queremos crear un modelo logistico que tenga variables independientes *balance* y *income* y variable dependiente *default* debemos usar el siguiente código.
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log12.png)
 
+tenemos un parámetro adicional llamado *Family* el cual hace referencia a la distribución de la variable, en nuestro caso la distribucion es binomial.
 
+Al realizar un resumen del modelo con la función *summary*
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log13.png)
 
 
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-05-29">
+<meta name="date" content="2019-05-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -313,6 +313,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar la construcción del modelo como tal. Iniciaremos con el lenguaje <em>R</em>:</p>
 <div id="modelo-logistico-en-r." class="section level3">
 <h3><span class="header-section-number">5.6.1</span> Modelo logístico en R.</h3>
+<p>Para el cálculo del modelo logístico haremos uso de la función <em>glm()</em> que esta disponible como función base en <em>R</em>, esta función tiene practicamente la misma sintaxis que la función <em>lm()</em> asi que no describiremos en detalle sus parámetros.</p>
+<p>Usaremos los datos <em>Default</em> que nos proporciona el paquete <em>ISLR</em>, los cuales podemos observar en la siguiente imagen:</p>
+<div class="figure">
+<img src="images/log11.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Si queremos crear un modelo logistico que tenga variables independientes <em>balance</em> y <em>income</em> y variable dependiente <em>default</em> debemos usar el siguiente código.</p>
+<div class="figure">
+<img src="images/log12.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>tenemos un parámetro adicional llamado <em>Family</em> el cual hace referencia a la distribución de la variable, en nuestro caso la distribucion es binomial.</p>
+<p>Al realizar un resumen del modelo con la función <em>summary</em></p>
+<div class="figure">
+<img src="images/log13.png" alt="" />
+<p class="caption"></p>
+</div>
 
 </div>
 </div>
