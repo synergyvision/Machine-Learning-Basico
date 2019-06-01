@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-05-30">
+<meta name="date" content="2019-06-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,13 +34,13 @@
   
 <link rel="prev" href="regresion-lineal.html">
 <link rel="next" href="analisis-de-cluster.html">
-<script src="libs/jquery/jquery.min.js"></script>
-<link href="libs/gitbook/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -51,43 +51,6 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -180,6 +143,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica."><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística.</a><ul>
 <li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
+<li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
@@ -325,9 +289,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p class="caption"></p>
 </div>
 <p>tenemos un parámetro adicional llamado <em>Family</em> el cual hace referencia a la distribución de la variable, en nuestro caso la distribucion es binomial.</p>
-<p>Al realizar un resumen del modelo con la función <em>summary</em></p>
+<p>Al realizar un resumen del modelo con la función <em>summary</em>, obtenemos:</p>
 <div class="figure">
 <img src="images/log13.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>En la imagen anterior una presentación del resumen del modelo un poco diferente a la del capítulo anterior, solo vale la pena describir la variable <em>AIC</em>, esta estadístico nos da información acerca de la bondad modelo con respecto a las variables introducidas, es decir, nos permite comparar distintos modelos estadísticos, se busca un valor la mas pequeño posible de esta variable.</p>
+<p>Un error tipo en el que se suele caer al crear un modelo de regresión logística es la de pensar que este modelo nos dara como predicción alguna variable cartegórica en especifico, en realidad el modelo nos proporciona la probabilidad de ocuerrecia del evento con los datos en específico. Así, la predicción esperada será un número entre <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>.</p>
+<p>A continuación presentamos el código para realizar la predicción:</p>
+<div class="figure">
+<img src="images/log14.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>En la imagen anterior el resultado es <span class="math inline">\(0.14\)</span> esto significa que la probabilidad de ocurrencia del evento es <span class="math inline">\(0.14\)</span>.</p>
+</div>
+<div id="modelo-logistico-en-python." class="section level3">
+<h3><span class="header-section-number">5.6.2</span> Modelo logístico en <em>Python</em>.</h3>
+<p>Para crear el modelo cargaremos la librería <em>pandas</em> y <em>statsmodels</em>, usaremos los mismos datos de la parte anterior. A diferencia de <em>R</em> debemos separar la variable dependiente de las independientes, y verificar que la variables categoricas esten compuestas por valores numéricos, estos cambios son hechos con la función <span class="math inline">\(.replace()\)</span>. Recordemos que por defecto no se cslcula la variable <em>intercept</em> en el modelo, por lo cual debemos incorporarla con la funcióm <em>sm.add_costant()</em>. A continuación se muestra este procedimiento:</p>
+<div class="figure">
+<img src="images/log15.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Ahora, procedemos al cálculo del model, primero lo creamos usando la función <em>sm.logit()</em> y luego lo entrenamos usando la función <em>.fit()</em>. Para ver el resumen del modelo usamos la función <em>.summary()</em>, la cual nos da practicamente la misma información que la función <em>summary</em> en <em>R</em>.</p>
+<div class="figure">
+<img src="images/log16.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Para concluir, realizamos predicciones usando nuestro modelo, recordando que la observaxión usada para predecir debe tener la misma estructura de la variable independiente, debemos tener en cuenta que dependiendo si se agrego o no el <em>intercept</em> tendremos que agregar la variable constante usando la función <em>sm.add_constant()</em>. A continuación se muestra este procedimiento:</p>
+<div class="figure">
+<img src="images/log17.png" alt="" />
 <p class="caption"></p>
 </div>
 
@@ -349,13 +339,13 @@ ga('send', 'pageview');
 <a href="analisis-de-cluster.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook/js/app.min.js"></script>
-<script src="libs/gitbook/js/lunr.js"></script>
-<script src="libs/gitbook/js/plugin-search.js"></script>
-<script src="libs/gitbook/js/plugin-sharing.js"></script>
-<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

@@ -113,28 +113,36 @@ Si queremos crear un modelo logistico que tenga variables independientes *balanc
 
 tenemos un parámetro adicional llamado *Family* el cual hace referencia a la distribución de la variable, en nuestro caso la distribucion es binomial.
 
-Al realizar un resumen del modelo con la función *summary*
+Al realizar un resumen del modelo con la función *summary*, obtenemos:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log13.png)
 
+En la imagen anterior una presentación del resumen del modelo un poco diferente a la del capítulo anterior, solo vale la pena describir la variable *AIC*, esta estadístico nos da información acerca de la bondad modelo con respecto a las variables introducidas, es decir, nos permite comparar distintos modelos estadísticos, se busca un valor la mas pequeño posible de esta variable.
+
+Un error tipo en el que se suele caer al crear un modelo de regresión logística es la de pensar que este modelo nos dara como predicción alguna variable cartegórica en especifico, en realidad el modelo nos proporciona la probabilidad de ocuerrecia del evento con los datos en específico. Así, la predicción esperada será un número entre $0$ y $1$.
+
+A continuación presentamos el código para realizar la predicción:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log14.png)
+
+En la imagen anterior el resultado es $0.14$ esto significa que la probabilidad de ocurrencia del evento es $0.14$.
+
+### Modelo logístico en *Python*.
+
+Para crear el modelo cargaremos la librería *pandas* y *statsmodels*, usaremos los mismos datos de la parte anterior. A diferencia de *R* debemos separar la variable dependiente de las independientes, y verificar que la variables categoricas esten compuestas por valores numéricos, estos cambios son hechos con la función $.replace()$. Recordemos que por defecto no se cslcula la variable *intercept* en el modelo, por lo cual debemos incorporarla con la funcióm *sm.add_costant()*. A continuación se muestra este procedimiento:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log15.png)
+
+Ahora, procedemos al cálculo del model, primero lo creamos usando la función *sm.logit()* y luego lo entrenamos usando la función *.fit()*. Para ver el resumen del modelo usamos la función *.summary()*, la cual nos da practicamente la misma información que la función *summary* en *R*.
 
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log16.png)
 
 
+Para concluir, realizamos predicciones usando nuestro modelo, recordando que la observaxión usada para predecir debe tener la misma estructura de la variable independiente, debemos tener en cuenta que dependiendo si se agrego o no el *intercept* tendremos que agregar la variable constante usando la función *sm.add_constant()*. A continuación se muestra este procedimiento:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log17.png)
 
 
 
