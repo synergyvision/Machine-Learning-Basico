@@ -38,7 +38,7 @@ Los méetodos jeráarquicos se subdividen en aglomerativos y disociativos. Cada 
 
 Los métodos jerárquicos, para un conjunto de $m$ individuos, parten de $m$ clusters de un miembro cada uno hasta construir un solo cluster de m miembros (métodos aglomerativos) o viceversa (métodos disociativos). Los métodos que se presentan ahora están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de $K$ clusters, donde $K$ se especifica a priori o bien se determina como una parte del proceso.
 
-La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras.
+La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras. l
 
 
 
