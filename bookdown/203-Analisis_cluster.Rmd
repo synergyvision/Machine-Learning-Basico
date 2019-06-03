@@ -19,10 +19,26 @@ Para medir lo similares ( o disimilares) que son los individuos existe una enorm
 
 La mayor parte de estos índices serán o bien, indicadores basados en la distancia (considerando a los individuos como vectores en el espacio de las variables) (en este sentido un elevado valor de la distancia entre dos individuos nos indicará un alto grado de disimilaridad entre ellos); o bien, indicadores basados en coeficientes de correlación ; o bien basados en tablas de datos de posesión o no de una serie de atributos.
 
+## Métodos jarárquicos y no jerárquicos
+
+Dependiendo de como se realizen las agrupaciones, tendremos dos tipos de analisis de cluster: jerárquicos y no jerárquicos. A continuación daremos una breve descripción estos métodos:
+
+### Métodos jerárquicos
+
+Los llamados métodos jerárquicos tienen por objetivo agrupar clusters para formar uno nuevo o bien separar alguno ya existente para dar origen a otros dos, de tal forma que, si sucesivamente se va efectuando este proceso de aglomeracióon o división,  se minimice alguna distancia o bien se maximice alguna medida de similitud.
+Los méetodos jeráarquicos se subdividen en aglomerativos y disociativos. Cada una de estas categorías presenta una gran diversidad de variantes.
+
+- Los métodos aglomerativos, también conocidos como ascendentes, comienzan el análisis con tantos grupos como individuos haya. A partir de estas unidades iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados están englobados en un mismo conglomerado.
+
+- Los métodos disociativos, también llamados descendentes, constituyen el proceso inverso al anterior. Comienzan con un conglomerado que engloba a todos los casos tratados y, a partir de este grupo inicial, a través de sucesivas divisiones, se van formando grupos cada vez más pequeños. Al final del proceso se tienen tantas agrupaciones como casos han sido tratados.
+
+### Metódos no jerárquicos
 
 
 
+Los métodos jerárquicos, para un conjunto de $m$ individuos, parten de $m$ clusters de un miembro cada uno hasta construir un solo cluster de m miembros (métodos aglomerativos) o viceversa (métodos disociativos). Los métodos que se presentan ahora están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de $K$ clusters, donde $K$ se especifica a priori o bien se determina como una parte del proceso.
 
+La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras.
 
 
 
