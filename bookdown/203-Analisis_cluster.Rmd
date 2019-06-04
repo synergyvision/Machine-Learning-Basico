@@ -38,42 +38,67 @@ Los méetodos jeráarquicos se subdividen en aglomerativos y disociativos. Cada 
 
 Los métodos jerárquicos, para un conjunto de $m$ individuos, parten de $m$ clusters de un miembro cada uno hasta construir un solo cluster de m miembros (métodos aglomerativos) o viceversa (métodos disociativos). Los métodos que se presentan ahora están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de $K$ clusters, donde $K$ se especifica a priori o bien se determina como una parte del proceso.
 
-La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras. l
+La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras. 
+
+## Elección de número de grupos
+
+Una pregunta natural es: ¿Como elegir de manera adecuada el número de grupos óptimos para segmentar la data?. Usaremos basicamente dos formas visuales para escoger dicho número: el *dendograma* y el *gráfico de codo*
+
+### Dendograma
+
+Un dendrograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud; dada por alguna medida de distancia. Los objetos similares se representan en el dendrograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendrogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los Clusters que pueden darse en un data set. A continuación vemos el siguiente ejemplo de dendograma:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu.png)
 
 
+A partir del dendograma se puede apreciar un número apropiado de cluster.
+
+### Gráfico de codo
+
+Este método considera el porcentaje de varianza explicado en función del número de conglomerados: Uno debería elegir un número de clústeres para que la adición de otro clúster no ofrezca un mejor modelado de los datos. Más precisamente, si se traza el porcentaje de varianza explicado por los clusters contra el número de clusters, los primeros clusters añadirán mucha información (explican mucha varianza), pero en algún momento la ganancia marginal caerá, dando un ángulo en el gráfico. El número de grupos se elige en este punto, de ahí el "criterio del codo". Este "codo" no siempre puede ser identificado inequívocamente. La siguiente imagen nos proporciona un gráfico de codo:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu1.png)
 
 
+## Análisis de cluster en *R*
+
+### Método no jerárquico
+
+Veremos el método llamado *K-medias* que en resumidas palabras agrupar un número de cluster pre-definidos a partir de los valores medios de cada cluster. Usaremos el conjunto de datos iris, el cual esta por defecto en *R*, usaremos también la función *kmeans()* la cual recibe dos parámetros: el conjunto de datos y el número de cluster a crear. 
+
+Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente cósdigo:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu7.png)
+
+Obteniendo la siguiente imagen:
 
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu6.png)
 
 
+A partir de este gráfico podemos intuir que el número de cluster adecuados es $3$, así para costruir los grupos, usaremos el siguiente código:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu2.png)
+
+Para tener una visión gráfica de los cluster hacemos proyecciones en pares de variables, obteniendo el siguiente gráfico:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu4.png)
 
 
+### Método jerárquico
+
+Para costruir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función *dist()* esta función tiene como parámetros el conjunto de datos y la manera en como se mediran los datos, en nuestro caso con la distancia euclidea, luego con la función *hclust()* creamos el proceso de agrupación entre individuos, esta función necesita dos parametros, las distancias calculadas y el método de agrupación entre los individuos, en nuestro caso usaremos el método "complete", una vez esto realizaremos el gráfico de dendograma, veamos esto en el siguiente código:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu9.png)
 
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu8.png)
 
+Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos, para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento: 
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu10.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Análisis de cluster en *Python*
 
 
 
