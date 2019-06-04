@@ -101,6 +101,27 @@ Con este dendograma podemos apreciar una posible separación de la variable de e
 ## Análisis de cluster en *Python*
 
 
+### Método no jerárquico
+
+Realizaremos la construcción de los grupos usando el método *kmeans* con el mismo conjunto datos. No describiremos en detalle las librerías a utilizar, solo describeremos su uso general, *sklearn* para crear el modelo, *seaborn*, *matplotlib* y *mpl_toolkits* para la parte gráfica.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu11.png)
+
+Ahora construiremos el gráfico de codos para poder determinar el número apropiado de cluster, usaremos la función *Kmeans* de la librería *sklearn* para construir los modelos por número de cluster. Se muestra el siguiente código para este proposito. 
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu12.png)
+
+Obteniendo el siguiente resultado:
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu13.png)
+
+A partir de este gráfico creamos unos número de tres grupos, con la función *kmean()*. Con *.predicts()* identificamos el grupo al cual peertenece cada observación.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu14.png)
+
+### Método jerárquico
+
 
 
 
