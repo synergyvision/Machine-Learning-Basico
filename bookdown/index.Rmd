@@ -52,56 +52,41 @@ knitr::include_graphics('images/cover.png', dpi = NA)
 ![Creative Commons License](images/by-nc-sa.png)  
 La versión en línea de este libro se comparte bajo la licencia [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
+## Acerca del Autor {-}
+
+Este material es un esfuerzo de equipo en Synergy Vision, (<http://synergy.vision/nosotros/>).		 
+
+El propósito de este material es ofrecer una experiencia de aprendizaje distinta y enfocada en el estudiante. El propósito es que realmente aprenda y practique con mucha intensidad. La idea es cambiar el modelo de clases magistrales y ofrecer una experiencia más centrada en el estudiante y menos centrado en el profesor. Para los temas más técnicos y avanzados es necesario trabajar de la mano con el estudiante y asistirlo en el proceso de aprendizaje con prácticas guiadas, material en línea e interactivo, videos, evaluación contínua de brechas y entendimiento, entre otros, para procurar el dominio de la materia.
+  		  
+Nuestro foco es la Ciencia de los Datos para ello se desarrollará material sobre: **Probabilidad y Estadística Matemática en R**, **Programación Científica en R**, **Mercados**, **Inversiones y Trading**, **Datos y Modelos Financieros en R**, **Renta Fija**, **Inmunización de Carteras de Renta Fija**, **Teoría de Riesgo en R**, **Finanzas Cuantitativas**, **Ingeniería Financiera**, **Procesos Estocásticos en R**, **Series de Tiempo en R**, **Ciencia de los Datos**, **Ciencia de los Datos Financieros**, **Simulación en R**, **Desarrollo de Aplicaciones Interactivas en R**, **Minería de Datos**, **Aprendizaje Estadístico**, **Estadística Multivariante**, **Riesgo de Crédito**, **Riesgo de Liquidez**, **Riesgo de Mercado**, **Riesgo Operacional**, **Riesgo de Cambio**, **Análisis Técnico**, **Inversión Visual**, **Finanzas**, **Finanzas Corporativas**, **Valoración**, **Teoría de Portafolio**, entre otros.
+
+Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros repositorios están en GitHub (https://github.com/synergyvision).
+  		  
+ **Somos Científicos de Datos**
+
 ## ¿Por qué  leer este libro? {-}
 
-Este libro es el resultado de enfocarnos en proveer la mayor cantidad de material sobre Probabilidad y Estadística Matemática con un desarrollo teórico lo más explícito posible, con el valor agregado de incorporar ejemplos de las finanzas y la programación en `R`. Finalmente tenemos un libro interactivo que ofrece una experiencia de aprendizaje distinta e innovadora.
+Este libro se concentra en precisar las herramientas mas comunes usadas en el área de *Machine Learning*, para de esta forma las empresas o individuos en particular que esten interesados en esta área tengan un punto de partida sólido para ir construyendo un conjunto de herramintas que podra usar en cualquier momento.
 
-El un mundo abierto, ya no es tanto el acceso a la información, sino el acceso al conocimiento. Este libro es la base teórica para nuestro Diplomado en Probabilidades y Estadística Matemática aplicado a las Finanzas. Aunque es un material de corte general, hay ejemplos específicos traido de las finanzas. En el Diplomado nos enfocamos en el participante, el propósito es que el instructor ocupa a lo sumo el 20% del tiempo y el resto del tiempo los participantes se dedican a practicar y resolver ejercicios, tanto teóricos como de programación y modelaje en `R` al nivel de un curso de Postgrado. Ésta es la base de un programa en Ciencia de los Datos Financieros.
+Este material se basa en dos pilares fundamentales *Python* y *R* los cuales son sin duda los des lenguajes de programación mas usados a la hora de constriur modelos de inteligencia artificial. El participante podra aprender las principales ibrerías para construir modelos y la sintaxis para construir dichos modelos.
 
-Es mucha la literatura, pero son pocas las opciones donde se pueda navegar el libro de forma amigable y además contar con ejemplos en `R` y ejercicios interactivos, además del contenido multimedia. Esperamos que ésta sea un contribución sobre nuevas prácticas para publicar el contenido y darle vida, crear una experiencia distinta, una experiencia interactiva y visual. El reto es darle vida al contenido asistidos con las herramientas de Internet.
+Contar con este conocimiento es una gran ventaja, pues el gran avance del internet en la última decada ha hecho crecer de forma exponencial la cantidad de datos que se producen por la interacción con sus usuarios y poder crear modelos que nos permitan sacaer ventaja con estos datos se ha vuelto una meta imprecindible de las mayorías de las empresas, ya que se ha demostrado que en dichos datos se encuentran patrones que siguen los usuarios.
 
-Finalmente este es un intento de ofrecer otra visión sobre la enseñanza y la generación de material más accesible. Estamos en un mundo multidisciplinado, es por ello que ahora hay que generar contenido que conjugue en un mismo lugar las matemáticas, estadística, finanzas y la computación.
-
-Lo dejamos público ya que las herramientas que usamos para ensamblarlo son abiertas y públicas.
 
 ## Estructura del libro {-}
 
-TODO: Describir la estructura
+Este libro se dividirá en 7 capítulos, en los cuales se especificará las intrucciones técnicas para poder accerder a los programas necesarios a utilizar. Cada sección estará compuesta por sección teórica, seguida de la sintaxis requerida para la construcción de los modelos, esta información en la mayoría de los casos esta dando en forma de imagenes donde se presenta al lector el como aplicar la sintaxis de forma adecuada.
+
 
 ## Información sobre los programas y convenciones {-}
 
-Este libro es posible gracias a una gran cantidad de desarrolladores que contribuyen en la construcción de herramientas para generar documentos enriquecidos e interactivos. En particular al autor de los paquetes Yihui Xie xie2015.
-
-## Prácticas interactivas con R {-}
-
-Vamos a utilizar el paquete [Datacamp Tutorial](https://github.com/datacamp/tutorial) que utiliza la librería en JavaScript [Datacamp Light](https://github.com/datacamp/datacamp-light) para crear ejercicios y prácticas con `R`. De esta forma el libro es completamente interactivo y con prácticas incluidas. De esta forma estamos creando una experiencia única de aprendizaje en línea.
-
-```{python tut=TRUE,ex="create_a", type="pre-exercise-code"}
-b = 5
-```
-
-```{python tut=TRUE,ex="create_a", type="sample-code"}
-# Crea una variable a, igual a 5
+A lo largo de este material estaremos usando la palabras paquetes y librería, estas hacen noción a lo mismo, con la diferencia de que en los lenguajes, la comunidad que los integra prefiere usar alguna palabra en específico. De igual forma, usaremos la palabra función o método, dependiendo de los lenguajes hay algunas diferencias entre ellas, pero con el mismo objetivo en general, por lo que podremos usarlas indistintamente, ya que no nos estamos concentrando en hacer un curso intensivo de programación.
 
 
-# Muestra el valor de a
-
-
-```
-
-```{python tut=TRUE,ex="create_a", type="solution"}
-# Crea una variable a, igual a 5
-a = 5
-
-# Muestra el valor de a
-print(a)
-```
-
-```{python tut=TRUE,ex="create_a", type="sct"}
-
-```
 
 ## Agradecimientos {-}
+
+Este libro es posible gracias a una gran cantidad de desarrolladores que contribuyen en la construcción de herramientas para generar documentos enriquecidos e interactivos. En particular al autor de los paquetes Yihui Xie xie(2015).
 
 A todo el equipo de Synergy Vision que no deja de soñar. Hay que hacer lo que pocos hacen, insistir, insistir hasta alcanzar. Lo más importante es concretar las ideas. La idea es sólo el inicio y solo vale cuando se concreta.
 
