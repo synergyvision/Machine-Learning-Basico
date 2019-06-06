@@ -120,10 +120,20 @@ A partir de este gráfico creamos unos número de tres grupos, con la función *
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu14.png)
 
-### Método jerárquico
+### Método jerárquico.
+
+Para el cálculo de los grupos, usaremos el mismo conjunto de datos, una vez cargados procederemos a contruir el dendograma, usaremos la librería *scipy* en especial la función *.dendogram()*, en este ejemplo usaremos el método de *ward*. Anexamos el código:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu15.png)
+
+Este código nos dará como resultado :
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu16.png)
+
+Al observar el dendograma observamos la existencia de tres posibles grupos, para obtener estos grpuos usaremos la librería *sklear* en específico la función *AgglomerativeClusterin()* y finalmente *.fit_predict()* para obtener los grupos, a continuación mostramos el procedimiento a seguir:
 
 
-
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu17.png)
 
 
 
