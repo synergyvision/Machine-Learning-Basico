@@ -67,6 +67,7 @@ A pesar de que al descargar Anaconda vienen por defecto una gran cantidad de lib
 Las descargas de las librerías en *R* la haremos directamente desde *RStudio*. Para ello hacemos clic en la pestaña *Package * ubicadas en la sección inferior derecha subrayada en rojo, luego haremos clic en el botón *Install*
 
 ![\label{fig:"R1"}](~/Machine-Learning-Basico/bookdown/images/packa1.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa2.png)
 
 
 Los campos de información solicitada se refieren a: 
@@ -78,7 +79,6 @@ Los campos de información solicitada se refieren a:
 
 - *Install dependencies*: Algunos paquetes necesitan del uso de otros paquetes para su correcto funcionamiento. Al tildar esta opción estamos otorgándole permiso a RStudio para que instale las librerías que necesita el paquete que deseamos instalar.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa2.png)
 
 ### Instalando librerias en python
 
