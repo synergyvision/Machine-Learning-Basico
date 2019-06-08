@@ -29,7 +29,7 @@ options(
 
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
-library(latex2exp)
+#library(latex2exp)
 library(e1071)
 library(moments)
 library(modeest)

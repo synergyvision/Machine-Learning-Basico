@@ -1,7 +1,7 @@
 
 # Ambientes de trabajo para el cientifico de datos
 
-Para usar  las herramientas estadística y matemáticas, los científicos de datos usan lenguajes de programación que nos ahorran el trabajo de codíficar paso a paso los algoritmos de los métodos a utilizar. La comunidad científica nos proporciona estas soluciones a tracés de paquetes y librerías a las que podemos accerder generalmente de manera gratuita. El siguiente gráfico del portal web muestra los lenguajes de programación preferidos por los científicos de datos:
+Para usar las herramientas estadísticas y matemáticas, los científicos de datos usan lenguajes de programación que nos ahorran el trabajo de codificar paso a paso los algoritmos de los métodos a utilizar. La comunidad científica nos proporcionan estas soluciones a través de paquetes y librerías que podemos acceder generalmente de manera gratuita. El siguiente gráfico del portal  web <https://www.paradigmadigital.com/dev/es-python-el-lenguaje-del-futuro/> muestra los lenguajes preferidos por los científicos de datos :
 
 ![\label{fig:"sd"}](~/Machine-Learning-Basico/bookdown/images/languages.png)
 
@@ -90,7 +90,7 @@ Si el paquete no está disponible en el ambiente tenemos la opción de instalarl
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa4.png)
 
-Se abre la consola del terminal y allí escribimos el comando conda install “Nombre del paquete” como se presenta a continuación
+Se abre la consola del terminal y allí escribimos el comando conda install "Nombre del paquete" como se presenta a continuación
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa5.png)
 
