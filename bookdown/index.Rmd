@@ -29,7 +29,7 @@ options(
 
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
-#library(latex2exp)
+library(latex2exp)
 library(e1071)
 library(moments)
 library(modeest)
@@ -55,34 +55,46 @@ La versión en línea de este libro se comparte bajo la licencia [Creative Commo
 
 ## ¿Por qué  leer este libro? {-}
 
-Este libro se concentra en precisar las herramientas mas comunes usadas en el área de *Machine Learning*, para de esta forma las empresas o individuos en particular que esten interesados en esta área tengan un punto de partida sólido para ir construyendo un conjunto de herramintas que podra usar en cualquier momento.
+Este libro aspira a que las empresas iberoamericanas tengan un acceso fácil y en su propio idioma a una tecnología que les permitirá el manejo estratégico de sus datos para soportar mejor la toma de decisiones sobre sus negocios. Para ello, el libro aportará con ejemplos muy diversos del mundo empresarial, las herramientas básicas del Machine Learning, haciendo énfasis en las aplicaciones prácticas con ayuda de los softwares R y Phyton, sin requerir mayores complicaciones matemáticas o computacionales. Los lenguajes de programación Python y R, son sin duda, los más utilizados a la hora de construir modelos de inteligencia artificial. 
 
-Este material se basa en dos pilares fundamentales *Python* y *R* los cuales son sin duda los des lenguajes de programación mas usados a la hora de constriur modelos de inteligencia artificial. El participante podra aprender las principales ibrerías para construir modelos y la sintaxis para construir dichos modelos.
+El material expuesto en el libro se concentra en precisar las técnicas más comunes usadas en Machine Learning, para que las empresas o individuos interesados, tengan un punto de partida sólido sobre el cual ir construyendo un conjunto de herramientas que puedan utilizar en cualquier momento. El lector podrá aprender las principales librerías y dominar la sintaxis para la construcción de modelos.
 
-Contar con este conocimiento es una gran ventaja, pues el gran avance del internet en la última decada ha hecho crecer de forma exponencial la cantidad de datos que se producen por la interacción con sus usuarios y poder crear modelos que nos permitan sacaer ventaja con estos datos se ha vuelto una meta imprecindible de las mayorías de las empresas, ya que se ha demostrado que en dichos datos se encuentran patrones que siguen los usuarios.
+Contar con este conocimiento es una gran ventaja, pues el gran avance de internet en la última década ha hecho crecer de forma exponencial la cantidad de datos que se producen por la interacción con sus usuarios. Así, poder crear modelos que permitan sacar ventaja a partir de estos datos, se ha vuelto una meta imprescindible para la mayoría de las empresas en el mundo actual, dado que  en dichos datos se encuentran patrones que siguen clientes y usuarios. Los individuos o empresas que logren develar estos patrones, tendrán una enorme ventaja estratégica sobre sus competidores en el mundo actual. Esperamos que este libro pueda ayudarlos en esa tarea.
+
 
 
 ## Estructura del libro {-}
 
-Este libro se dividirá en 7 capítulos, en los cuales se especificará las intrucciones técnicas para poder accerder a los programas necesarios a utilizar. Cada sección estará compuesta por sección teórica, seguida de la sintaxis requerida para la construcción de los modelos, esta información en la mayoría de los casos esta dando en forma de imagenes donde se presenta al lector el como aplicar la sintaxis de forma adecuada.
+Este libro se divide en 7 capítulos, en los cuales se especificarán las instrucciones técnicas para poder acceder a los programas y funciones a utilizar. Cada sección estará compuesta por una sección teórica, seguida de la sintaxis requerida para la construcción de los modelos. En la mayoría de los casos está información es proporcionada a través de imágenes donde el lector observará cómo aplicar la sintaxis de forma adecuada.
+
+La secuencia de ejemplos de uso de las herramientas siempre se presentará primero en R y luego en Phyton.  
+El propósito de este material es ofrecer una experiencia de aprendizaje distinta y enfocada en el estudiante de forma que realmente aprenda y practique con mucha intensidad. La idea es cambiar el modelo de clases magistrales y ofrecer una experiencia más centrada en el estudiante y menos centrado en el profesor. Para los temas más técnicos y avanzados es necesario trabajar de la mano con el estudiante y asistirlo en el proceso de aprendizaje con prácticas guiadas, material en línea e interactivo, videos, evaluación continua de brechas y entendimiento, entre otros, para procurar el dominio de la materia.
 
 
 ## Información sobre los programas y convenciones {-}
 
-A lo largo de este material estaremos usando la palabras paquetes y librería, estas hacen noción a lo mismo, con la diferencia de que en los lenguajes, la comunidad que los integra prefiere usar alguna palabra en específico. De igual forma, usaremos la palabra función o método, dependiendo de los lenguajes hay algunas diferencias entre ellas, pero con el mismo objetivo en general, por lo que podremos usarlas indistintamente, ya que no nos estamos concentrando en hacer un curso intensivo de programación.
+A lo largo de este material estaremos usando las palabras paquetes y librerías, las cuales se refieren a lo mismo, la única diferencia es la preferencia de uso entre las comunidades que utilizan los diversos lenguajes de programación. De igual forma, usaremos la palabra función o método, las cuales si bien presentan algunas diferencias entre ellas dependiendo del lenguaje utilizado, tienen en general para este curso, el mismo significado. Por tal razón las usaremos indistintamente, dado que las variaciones solo son relevantes mencionarlas en un curso avanzado de programación.
+
+Las definiciones en el libro irán en negrita, mientras que los nombres de paquetes y funciones se escribirán en cursivas. 
 
 
 ## Acerca del Autor {-}
 
-Este material es un esfuerzo de equipo en Synergy Vision, (<http://synergy.vision/nosotros/>).		 
+Synergy Vision es una empresa que se especializa en proveer la Formación, la Tecnología y la Consultoría en las áreas de Especulación (Trading), Inversión, Economía, Finanzas y Riesgo.
 
-El propósito de este material es ofrecer una experiencia de aprendizaje distinta y enfocada en el estudiante. El propósito es que realmente aprenda y practique con mucha intensidad. La idea es cambiar el modelo de clases magistrales y ofrecer una experiencia más centrada en el estudiante y menos centrado en el profesor. Para los temas más técnicos y avanzados es necesario trabajar de la mano con el estudiante y asistirlo en el proceso de aprendizaje con prácticas guiadas, material en línea e interactivo, videos, evaluación contínua de brechas y entendimiento, entre otros, para procurar el dominio de la materia.
-  		  
-Nuestro foco es la Ciencia de los Datos para ello se desarrollará material sobre: **Probabilidad y Estadística Matemática en R**, **Programación Científica en R**, **Mercados**, **Inversiones y Trading**, **Datos y Modelos Financieros en R**, **Renta Fija**, **Inmunización de Carteras de Renta Fija**, **Teoría de Riesgo en R**, **Finanzas Cuantitativas**, **Ingeniería Financiera**, **Procesos Estocásticos en R**, **Series de Tiempo en R**, **Ciencia de los Datos**, **Ciencia de los Datos Financieros**, **Simulación en R**, **Desarrollo de Aplicaciones Interactivas en R**, **Minería de Datos**, **Aprendizaje Estadístico**, **Estadística Multivariante**, **Riesgo de Crédito**, **Riesgo de Liquidez**, **Riesgo de Mercado**, **Riesgo Operacional**, **Riesgo de Cambio**, **Análisis Técnico**, **Inversión Visual**, **Finanzas**, **Finanzas Corporativas**, **Valoración**, **Teoría de Portafolio**, entre otros.
+Ofrecemos Formación de Alto Nivel para prácticas de Consultoría y Ejercicio Profesional Especializado para alcanzar Certificaciones reconocidas a nivel mundial como el CFA, CMT y FRM.
 
-Nuestra cuenta de Twitter es (https://twitter.com/bysynergyvision) y nuestros repositorios están en GitHub (https://github.com/synergyvision).
-  		  
- **Somos Científicos de Datos**
+Aplicamos técnicas que conjugan lo que hoy en día se conoce como Data Science que consiste en la aplicación de herramientas de las Matemáticas, Estadísticas y las Ciencias de la Computación, además de las técnicas de Minería de Datos (Datamining) y Aprendizaje de máquina (Machine Learning).
+
+Nuestra oferta de servicios consiste en asistir a empresas con sus canales Electrónicos con aplicaciones Web y Móvil para ofrecer servicios del mundo de la Especulación, Inversiones, Economía, Finanzas y Riesgo. Así como el desarrollo de sistemas especializados para facilitar la gestión de inversiones, portafolios, trading, simuladores, modelos, plataformas de trading, finanzas corporativas, finanzas internacionales, valoración, optimización, riesgo, calculadoras, proyecciones, etc.
+
+Iniciamos la conformación de un ecosistema para materializar esta oferta. En este sentido estamos buscando aliados que en medio de entornos complejos son capaces de identificar oportunidades y materializarlas.
+
+Synergy Vision se encuentra desarrollando y actualizando nuevos materiales sobre temas como: Probabilidad y Estadística Matemática en R, Programación Científica en R, Mercados, Inversiones y Trading, Datos y Modelos Financieros en R, Renta Fija, Inmunización de Carteras de Renta Fija, Teoría de Riesgo en R, Finanzas Cuantitativas, Ingeniería Financiera, Procesos Estocásticos en R, Series de Tiempo en R, Ciencia de los Datos, Ciencia de los Datos Financieros, Simulación en R, Desarrollo de Aplicaciones Interactivas en R, Minería de Datos, Aprendizaje Estadístico, Estadística Multivariante, Riesgo de Crédito, Riesgo de Liquidez, Riesgo de Mercado, Riesgo Operacional, Riesgo de Cambio, Análisis Técnico, Inversión Visual, Finanzas, Finanzas Corporativas, Valoración, Teoría de Portafolio, entre otros.
+
+Nuestra página web: <http://synergy.vision/nosotros/>
+Nuestra cuenta de Twitter es (<https://twitter.com/bysynergyvision>) y nuestros repositorios están en GitHub (<https://github.com/synergyvision>).
+Somos Científicos de Datos.
 
 ## Agradecimientos {-}
 
