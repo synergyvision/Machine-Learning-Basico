@@ -1,61 +1,65 @@
 # Análisis de cluster
 
 
-El análisis de cluster o análisis de conglomerados es un método estadístico no parámetrico, es decir, no se basa en el cálculo de parámetros como la regresión lineal, el cual tiene como objetivo hallar grupos que a partir de los datos y que estos grupos estén claramente divididos.
+El análisis de clúster o análisis de conglomerados es un método estadístico no paramétrico, que tiene como objetivo hallar grupos a partir de los datos y que estos grupos estén claramente divididos. Se dice que el análisis de clúster es no paramétrico, porque no requiere que la distribución de la población sea caracterizada por ciertos parámetros, como en cambio sí ocurre con métodos como las regresiones lineal y logística.
 
-Para poder agrupar las observaciones se deben compararusando alguna medida de distacia o similitud, esto dependera de como sean los datos en si, por ejemplo no es el mismo problema comparar oservaciones en que todas las variables son cuantitativas a variables que possen variables categóricas.
+Para agrupar las observaciones en un análisis de clúster, se deben comparar usando alguna medida de distancia o similitud entre ellas, según como sean los datos. Así existirán diferencias de enfoque en la metodología dependiendo de si las variables son cuantitativas o categóricas.
+
 
 ## Supuetos del análisis de cluster.
 
-Debido a que el análisis de cluster como ya se menciono es un metódo no parámetrico, no posee hipotesis estadísticas tan fuertes como es el caso e la regresión lineal, pero si debemos gaarantizar que cada variable a usar sea significativa y tengamos en mente que esta puede dividir de algún modo nuestro conjunto de datos.
+Como el análisis de clúster es un método no paramétrico, las hipótesis estadísticas requeridas son menos exigentes que en el caso de una regresión lineal. Ahora bien, es necesario garantizar que cada variable a usar sea significativa y tener siempre presente que éstas pueden dividir de algún modo al conjunto de datos.
 
-El análisis de cluster es sensible a los valores atípicos, mas aún, se puede suponer que es indispensable corroborar la existencia de datos atípicos, pues podremos tener resuldos significativamente diferentes al no eliminarlos. Por lo que aconsejamos siempre iniciar haciendo un estudio de los valores atípicos.
+El análisis de clúster es sensible a los valores atípicos, por lo cual es indispensable corroborar o no la existencia de este tipo de datos, y en caso de detectar su presencia, manejarlos e interpretar adecuadamente su efecto en los resultados. Por lo tanto es recomendable iniciar siempre el análisis de clúster haciendo un estudio de los valores atípicos.
+
 
 ## Medidas o similitudes
 
-Una vez hemos hecho una adecuada selección de las variables a considerar, cada uno de los individuos sujetos al análisis nos vendrá representado por los valores que tomen estas variables en cada uno de ellos. Este es el punto de partida de la clasificación. Para clasificar adecuadamente los individuos deberemos determinar lo similares o disimilares (divergentes) que son entre sí, en función de lo diferentes que resulten ser sus representaciones en el espacio de las variables.
+Realizada la apropiada selección de las variables, los individuos bajo análisis vendrán representados por el conjunto de valores que tomen dichas variables en cada uno de ellos. Este es el punto de partida del análisis de clúster. Para clasificar adecuadamente los individuos es necesario determinar el grado de similaridad o disimilaridad (divergencia) entre ellos, de acuerdo a sus representaciones en el espacio de las variables.
+Existe una enorme cantidad de índices de similaridad y de disimilaridad o divergencia. Todos tienen propiedades y utilidades distintas que debemos  conocer para aplicarlas correctamente a cada caso.
+La mayor parte de estos índices serán indicadores basados: 
 
-Para medir lo similares ( o disimilares) que son los individuos existe una enorme cantidad de índices de similaridad y de disimilaridad o divergencia. Todos ellos tienen propiedades y utilidades distintas y habrá que ser consciente de ellas para su correcta aplicación al caso que nos ocupe.
+- En la distancia: considerando a los individuos como vectores en el espacio de las variables. En este sentido un elevado valor de la distancia entre dos individuos indicará un alto grado de disimilaridad entre ellos.
 
-La mayor parte de estos índices serán o bien, indicadores basados en la distancia (considerando a los individuos como vectores en el espacio de las variables) (en este sentido un elevado valor de la distancia entre dos individuos nos indicará un alto grado de disimilaridad entre ellos); o bien, indicadores basados en coeficientes de correlación ; o bien basados en tablas de datos de posesión o no de una serie de atributos.
+- En coeficientes de correlación.
+
+- En tablas de datos de posesión o no de una serie de atributos.
 
 ## Métodos jarárquicos y no jerárquicos
 
-Dependiendo de como se realizen las agrupaciones, tendremos dos tipos de analisis de cluster: jerárquicos y no jerárquicos. A continuación daremos una breve descripción estos métodos:
+Dependiendo de cómo se realicen las agrupaciones, tendremos dos tipos de análisis de clúster: jerárquicos y no jerárquicos:
 
 ### Métodos jerárquicos
 
-Los llamados métodos jerárquicos tienen por objetivo agrupar clusters para formar uno nuevo o bien separar alguno ya existente para dar origen a otros dos, de tal forma que, si sucesivamente se va efectuando este proceso de aglomeracióon o división,  se minimice alguna distancia o bien se maximice alguna medida de similitud.
-Los méetodos jeráarquicos se subdividen en aglomerativos y disociativos. Cada una de estas categorías presenta una gran diversidad de variantes.
+Los llamados métodos jerárquicos tienen por objetivo agrupar clústeres para formar uno nuevo o separar alguno ya existente para dar origen a otros dos. Si sucesivamente se va efectuando el proceso de aglomeración o división, se minimizará alguna distancia o bien se maximizará alguna medida de similitud. Los métodos jerárquicos se subdividen en: aglomerativos y disociativos. Cada una de estas categorías presenta una gran diversidad de variantes
 
-- Los métodos aglomerativos, también conocidos como ascendentes, comienzan el análisis con tantos grupos como individuos haya. A partir de estas unidades iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados están englobados en un mismo conglomerado.
+- Métodos aglomerativos: también conocidos como ascendentes, comienzan el análisis con tantos grupos como individuos haya. A partir de estas unidades iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados están englobados en un mismo conglomerado.
 
-- Los métodos disociativos, también llamados descendentes, constituyen el proceso inverso al anterior. Comienzan con un conglomerado que engloba a todos los casos tratados y, a partir de este grupo inicial, a través de sucesivas divisiones, se van formando grupos cada vez más pequeños. Al final del proceso se tienen tantas agrupaciones como casos han sido tratados.
+- Métodos disociativos: también llamados descendentes, constituyen el proceso inverso al anterior. Comienzan con un conglomerado que engloba a todos los casos tratados y, a partir de este grupo inicial, a través de sucesivas divisiones, se van formando grupos cada vez más pequeños. Al final del proceso se tienen tantas agrupaciones como casos han sido tratados.
 
 ### Metódos no jerárquicos
 
+Los métodos jerárquicos para un conjunto de $m$ individuos parten de $m$ clústeres de un miembro cada uno hasta construir un solo clúster de m miembros (métodos aglomerativos), o viceversa (métodos disociativos). Los métodos que se presentan a continuación están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de $K$ clústeres, donde $K$ se especifica a priori o bien se determina como una parte del proceso.
 
+La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clústeres para obtener una mejor partición. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una mejor partición y en los métodos que deben usarse para conseguir mejoras.
 
-Los métodos jerárquicos, para un conjunto de $m$ individuos, parten de $m$ clusters de un miembro cada uno hasta construir un solo cluster de m miembros (métodos aglomerativos) o viceversa (métodos disociativos). Los métodos que se presentan ahora están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de $K$ clusters, donde $K$ se especifica a priori o bien se determina como una parte del proceso.
-
-La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clusters para obtener una partición mejor. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una partición mejor y en los métodos que deben usarse para conseguir mejoras. 
 
 ## Elección de número de grupos
 
-Una pregunta natural es: ¿Como elegir de manera adecuada el número de grupos óptimos para segmentar la data?. Usaremos basicamente dos formas visuales para escoger dicho número: el *dendograma* y el *gráfico de codo*
+Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos óptimos para segmentar la data? Usaremos básicamente dos formas visuales para escoger dicho número: el *dendograma* y el *gráfico de codo*.
 
 ### Dendograma
 
-Un dendrograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud; dada por alguna medida de distancia. Los objetos similares se representan en el dendrograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendrogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los Clusters que pueden darse en un data set. A continuación vemos el siguiente ejemplo de dendograma:
+Un dendograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendograma:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu.png)
 
 
-A partir del dendograma se puede apreciar un número apropiado de cluster.
+A partir del dendograma se puede apreciar un número apropiado de clúster.
 
 ### Gráfico de codo
 
-Este método considera el porcentaje de varianza explicado en función del número de conglomerados: Uno debería elegir un número de clústeres para que la adición de otro clúster no ofrezca un mejor modelado de los datos. Más precisamente, si se traza el porcentaje de varianza explicado por los clusters contra el número de clusters, los primeros clusters añadirán mucha información (explican mucha varianza), pero en algún momento la ganancia marginal caerá, dando un ángulo en el gráfico. El número de grupos se elige en este punto, de ahí el "criterio del codo". Este "codo" no siempre puede ser identificado inequívocamente. La siguiente imagen nos proporciona un gráfico de codo:
+Este método considera el porcentaje de varianza explicado en función del número de conglomerados: Se debe elegir un número de clústeres que optimice el modelado, de modo que la mejora sea insignificante si se intenta añadir otro clúster. En otros términos, si se traza el porcentaje de varianza explicado por los clústeres contra el número de clústeres, los primeros clústeres añadirán mucha información (explican mucha varianza), pero en algún momento la ganancia marginal producto de añadir clústeres adicionales caerá, mostrando un ángulo en el gráfico. El número de grupos se elige justo hasta este punto, de ahí el “criterio del codo”. Este “codo” no siempre puede ser identificado inequívocamente. La siguiente imagen nos proporciona una muestra de un gráfico de codo:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu1.png)
 
@@ -64,9 +68,10 @@ Este método considera el porcentaje de varianza explicado en función del núme
 
 ### Método no jerárquico
 
-Veremos el método llamado *K-medias* que en resumidas palabras agrupar un número de cluster pre-definidos a partir de los valores medios de cada cluster. Usaremos el conjunto de datos iris, el cual esta por defecto en *R*, usaremos también la función *kmeans()* la cual recibe dos parámetros: el conjunto de datos y el número de cluster a crear. 
+Veremos el método llamado *K*-medias que en resumidas palabras agrupa un número de clústeres pre-definidos a partir de los valores medios de cada clúster. Usaremos el conjunto de datos *iris*, el cual viene por defecto en *R*, también la función *kmeans()* la cual requiere dos parámetros: el conjunto de datos y el número de clústeres a crear.
 
-Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente cósdigo:
+Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente código:
+
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu7.png)
 
@@ -76,25 +81,28 @@ Obteniendo la siguiente imagen:
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu6.png)
 
 
-A partir de este gráfico podemos intuir que el número de cluster adecuados es $3$, así para costruir los grupos, usaremos el siguiente código:
+A partir de este gráfico podemos intuir que el número de clústeres adecuados es 3, luego para construir los grupos usaremos el siguiente código:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu2.png)
 
-Para tener una visión gráfica de los cluster hacemos proyecciones en pares de variables, obteniendo el siguiente gráfico:
+Para tener una visión gráfica de los clústeres hacemos proyecciones en pares de variables, obteniendo el siguiente gráfico:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu4.png)
 
 
 ### Método jerárquico
 
-Para costruir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función *dist()* esta función tiene como parámetros el conjunto de datos y la manera en como se mediran los datos, en nuestro caso con la distancia euclidea, luego con la función *hclust()* creamos el proceso de agrupación entre individuos, esta función necesita dos parametros, las distancias calculadas y el método de agrupación entre los individuos, en nuestro caso usaremos el método "complete", una vez esto realizaremos el gráfico de dendograma, veamos esto en el siguiente código:
+Para construir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función *dist()*. Esta función tiene como parámetros el conjunto de datos y la manera en cómo se medirán los datos, en nuestro caso con la distancia euclídea. Luego con la función *hclust()* creamos el proceso de agrupación entre individuos, ésta función necesita dos parámetros: las distancias calculadas y el método de agrupación entre los individuos. En nuestro caso usaremos el método “*complete*”. A continuación realizaremos el gráfico de dendograma. Veamos esto en el siguiente código:
+
+
+
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu9.png)
 
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu8.png)
 
-Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos, para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento: 
+Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos. Para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu10.png)
 
@@ -103,11 +111,11 @@ Con este dendograma podemos apreciar una posible separación de la variable de e
 
 ### Método no jerárquico
 
-Realizaremos la construcción de los grupos usando el método *kmeans* con el mismo conjunto datos. No describiremos en detalle las librerías a utilizar, solo describeremos su uso general, *sklearn* para crear el modelo, *seaborn*, *matplotlib* y *mpl_toolkits* para la parte gráfica.
+Realizaremos la construcción de los grupos usando el método *kmeans* con el mismo conjunto datos. No describiremos en detalle las librerías a utilizar, solo describiremos su uso general, utilizando la librería *sklearn* para crear el modelo y *seaborn*, *matplotlib* y *mpl_toolkits* para la parte gráfica.
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu11.png)
 
-Ahora construiremos el gráfico de codos para poder determinar el número apropiado de cluster, usaremos la función *Kmeans* de la librería *sklearn* para construir los modelos por número de cluster. Se muestra el siguiente código para este proposito. 
+Ahora construiremos el gráfico de codos para poder determinar el número apropiado de clústeres. Usaremos la función *Kmeans* de la librería *sklearn* para construir los modelos por número de clústeres. Seguidamente se muestra el siguiente código para este propósito. 
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu12.png)
 
@@ -116,27 +124,21 @@ Obteniendo el siguiente resultado:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu13.png)
 
-A partir de este gráfico creamos unos número de tres grupos, con la función *kmean()*. Con *.predicts()* identificamos el grupo al cual peertenece cada observación.
+A partir de este gráfico creamos unos número de tres grupos, con la función *kmean().* Con *.predicts()* identificamos el grupo al cual pertenece cada observación.
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu14.png)
 
 ### Método jerárquico.
 
-Para el cálculo de los grupos, usaremos el mismo conjunto de datos, una vez cargados procederemos a contruir el dendograma, usaremos la librería *scipy* en especial la función *.dendogram()*, en este ejemplo usaremos el método de *ward*. Anexamos el código:
+Para el cálculo de los grupos usaremos el mismo conjunto de datos, una vez cargados construimos el dendograma, para lo cual usaremos la función *.dendogram()* de la librería *scipy*. En este ejemplo usaremos el método de *ward*. A continuación mostramos el código:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu15.png)
 
-Este código nos dará como resultado :
+Este código nos da como resultado :
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu16.png)
 
-Al observar el dendograma observamos la existencia de tres posibles grupos, para obtener estos grpuos usaremos la librería *sklear* en específico la función *AgglomerativeClusterin()* y finalmente *.fit_predict()* para obtener los grupos, a continuación mostramos el procedimiento a seguir:
+Al observar el dendograma observamos la existencia de tres grupos posibles. Para obtenerlos usaremos la función *AgglomerativeClusterin()* de la librería *sklear*  y finalmente *.fit_predict()* para obtener los grupos. El procedimiento a seguir se presenta a continuación:
 
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu17.png)
-
-
-
-
-
-
