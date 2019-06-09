@@ -2,58 +2,60 @@
 
 # (APPENDIX) Apéndice {-}
 
-# Software Tools
+# Herramientas de software
 
-For those who are not familiar with software packages required for using R Markdown, we give a brief introduction to the installation and maintenance of these packages.
+Para aquellos que no están familiarizados con los paquetes de software necesarios para usar R Markdown, damos una breve introducción sobre la instalación y mantenimiento de estos paquetes.
 
-## R and R packages
+## *R* y paquetes de *R*
 
-R can be downloaded and installed from any CRAN (the Comprehensive R Archive Network) mirrors, e.g., https://cran.rstudio.com. Please note that there will be a few new releases of R every year, and you may want to upgrade R occasionally.
+*R* puede descargarse e instalarse desde cualquier réplica de CRAN (Comprehensive R Archive Network), por ejemplo de <https://cran.rstudio.com> . Tenga en cuenta que existirán algunas nuevas versiones de *R* cada año, y es posible que desee actualizar *R* de vez en cuando.
 
-To install the **bookdown** package, you can type this in R:
+Para instalar el paquete *bookdown*, puede escribir en R:
+
 
 ```{r eval=FALSE}
 install.packages("bookdown")
 ```
 
-This installs all required R packages. You can also choose to install all optional packages as well, if you do not care too much about whether these packages will actually be used to compile your book (such as **htmlwidgets**):
+De esta manera se instalan todos los paquetes *R* requeridos. También puede elegir instalar todos los paquetes opcionales, si no le importa demasiado si estos paquetes serán usados realmente para compilar su libro (como **htmlwidgets**):
 
 ```{r eval=FALSE}
 install.packages("bookdown", dependencies = TRUE)
 ```
 
-If you want to test the development version of **bookdown** on GitHub, you need to install **devtools** first:
+Si quiere probar la versión de desarrollo de **bookdown** en *GitHub*, primero tiene que instalar **devtools**:
 
 ```{r eval=FALSE}
 if (!requireNamespace('devtools')) install.packages('devtools')
 devtools::install_github('rstudio/bookdown')
 ```
 
-R packages are also often constantly updated on CRAN or GitHub, so you may want to update them once in a while:
+Los paquetes *R* también se actualizan constantemente en *CRAN* o *GitHub*, por lo que es posible que desee actualizarlos de vez en cuando:
 
 ```{r eval=FALSE}
 update.packages(ask = FALSE)
 ```
 
-Although it is not required, the RStudio IDE can make a lot of things much easier when you work on R-related projects. The RStudio IDE can be downloaded from https://www.rstudio.com.
+Aunque no es necesario, el IDE de RStudio puede hacer muchas cosas mucho más fáciles cuando se trabaja en proyectos relacionados con R. El IDE de RStudio se puede descargar desde <https://www.rstudio.com>
 
 ## Pandoc
 
-An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through the **knitr** package, and then Markdown is compiled to other output formats (such as LaTeX or HTML) through Pandoc.\index{Pandoc} This process is automated by the **rmarkdown** package. You do not need to install **knitr** or **rmarkdown** separately, because they are the required packages of **bookdown** and will be automatically installed when you install **bookdown**. However, Pandoc is not an R package, so it will not be automatically installed when you install **bookdown**. You can follow the installation instructions on the Pandoc homepage (http://pandoc.org) to install Pandoc, but if you use the RStudio IDE, you do not really need to install Pandoc separately, because RStudio includes a copy of Pandoc. The Pandoc version number can be obtained via:
+Un documento R Markdown (*.Rmd*) es primero compilado a Markdown (*.md*) a través del paquete *knitr*, y luego *Markdown* es compilado a otros formatos de salida (como *LaTeX* o *HTML*) a través de *Pandoc*. Este proceso está automatizado a través del paquete *rmarkdown*. No es necesario instalar *knitr* o *rmarkdown* por separado, ya que son los paquetes requeridos de *bookdown* y se instalarán automáticamente cuando instale *bookdown*. Sin embargo, *Pandoc* no es un paquete *R*, por lo que no se instalará automáticamente cuando instale *bookdown*. Puede seguir las instrucciones de instalación en la página principal de Pandoc (<http://pandoc.org>) para instalar *Pandoc*, pero si utiliza el *IDE* de *RStudio*, no necesita instalar *Pandoc* por separado, porque *RStudio* incluye una copia de Pandoc. El número de versión de *Pandoc* se puede obtener a través de:
 
 ```{r collapse=TRUE}
 rmarkdown::pandoc_version()
 ```
 
-If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.
+Si encuentra esta versión demasiado baja y hay características de *Pandoc* sólo en una versión posterior, puede instalar la versión posterior de *Pandoc*, y *rmarkdown* llamará a la versión más reciente en lugar de su versión incorporada.
 
 ## LaTeX
 
-LaTeX\index{LaTeX} is required only if you want to convert your book to PDF. The typical choice of the LaTeX distribution depends on your operating system. Windows users may consider MiKTeX (http://miktex.org), Mac OS X users can install MacTeX (http://www.tug.org/mactex/), and Linux users can install TeXLive (http://www.tug.org/texlive). See https://www.latex-project.org/get/ for more information about LaTeX and its installation.
+*LaTeX* es necesario sólo si desea convertir su libro a *PDF*. La elección típica de la distribución *LaTeX* depende de su sistema operativo. Los usuarios de *Windows* pueden considerar *MiKTeX* (<http://miktex.org>), los usuarios de *Mac OS X* pueden instalar *MacTeX* (<http://www.tug.org/mactex/>), y los usuarios de *Linux* pueden instalar *TeXLive* (<http://www.tug.org/texlive>). Visite <https://www.latex-project.org/get/> para obtener más información sobre LaTeX y su instalación.
 
-Most LaTeX distributions provide a minimal/basic package and a full package. You can install the basic package if you have limited disk space and know how to install LaTeX packages later. The full package is often significantly larger in size, since it contains all LaTeX packages, and you are unlikely to run into the problem of missing packages in LaTeX.
+La mayoría de las distribuciones *LaTeX* ofrecen un paquete mínimo/básico y un paquete completo. Puede instalar el paquete básico si tiene poco espacio de disco y sabe cómo instalar los paquetes *LaTeX* más tarde. El paquete completo es a menudo significativamente más grande en tamaño, ya que contiene todos los paquetes de *LaTeX*, y es poco probable que se encuentre con el problema de que le falten paquetes en *LaTeX*.
 
-LaTeX error messages may be obscure to beginners, but you may find solutions by searching for the error message online (you have good chances of ending up on [StackExchange](http://tex.stackexchange.com)). In fact, the LaTeX code converted from R Markdown should be safe enough and you should not frequently run into LaTeX problems unless you introduced raw LaTeX content in your Rmd documents. The most common LaTeX problem should be missing LaTeX packages, and the error may look like this:
+Los mensajes de error de *LaTeX* pueden ser oscuros para los principiantes, pero puede encontrar soluciones buscando el mensaje de error en línea (tiene buenas posibilidades de terminar en *StackExchange*). De hecho, el código *LaTeX* convertido a partir de *R Markdown* debería ser lo suficientemente seguro y no debería tener problemas frecuentes con *LaTeX* a menos que haya introducido contenido *LaTeX* en bruto en sus documentos *Rmd*. El problema más común de *LaTeX* debería ser la falta de paquetes *LaTeX*, y el error puede parecerse a esto:
+
 
 ```latex
 ! LaTeX Error: File `titling.sty' not found.
@@ -72,7 +74,8 @@ Error: pandoc document conversion failed with error 43
 Execution halted
 ```
 
-This means you used a package that contains `titling.sty`, but it was not installed. LaTeX package names are often the same as the `*.sty` filenames, so in this case, you can try to install the `titling` package. Both MiKTeX and MacTeX provide a graphical user interface to manage packages. You can find the MiKTeX package manager from the start menu, and MacTeX's package manager from the application "TeX Live Utility". Type the name of the package, or the filename to search for the package and install it. TeXLive may be a little trickier: if you use the pre-built TeXLive packages of your Linux distribution, you need to search in the package repository and your keywords may match other non-LaTeX packages. Personally, I find it frustrating to use the pre-built collections of packages on Linux, and much easier to install TeXLive from source, in which case you can manage packages using the `tlmgr` command. For example, you can search for `titling.sty` from the TeXLive package repository:
+Esto significa que usó un paquete que contiene *titling.sty*, pero no fue instalado. Los nombres de los paquetes *LaTeX* suelen ser los mismos que los de los archivos *.sty*, por lo que en este caso, puede intentar instalar el paquete de titulación. Tanto *MiKTeX* como *MacTeX* proporcionan una interfaz gráfica de usuario para gestionar paquetes. Puede encontrar el administrador de paquetes de *MiKTeX* en el menú de inicio, y el administrador de paquetes de *MacTeX* en la aplicación *"TeX Live Utility"*. Escriba el nombre del paquete o el nombre del archivo para buscar el paquete e instalarlo. *TeXLive* puede ser un poco más complicado: si usa los paquetes *TeXLive* preconstruidos de su distribución de *Linux*, necesita buscar en el repositorio de paquetes y sus palabras clave pueden coincidir con otros paquetes que no sean de *LaTeX*. A veces resulta frustrante usar las colecciones de paquetes predefinidas en *Linux*, y es mucho más fácil instalar *TeXLive* desde el código fuente, en cuyo caso puede administrar paquetes usando el comando *tlmgr*. Por ejemplo, puede buscar *titling.sty* desde el repositorio de paquetes de *TeXLive*:
+
 
 ```bash
 tlmgr search --global --file titling.sty
@@ -80,13 +83,13 @@ tlmgr search --global --file titling.sty
 #	 texmf-dist/tex/latex/titling/titling.sty
 ```
 
-Once you have figured out the package name, you can install it by:
+Una vez que haya averiguado el nombre del paquete, puede instalarlo por medio de:
 
 ```bash
 tlmgr install titling  # may require sudo
 ```
 
-LaTeX distributions and packages are also updated from time to time, and you may consider updating them especially when you run into LaTeX problems. You can find out the version of your LaTeX distribution by:
+Las distribuciones y paquetes de *LaTeX* también se actualizan de vez en cuando, y puede considerar actualizarlos especialmente cuando tenga problemas con *LaTeX*. Puede encontrar la versión de su distribución LaTeX por:
 
 ```{r include=FALSE}
 system = function(...) cat(base::system(..., intern = TRUE), sep = '\n')
