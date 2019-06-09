@@ -1,53 +1,59 @@
 # Análisis de Componentes Principales
 
 
-El análisis de componentes principales o PCA por sus siglas en ingles es un método concebido para la reducción de variables, la idea fundamental detras de la matématica en la que se fundamenta es crear a través de las variables que la conforman un nuevo conjunto de variables que tengan muy poca correlación entre si, y que por una cantidad reducidas de ellas se puede explicar la mayor cantidad de varianza del conjunto de datos. Cada variable nueva es llamada componente, en el cual el orden de la componente implica una cantidad de varianza explicada, es decir, el nivel de varianza explicada decrece entre mayor sea el orden de la componente a usar, esta es la clave a la hora de reducir variables, pues en general se escoge un nivel de componentes que explique una cantidad considerable de varianza, por ejemplo, el $80$%.
+El análisis de componentes principales o PCA por sus siglas en inglés (Principal component analysis), es un método concebido para la reducción de variables que conforman un conjunto de datos. La idea fundamental detrás de la matemática en la que se fundamenta, es crear a través de las variables, un nuevo grupo de variables que tengan muy poca correlación entre sí, de modo que con una cantidad reducida de ellas se pueda explicar la mayor cantidad de varianza del conjunto de datos. Cada variable nueva es llamada componente, en el cual  el orden representa la cantidad de varianza explicada, de modo que el nivel de varianza explicada decrece entre mayor sea el orden de la componente a utilizar. Ésta es la clave a la hora de reducir variables, pues en general se escoge un nivel de componentes que explique una cantidad considerable de varianza, por ejemplo, el 80%.
+
+
 
 ## Correlación o Covarianza:
 
-A la hora de calcular las componentes principales debemos especificar la matriz a usar para dichos cálculos, es decir, la matriz de correlación o la matriz de covarianza. El criterio general para dicha escogencia es el siguientre:
+A la hora de calcular las componentes principales debemos especificar la matriz a utilizar para dichos cálculos, es decir, la matriz de correlación o la matriz de covarianza. El criterio general para dicha escogencia es el siguiente:
 
-- Matriz de correlación: Cuando los datos no son dimensionalmente homogéneos o el orden de magnitud de las variables medidas no es el mismo.
+-	Matriz de correlación: Cuando los datos no son dimensionalmente homogéneos o el orden de magnitud de las variables medidas no es el mismo.
 
-- Matriz de covarianza: Cuando los datos son dimensionalmente homogéneos y presentan valores medios similares.
+-	Matriz de covarianza: Cuando los datos son dimensionalmente homogéneos y presentan valores medios similares.
+En general, se suelen normalizar los datos, es decir, dividir por su varianza y trasladar su valor medio al origen, en este punto se suele usar en la mayoría de los casos la matriz de covarianza.
 
-En general, se suelen normalizar los datos, es decir, dividir por su varianza y transladar su valor medio al origen, en este punto se suele usar en la mayoria de los casos la matriz de covarianza.
 
 ## Supuestos estadísticos
 
-Este análisis sigue cierto supuestos estadísticos que debemos verificar, a continuación se presentan:
+Este análisis exige verificar ciertos supuestos estadísticos:
 
-- Se asume que los daros observados siguen cierta linealidad a traves de cierta base de $\mathbb{R}^n$. Por ejemplo, debemos asegurarnos de que las variables esten lo menos correlacionadas entre si.
+-	Se asume que los datos observados siguen cierta linealidad a través de cierta base de  $\mathbb{R}^n$. Por ejemplo, debemos asegurarnos de que las variables estén lo menos correlacionadas entre sí.
 
 - El *PCA* utiliza los vectores propios de la matriz de covarianzas o correlación y sólo encuentra las direcciones de ejes en el espacio de variables considerando que los datos se distribuyen de manera normal.
 
 ## *PCA* en *R*
-Usaremos los datos por defecto en *R* llamados *USArrests* los cuales contiene información acerca de ciertos índices delictivos en USA.
 
-Al cargar los datos calcularemos las datos calcularemos las medias y varianzas de las variables para saber si es necesario normalizar los datos, anexamos el código a comntinuación
+Usaremos la base de datos *USArrests* los cuales vienen por defecto en *R* y contiene información acerca de ciertos índices delictivos en EEUU.
+
+Al cargar los datos calcularemos las medias y varianzas de las variables para saber si es necesario normalizar los datos. Para ello empleamos el siguiente código:
+
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca1.png)
-El primer resultado es la media por variable, observando considerables diferencias
+
+El primer resultado es la media por variable, observándose considerables diferencias
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca3.png)
 
 
-De igual manera a continuación podemos observar considerables diferecias en las varianzas entre las variables.
+De igual manera a continuación podemos observar considerables diferencias en las varianzas entre las variables:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca2.png)
 
-Ahora, con la función *prcomp()* calculamos las componentes principales, esta función recibe como parámetros los datos y la variable *scale* la cual de ser *TRUE* normaliza los datos y de ser *FALSE* los deja en su forma original. Una vez hecho lo anterior podemos atrabes del atributo *rotation* ver los datos en función de las nuevas componentes.
+Ahora, con la función *prcomp()* calculamos las componentes principales. Esta función recibe como parámetros los datos y la variable *scale*, la cual de ser *TRUE* normaliza los datos y de ser *FALSE* los deja en su forma original. Una vez hecho lo anterior podemos a través del atributo rotation ver los datos en función de las nuevas componentes.
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca4.png)
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca5.png)
-Ahora para poder escoger que numéro de componentes debemos utilizar usaremos el gráfico de codo. Debemos cálcular la varianza por componente previamente. Además usaremos el paquete *ggplot* para obtener una grafica mas elegente. A continuación se muestra este proceso.
+
+Ahora para escoger el número de componentes utilizaremos el gráfico de codo. Para ello debemos calcular previamente la varianza por componente. Además, usaremos el paquete $ggplot$ para obtener una gráfica más elegante. A continuación se muestra este proceso:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca6.png)
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca7.png)
 
-Con el gráfico anterior podemos intuir que con tres componentes tenemos una gran cantidad de varianza explicada.
+Con el gráfico anterior podemos intuir que con tres componentes obtendremos una gran parte de la varianza explicada.
 
 ## *PCA* en *Python*
 
@@ -78,66 +84,5 @@ A continuación anexamos dos gráficas, la primera con los coeficientes por comp
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca13.png)
 
 Con el gráfico de codo podemos apreciar que con $2$ o $3$ componentes tenemos una gran catidad de varianza explicada.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
