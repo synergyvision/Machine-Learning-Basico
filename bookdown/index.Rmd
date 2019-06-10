@@ -73,9 +73,9 @@ El propósito de este material es ofrecer una experiencia de aprendizaje distint
 
 ## Información sobre los programas y convenciones {-}
 
-A lo largo de este material estaremos usando las palabras paquetes y librerías, las cuales se refieren a lo mismo, la única diferencia es la preferencia de uso entre las comunidades que utilizan los diversos lenguajes de programación. De igual forma, usaremos la palabra función o método, las cuales si bien presentan algunas diferencias entre ellas dependiendo del lenguaje utilizado, tienen en general para este curso, el mismo significado. Por tal razón las usaremos indistintamente, dado que las variaciones solo son relevantes mencionarlas en un curso avanzado de programación.
+A lo largo de este material estaremos usando las palabras _paquetes y librerías_, las cuales se refieren a lo mismo, la única diferencia es la preferencia de uso entre las comunidades que utilizan los diversos lenguajes de programación. De igual forma, usaremos la palabra función o método, las cuales si bien presentan algunas diferencias entre ellas dependiendo del lenguaje utilizado, tienen en general para este curso, el mismo significado. Por tal razón las usaremos indistintamente, dado que las variaciones solo son relevantes mencionarlas en un curso avanzado de programación.
 
-Las definiciones en el libro irán en negrita, mientras que los nombres de paquetes y funciones se escribirán en cursivas. 
+Las definiciones en el libro irán en **negrita**, mientras que los nombres de paquetes y funciones se escribirán en _cursivas_. 
 
 
 ## Acerca del Autor {-}
