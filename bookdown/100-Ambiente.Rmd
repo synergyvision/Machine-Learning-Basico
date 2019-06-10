@@ -5,7 +5,7 @@ Para usar las herramientas estadísticas y matemáticas, los científicos de dat
 
 ![\label{fig:"sd"}](~/Machine-Learning-Basico/bookdown/images/languages.png)
 
-Sin duda Python y R son los favoritos. Ambos son de códigos abiertos (open source), Phyton es un lenguaje flexible fácil de aprender y de propósito general, adaptable a fines empresariales. Por su parte, R es un lenguaje funcional orientado a la comunidad científica que trabaja con estadísticas, disponiendo de una infinidad de librerías, siempre en crecimiento. Entre ambos lenguajes Phyton es el más utilizado, sin embargo R puede adaptarse para fines empresariales gracias a librerías como Shiny, las cuales permiten crear páginas web dondese pueden aplicar prácticamente todas las herramientas de R y ofrecer resultados adecuados a todo tipo de usuarios.
+Sin duda *Python* y *R* son los favoritos. Ambos son de códigos abiertos (open source), Phyton es un lenguaje flexible fácil de aprender y de propósito general, adaptable a fines empresariales. Por su parte, R es un lenguaje funcional orientado a la comunidad científica que trabaja con estadísticas, disponiendo de una infinidad de librerías, siempre en crecimiento. Entre ambos lenguajes Phyton es el más utilizado, sin embargo R puede adaptarse para fines empresariales gracias a librerías como Shiny, las cuales permiten crear páginas web donde se pueden aplicar prácticamente todas las herramientas de R y ofrecer resultados adecuados a todo tipo de usuarios.
 
 
 En principio todo aquel que trabaje con datos debe conocer ambos lenguajes y utilizarlos de acuerdo a sus necesidades. En los ámbitos académicos, divulgativos o de investigación, es recomendable usar R.  Phyton es una mejor opción si las necesidades son del campo empresarial, industrial o para el diseño de software en el cual se usen métodos estadísticos. Los dos lenguajes pueden descargarse en los siguientes enlaces: 
@@ -80,7 +80,7 @@ Los campos de información solicitada se refieren a:
 - *Install dependencies*: Algunos paquetes necesitan del uso de otros paquetes para su correcto funcionamiento. Al tildar esta opción estamos otorgándole permiso a RStudio para que instale las librerías que necesita el paquete que deseamos instalar.
 
 
-### Instalando librerias en python
+### Instalando librerías en *Python*
 
 Descargar librerías en *Python* no es tan fácil como en *R*, pero Anaconda facilita esta tarea. En el navegador de *Anaconda* vamos a la sección *Ambientes*, en inglés *Environments*, y al lado del buscador seleccionamos la acción *Todo*, *All* en inglés, colocamos el nombre del paquete que deseamos instalar y se nos desplegará en la parte inferior derecha dos opciones: *Aplicar* o *Apply* y *Borrar* o *Clear*. Seleccionamos la opción *Apply* y se instalará el paquete deseado.
 
@@ -90,7 +90,7 @@ Si el paquete no está disponible en el ambiente tenemos la opción de instalarl
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa4.png)
 
-Se abre la consola del terminal y allí escribimos el comando conda install "Nombre del paquete" como se presenta a continuación
+Se abre la consola del terminal y allí escribimos el comando *conda install "Nombre del paquete"* como se presenta a continuación
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa5.png)
 

@@ -1,4 +1,4 @@
-# Análisis de cluster
+# Análisis de clúster
 
 
 El análisis de clúster o análisis de conglomerados es un método estadístico no paramétrico, que tiene como objetivo hallar grupos a partir de los datos y que estos grupos estén claramente divididos. Se dice que el análisis de clúster es no paramétrico, porque no requiere que la distribución de la población sea caracterizada por ciertos parámetros, como en cambio sí ocurre con métodos como las regresiones lineal y logística.
@@ -6,7 +6,7 @@ El análisis de clúster o análisis de conglomerados es un método estadístico
 Para agrupar las observaciones en un análisis de clúster, se deben comparar usando alguna medida de distancia o similitud entre ellas, según como sean los datos. Así existirán diferencias de enfoque en la metodología dependiendo de si las variables son cuantitativas o categóricas.
 
 
-## Supuetos del análisis de cluster.
+## Supuestos del análisis de clúster.
 
 Como el análisis de clúster es un método no paramétrico, las hipótesis estadísticas requeridas son menos exigentes que en el caso de una regresión lineal. Ahora bien, es necesario garantizar que cada variable a usar sea significativa y tener siempre presente que éstas pueden dividir de algún modo al conjunto de datos.
 
@@ -25,7 +25,7 @@ La mayor parte de estos índices serán indicadores basados:
 
 - En tablas de datos de posesión o no de una serie de atributos.
 
-## Métodos jarárquicos y no jerárquicos
+## Métodos jerárquicos y no jerárquicos
 
 Dependiendo de cómo se realicen las agrupaciones, tendremos dos tipos de análisis de clúster: jerárquicos y no jerárquicos:
 
@@ -44,7 +44,7 @@ Los métodos jerárquicos para un conjunto de $m$ individuos parten de $m$ clús
 La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clústeres para obtener una mejor partición. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una mejor partición y en los métodos que deben usarse para conseguir mejoras.
 
 
-## Elección de número de grupos
+## Elección del número de grupos
 
 Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos óptimos para segmentar la data? Usaremos básicamente dos formas visuales para escoger dicho número: el *dendograma* y el *gráfico de codo*.
 
@@ -64,7 +64,7 @@ Este método considera el porcentaje de varianza explicado en función del núme
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu1.png)
 
 
-## Análisis de cluster en *R*
+## Análisis de clúster en *R*
 
 ### Método no jerárquico
 
@@ -106,7 +106,7 @@ Con este dendograma podemos apreciar una posible separación de la variable de e
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu10.png)
 
-## Análisis de cluster en *Python*
+## Análisis de clúster en *Python*
 
 
 ### Método no jerárquico

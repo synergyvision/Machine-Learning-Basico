@@ -50,7 +50,7 @@ Para realizar la prueba *chi-cuadrado* en Python usaremos la librería *scipy* y
 
 ## Detectar correlación entre variables categóricas y variables cuantitativas.
 
-Para detectar un posible efecto entre la correlación de una variable categórica y una variable continua usaremos un estadístico llamado *$d$ de Cohen*, el cual se construye a partir de las diferencias de las medias de la segmentación a través de la variable categórica. Dependiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa. En general si el valor es menor 0.5 diremos que hay un efecto débil, si el valor esta entre 0.5 y 0.8 diremos que hay un efecto moderado y si es mayor a 0.8 diremos que hay un efecto fuerte. En general este estadístico es útil cuando la variable categórica posee dos categorías, en otro caso, el estadístico pierde utilidad y se suele usar una herramienta estadística conocida como *Anova*, la cual veremos en otro curso.
+Para detectar un posible efecto entre la correlación de una variable categórica y una variable continua usaremos un estadístico llamado *$d$ de Cohen*, el cual se construye a partir de las diferencias de las medias de la segmentación a través de la variable categórica. Dependiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa. En general si el valor es menor 0.5 diremos que hay un efecto débil, si el valor está entre 0.5 y 0.8 diremos que hay un efecto moderado y si es mayor a 0.8 diremos que hay un efecto fuerte. En general este estadístico es útil cuando la variable categórica posee dos categorías, en otro caso, el estadístico pierde utilidad y se suele usar una herramienta estadística conocida como *Anova*, la cual veremos en otro curso.
 
 
 
@@ -71,7 +71,7 @@ En *Python* no existe una función para calcular la *$d$ de Cohen* de manera dir
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log7.png)
 
-## Codificando variables castegóricas.
+## Codificando variables categóricas.
 
 Una variable categórica no puede ser ingresada directamente al modelo, pues se asume que es una variable continua, por lo cual arrojará una interpretación errónea del comportamiento de la variable. El procedimiento estándar es crear variables auxiliares binarias que nos indiquen la presencia o no de cierto atributo. Por ejemplo, si tenemos una variable categórica con tres categorías: rojo, azul y verde, debemos crear dos variables auxiliares: la primera que esté compuesta por 0 si es roja, 1 si no; la segunda que esté compuesta por 1 si es azul 0 si no. Es innecesario crear una tercera variable para el color verde, pues se entiende que si las primeras variables son 0 y 0, se concluye que debe ser verde. En general si una variable categórica está compuesta por $n$ categorías debemos crear $n−1$ variables auxiliares, en algunas fuentes esto también se conoce como creación de variables *Dummies*
 

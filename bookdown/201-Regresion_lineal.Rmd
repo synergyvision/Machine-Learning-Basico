@@ -1,12 +1,12 @@
 # Regresión Lineal
 
-La regresión lineal es un método estadístico que intenta predecir una variable de interés (dependiente) a partir de otras variables que se consideran influyentes (independientes) y se relacionan directamente con ella. Por ejemplo, hay estudios que sugieren la relacion entre el tamallo del pétalo ($P$) y el sépalo de una flor ($S$), en algunal flores se aproxima el tamaño del pétalo multiplicando por 3 el tamaño del sépalo, es decir, $P=3*S$, esta relación es un ejemplo simple de lo que es la regresión lineal de solo dos variables.
+La regresión lineal es un método estadístico que intenta predecir una variable de interés (dependiente) a partir de otras variables que se consideran influyentes (independientes) y se relacionan directamente con ella. Por ejemplo, hay estudios que sugieren la relacion entre el tamaño del pétalo ($P$) y el sépalo de una flor ($S$), en algunal flores se aproxima el tamaño del pétalo multiplicando por 3 el tamaño del sépalo, es decir, $P=3*S$, esta relación es un ejemplo simple de lo que es la regresión lineal de solo dos variables.
 
 En general si tenemos una variable $y$ dependiente y $n$ variables independientes $x1, x_2, ..., x_n$ un modelo de regresión lineal tiene la forma $$y=c+c_1x_1+c_2x_2+...+c_nx_n$$ donde los coeficientes $c_j$ son los coeficientes del modelo y $c$ es el coeficiente independiente, en algunos casos es llamado intercept.
 
 ## Identificando relación entre variables
 
-Una de las primeras cosas a verificar antes de realizar el análisis de regresión es la relación existente entre la variable dependiente con las variables independientes, existen diversas manerar de comprobarlo, entre las que veremos están:
+Una de las primeras cosas a verificar antes de realizar el análisis de regresión es comprobar la relación existente entre la variable dependiente con las variables independientes, para lo cual existen diversas maneras de hacerlo:
 
 - Visual: Se realiza un gráfico entre la variable dependiente y la variable independiente a estudiar, si se nota un tipo de linealidad entre los datos podemos pensar en incluir la variable independiente en el modelo. Por ejemplo, en el siguiente ejemplo se nota una cierta linealidad entre las variables.
 
@@ -15,7 +15,7 @@ Una de las primeras cosas a verificar antes de realizar el análisis de regresi�
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg.svg)
 
 
-- Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el índice de correlacion, el cual varía entre -1 y 1. Entre más cerca de -1 o 1 esté el índice e correclación entre variables, mayor es su relación, en general, decimos que existe correlación lineal entre las variables independientes si el índice de correlación entre las variables es mayor a 0.5 o menor a -0.5.  
+- Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el índice de correlacion, el cual varía entre -1 y 1. Entre más cerca de -1 o 1 esté el índice de correlación entre variables, mayor es su relación, en general, decimos que existe correlación lineal entre las variables independientes si el índice de correlación entre las variables es mayor a 0.5 o menor a -0.5.  
 
 Usaremos el conjunto de datos *mtcars* en *R* para ilustrar de ahora en adelante el proceso de regresión lineal. Los datos fueron extraídos de la revista Motor Trend US de 1974, y comprenden el consumo de combustible y 10 aspectos del diseño y rendimiento de los automóviles para 32 automóviles (modelos 1973-74).
 
@@ -44,7 +44,7 @@ Este valor -0.84 nos confirma la posible relación que existe entre las variable
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg7.png)
 
-### Identificando relación entre variables con *python*
+### Identificando relación entre variables con *Python*
 
 - Visual: En Python usaremos de nuevo la librería *Matplotlib*, para obtener el gráfico del cruce entre variables, de igual manera notaremos el comportamiento lineal entre las variables.
 
@@ -98,14 +98,14 @@ En Python es fácil realizar las transformaciones menos la del logaritmo, para l
 
 ## Eliminando el efecto de colinealidad entre variables independientes.
 
-Otra hipótesis importante antes de realizar el modelo de regresión, es la no colinealidad entre las variables, es decir no debe haber una relación lineal entre variables independientes. En caso de descubrir este efecto debemos eliminar una de estas variables y quedarnos con la otra.
+Otra hipótesis importante antes de realizar el modelo de regresión, es la no colinealidad entre las variables, es decir, inexistencia de una relación lineal entre variables independientes. En caso de descubrir este efecto debemos eliminar una de estas variables y quedarnos con la otra.
 
 La forma de identificar colinealidad es exactamente igual a la forma de encontrar correlaciones entre las variables vistas al principio de este capítulo. Primero calculamos el índice de correlación entre variables, si se encuentra una alta correlación entre un par de variables independientes se procede a revisar la gráfica del cruce de dichas variable, y si se observa una clara relación lineal procedemos a eliminar alguna de ellas.
 
 
 ## Eliminación de las variables categoricas
 
-En los modelos de regresión lineal las variables categóricas no cumplen las hipótesis del modelo, pues no satisfacen con el supuesto de normalidad. Recordemos que una variable categórica es una variable que toma unos valores fijos ya conocidos, por ejemplo, la variable que toma los valores 1,2,3,4,5,6 que representa los posibles valores que toma el lanzamiento de un dado, es una variable categórica, o la variable que toma los valores de Si o No que se refiere al consumo de un producto específico. Por lo tanto debemos saber cómo eliminar variables de nuestro conjunto de datos.
+En los modelos de regresión lineal las variables categóricas no cumplen las hipótesis del modelo, pues no satisfacen el supuesto de normalidad. Recordemos que una variable categórica es una variable que toma unos valores fijos ya conocidos, por ejemplo, la variable que toma los valores 1,2,3,4,5,6 que representa los posibles valores que toma el lanzamiento de un dado, es una variable categórica, o la variable que toma los valores de Si o No que se refiere al consumo de un producto específico. Por lo tanto debemos saber cómo eliminar variables de nuestro conjunto de datos.
 
 ### Eliminación de variables en *R*
 
@@ -124,7 +124,7 @@ De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma var
 
 ## Aplicando el modelo de regresión lineal
 
-Una vez que elegimos las variables que deseamos usar en el modelo debemos conocer que funciones usar y que parámetros.
+Una vez que elegimos las variables que deseamos usar en el modelo debemos conocer que funciones  y parámetros utilizar.
 
 ### Aplicando el modelo de regresion lineal en *R*
 
@@ -179,7 +179,7 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
  
 ### Interpretar con *summary* en *R*:
 
-- *Residuals*: Al calcular el modelo, la función *Summary* calcula las predicciones para los mismos datos con los que se entrenó el modelo y la variable *residuals* nos da los errores de predicción. Con esta variable se pueden obtener el menor, el mayor, la mediana, primer cuantil y tercer cuantil de los errores. Debemos realizar un histograma de los errores del modelo, si este histograma es distinto a un comportamiento normal, debemos pensar rápidamente que nuestro modelo es inadecuado. A continuación se muestra el código y un histograma ideal, suponiendo que creamos un modelo con nombre "modelo"
+- *Residuals*: Al calcular el modelo, la función *summary* calcula las predicciones para los mismos datos con los que se entrenó el modelo y la variable *residuals* nos da los errores de predicción. Con esta variable se pueden obtener el menor, el mayor, la mediana, primer cuantil y tercer cuantil de los errores. Debemos realizar un histograma de los errores del modelo, si este histograma es distinto a un comportamiento normal, debemos pensar rápidamente que nuestro modelo es inadecuado. A continuación se muestra el código y un histograma ideal, suponiendo que creamos un modelo con nombre "modelo"
 
 
 
@@ -187,15 +187,15 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg24.jpeg)
 
-- *Coeficients*: Luego se muestran los coecicientes del modelo en forma de matriz:
+- *Coefficients*: Luego se muestran los coeficientes del modelo en forma de matriz:
     - En la primera columna se muestran los coeficientes del modelo.
-    - En la segunda columna se muestran las desviaciones estandar de cada coeficientes.
-    - Luego se muestran los valores correspondientes al estadístico $t$, con el fin de realizar una prueba de hipotesis a los coeficiente.
+    - En la segunda columna se muestran las desviaciones estándares de cada coeficiente.
+    - Luego se muestran los valores correspondientes al estadístico $t$, con el fin de realizar una prueba de hipótesis a los coeficientes.
     - En cuarta columna se muestran los $p$-valores de la prueba de hipótesis, los resultados de estos valores deben ser lo más pequeños posibles, en general, se esperan que sean menores a 0.05, en caso de que esto no ocurra, debemos pensar en eliminar la variable del modelo, o realizar alguna transformación adecuada.
     
-- *Residual standar error*: Nos da una idea de cómo varía el error de precisión del modelo, es decir, nos dice como varían las predicciones de las observaciones.
+- *Residual standard error*: Nos da una idea de cómo varía el error de precisión del modelo, es decir, nos dice como varían las predicciones de las observaciones.
 
-- *Multiple R-squared* and *Adjusted R-squared* : En ambos casos ambas valores explican el valor de la varianza explicada del modelo, la diferencia en la segunda se considera el número de variables involucradas en el modelo, debido a esto la mayoría de los casos se considera la segunda y se buscan valores mayores a 0.7 o 0.8
+- *Multiple R-squared* and *Adjusted R-squared* : En ambos casos ambas valores explican el valor de la varianza explicada del modelo. Se diferencian en que el segundo parámetro considera el número de variables involucradas en el modelo, por lo cual en la mayoría de los casos se utiliza con preferencia sobre el primero  y se buscan valores mayores a 0.7 o 0.8. 
 
 - *$F$-statistic*: Nos presenta el valor del estadístico $F$, luego los grados de libertad y por último el $p$-valor de la prueba de hipótesis que resulta de contrastar el modelo resultante con el modelo que únicamente consta de un término intercept
 

@@ -1,0 +1,30 @@
+# Árboles de decisión y bosques aleatorios.
+
+
+## Arboles de decisión.
+
+Los árboles de decisión son una herramienta muy útil a la hora de elegir entre varias
+alternativas, cuando estas son escalonadas, es decir, que los resultados (positivos
+o negativos) dependen de una decisión tomada anteriormente. Independiente del
+área en la que se use, esta herramienta facilita la visualización y el análisis de las
+decisiones, probabilidades y resultados de las diferentes alternativas, todo esto con
+el fin de poder tomar la mejor decisión. 
+
+Un árbol de decisión es, para quien va a tomar la decisión, un modelo esquemático de
+las alternativas disponibles y de las posibles consecuencias de cada una, su nombre
+proviene de la forma que adopta el modelo, parecido a la de un árbol. El modelo está
+conformado por múltiples de nodos cuadrados que representan puntos de decisión y de
+los cuales surgen ramas (que deben leerse de izquierda a derecha), que representan
+las distintas alternativas, las ramas que salen de los nodos circulares, o causales,
+representan los eventos. A continuación presentamos un ejemplo gráfico de un arbol de desición: 
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb1.jpg)
+
+
+### Arboles de decisión en *R*
+
+
+
+
+
