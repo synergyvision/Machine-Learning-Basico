@@ -1,5 +1,5 @@
 
-# Ambientes de trabajo para el cientifico de datos
+# Ambientes de trabajo para el científico de datos
 
 Para usar las herramientas estadísticas y matemáticas, los científicos de datos usan lenguajes de programación que nos ahorran el trabajo de codificar paso a paso los algoritmos de los métodos a utilizar. La comunidad científica nos proporcionan estas soluciones a través de paquetes y librerías que podemos acceder generalmente de manera gratuita. El siguiente gráfico del portal  web <https://www.paradigmadigital.com/dev/es-python-el-lenguaje-del-futuro/> muestra los lenguajes preferidos por los científicos de datos :
 
@@ -48,21 +48,21 @@ Entorno de  Jupyter notebook:
 
 
 
-Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incoveniente de que muchas de las librerias para la ciencia de los datos debemos instalarlas por nuestra cuenta, este problema se solventa con la existencia de ambientes de desarrollo para cientificos de datos que incluyan todos estos factores.
+Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incoveniente de que muchas de las librerías para la ciencia de los datos debemos instalarlas por nuestra cuenta, este problema se solventa con la existencia de ambientes de desarrollo para científicos de datos que incluyan todos estos factores.
 
 ## Anaconda
 
-Anaconda es una distribución libre y abierta que incluye los lenguajes *R* y *Python* que permite a los cientificos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerias orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar *Rstudio* con un simple clik. La presentacion que veremos cuando abramos *Anaconda* es :
+Anaconda es una distribución libre y abierta que incluye los lenguajes *R* y *Python* que permite a los científicos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerías orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar *Rstudio* con un simple clik. La presentacion que veremos cuando abramos *Anaconda* es :
 
 ![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/Anaconda.png)
 
 Se recomienda el uso de Anaconda para el público en general, para los principiantes debido a que permite un rapido inicio sin tener que descargar programas y paquetes por su propia cuenta y de esta forma concentrarse en el aprendizaje y para los avanzados ya que permite un trabajo mas centralizado y eficiente al poder tener un ambiente con todo los requerimientos que se necesiten para poder trabajar de una forma mas comoda. *Anaconda* se puede descargar en el siguiente enlace: <https://www.anaconda.com>
 
-## Librerias
+## Librerías
 
 A pesar de que al descargar Anaconda vienen por defecto una gran cantidad de librerías o paquetes, podríamos estar interesados en instalar alguno que tal vez no lo esté. En esta sección enseñaremos como instalar paquetes de forma rápida y sencilla.
 
-### Instalando librerias en *R*
+### Instalando librerías en *R*
 
 Las descargas de las librerías en *R* la haremos directamente desde *RStudio*. Para ello hacemos clic en la pestaña *Package * ubicadas en la sección inferior derecha subrayada en rojo, luego haremos clic en el botón *Install*
 
