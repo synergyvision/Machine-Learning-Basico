@@ -25,6 +25,41 @@ representan los eventos. A continuación presentamos un ejemplo gráfico de un a
 ### Arboles de decisión en *R*
 
 
+Para realizar la costrucción de arboles de decisión usaremos la librería *C50*, junto con la función *C5.0()* en la cual la santaxis es similar a la de la regresión lineal, es decir, ingresamos la variable a predecir seguido de las variables independientes, el segundo párametro son los datos que se usaran, a contiuación se muestra este proceso:
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb3.png)
+
+Al usar la función *plot()* obtenemos la gráfica del arbol de decisión calculado.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/Arb2.png)
+
+Para hacer predicciones, usaremos la función *predict()* la cual necesita como argumentos el nombre del modelo y la data a predecir, como en el siguiente ejemplo:
+
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb4.png)
+
+### Arboles de decisión en *Python*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
