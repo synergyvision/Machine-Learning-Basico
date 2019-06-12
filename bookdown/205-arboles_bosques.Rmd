@@ -83,8 +83,23 @@ Aqui obtenemos la información sobre como se construyo el modelo y de la clasifi
 
 ## Bosques aleatorios en *Python*
 
+Usaremos de igual manera la librería *sklear*, a modo de conocimiento cargaremos los datos *iris* desde *sklear*, pero tendremos que hacerles unas modificaciones previas, de la siguiente forma:
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos5.png)
 
+Debemos separar las variables independientes, en otra variable que llamaremos *predictores*. Los datos vienen sin la variable *species* por lo que se la debemos agregar realizaremos este procedimiento de la siguiente forma::
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos1.png)
+
+Antes de crear el modelo debemos asegurarnos que la variable sea del tipo numérico, con la función *factorize* realizamos este cambio.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos2.png)
+
+Para crear el modelo usamos la función *RandomForestClasifier()* y *.fit()* para entrenar el modelo.
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos3.png)
+
+Finalmente, con *.predict()* realizamos predicciones con nuestro modelo.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos4.png)
 
 
 
