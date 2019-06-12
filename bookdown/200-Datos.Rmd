@@ -130,18 +130,18 @@ Para eliminar los valores faltantes de la data por filas, usamos la función *na
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/Rplot.png)
 
 
-Para sustituir por el valor medio se utiliza la función *.mean()* para calcular el valor medio de la columna y la función *.replace()* para realizar el cambio.
+Para sustituir por el valor medio se utiliza la función *mean()* para calcular el valor medio de la columna y la función *replace()* para realizar el cambio.
 
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat14.png)
 
 
-* Sustitución por la mediana: El problema de sustituir por la media es que ésta se puede ver afectada por valores atípicos (los veremos en la próxima sección de este capítulo), es por esto que debe sustituirse por la mediana que es un estimador más robusto para este propósito. Por ejemplo, el conjunto de puntos 1,2,3,1,2,1,3,1,2,1,2,1,33 tiene promedio 4, sustituir por este valor no tiene sentido, mientras que la mediana es 2. Para realizar el cambio usamos *.median()*
+* Sustitución por la mediana: El problema de sustituir por la media es que ésta se puede ver afectada por valores atípicos (los veremos en la próxima sección de este capítulo), es por esto que debe sustituirse por la mediana que es un estimador más robusto para este propósito. Por ejemplo, el conjunto de puntos 1,2,3,1,2,1,3,1,2,1,2,1,33 tiene promedio 4, sustituir por este valor no tiene sentido, mientras que la mediana es 2. Para realizar el cambio usamos *median()*
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat15.png)
 
 
-* Sustitución por la moda:   La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categóricos, recordemos que la moda no es mas que el dato que más se repite en el conjunto de datos. Para realizar el cambio usamos .mode()
+* Sustitución por la moda:   La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categóricos, recordemos que la moda no es mas que el dato que más se repite en el conjunto de datos. Para realizar el cambio usamos *mode()*
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat16.png)
 
