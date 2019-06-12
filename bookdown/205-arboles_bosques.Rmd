@@ -42,19 +42,46 @@ Para hacer predicciones, usaremos la función *predict()* la cual necesita como 
 
 ### Arboles de decisión en *Python*
 
+Usaremos la librería *sklearn* y los daros *iris*. Se debe separar la variable a predecir de la variable independientes antes de realizar la construcción del modelo.
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb5.png)
+
+
+Construimos el modelo usando usando la función *DecisionTreeClassifier()* y luego lo entrenamos usando usando la función *.fit()* agregando como parámetros la variable independiente y las variables independientes.
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb6.png)
+
+Para realizar predicciones usamos la función *.predict()*
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb7.png)
 
 
 
 
+## Bosques aleatorios.
+
+*Bosques aleatorios* es una combinación de árboles de decisión, el cual trabaja con una colección de árboles incorrelacionados y los promedia (Hastie, Friedman y Tibshirani, 2001), en el cual se tiene que cada árbol depende de los valores de un vector aleatorio de la muestra de manera independiente y con la misma distribución de todos los árboles en el bosque. La generalización del error para los bosques converge a un límite en cuanto el número de árboles en el bosque sea grande. El error de generalización de un bosque de árboles de clasificación depende de la fuerza de los árboles individuales en el bosque y la correlación entre ellos.
+
+## Bosques aleatorios en *R*
+
+Para realizar bosques aleatorios en *R* usaremos la librería *randomForest* la cual facilita la sintaxis necesaria para construir el modelo, usaremos los mismos datos *iris*, se debe separar la variable independiente de las dependientes para luego usar la función *randomForest()* para construir el modelo, esta función necesita como parámetros las variables independientes y la variable dependiente junto al número de arboles a primediar. Anexamos el código para este proceso: 
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb8.png)
+
+Al realizar el *print* modelo obtenemos:
+
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb9.png)
 
 
 
 
+Aqui obtenemos la información sobre como se construyo el modelo y de la clasificación de los datos con los que se construyo el modelo, en nuestro ejemplo podemos notar que el modelo es muy preciso. Para realizar prediciones con el modelo lo hacemos de la manera habitual, usando la función *predict()* alimentandola con los parámetro correspondoentes al nombre del modelo y el conjunto de datos a predecir.
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb10.png)
 
 
-
-
-
+## Bosques aleatorios en *Python*
 
 
 
