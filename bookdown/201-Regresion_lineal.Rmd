@@ -126,7 +126,7 @@ De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma var
 
 Una vez que elegimos las variables que deseamos usar en el modelo debemos conocer que funciones  y parámetros utilizar.
 
-### Aplicando el modelo de regresion lineal en *R*
+### Aplicando el modelo de regresión lineal en *R*
 
 En *R* existen varias formas de aplicar este modelo, gracias al gran número de librerías existentes, sin embargo, ya *R* trae por defecto la función *lm()* la cual nos permite construir el modelo de una forma sencilla.
 
@@ -162,7 +162,7 @@ En esta imagen se nos proporciona el valor que se introdujo en el modelo y los c
 
 
 
-### Aplicando el modelo de regresion lineal en *Python*:
+### Aplicando el modelo de regresión lineal en *Python*:
 
 Existen varias librerías para aplicar modelos lineales en *Python*, entre las más populares están *StatsModels* y *sklearn*. Usaremos la primera por ser la que nos proporciona unas funciones parecidas a las que tenemos en *R*. Como el objetivo de este curso es aprender a usar la herramienta, no incluiremos algunos parámetros como los que describimos en *R*.
 
@@ -179,7 +179,8 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
  
 ### Interpretar con *summary* en *R*:
 
-- *Residuals*: Al calcular el modelo, la función *summary* calcula las predicciones para los mismos datos con los que se entrenó el modelo y la variable *residuals* nos da los errores de predicción. Con esta variable se pueden obtener el menor, el mayor, la mediana, primer cuantil y tercer cuantil de los errores. Debemos realizar un histograma de los errores del modelo, si este histograma es distinto a un comportamiento normal, debemos pensar rápidamente que nuestro modelo es inadecuado. A continuación se muestra el código y un histograma ideal, suponiendo que creamos un modelo con nombre "modelo"
+- *residuals*: Al calcular el modelo, la función *summary* calcula las predicciones para los mismos datos con los que se entrenó el modelo y la variable *residuals* nos da los errores de predicción. Con esta variable se pueden obtener el menor, el mayor, la mediana, primer cuantil y tercer cuantil de los errores. Debemos realizar un histograma de los errores del modelo, si este histograma es distinto a un comportamiento normal, debemos pensar rápidamente que nuestro modelo es inadecuado. A continuación se muestra el código y un histograma ideal, suponiendo que usamos el “modelo” obtenido en la sección anterior
+
 
 
 

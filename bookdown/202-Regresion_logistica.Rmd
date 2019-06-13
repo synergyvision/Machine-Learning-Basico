@@ -23,7 +23,9 @@ En las columnas la variable hace referencia al uso del internet y en las filas l
 
 Para detectar si dos variables están o no correlacionadas usaremos la prueba *chi-cuadrado* que contrasta la independencia entre las variables, es decir, si el *$p$-valor* es bajo estamos encontrando evidencia de independencia entre los factores, en caso contrario podemos suponer la existencia de cierta relación entre las variables.
 
-En la siguiente imagen se muestra una tabla de contingencia, a la cual le aplicaremos la prueba *chi-cuadrado*, para contrastar la independencia entre el uso de internet y el estar empleado.
+En la siguiente imagen se muestra una tabla de contingencia, a la cual le aplicaremos la prueba *chi-cuadrado*, para contrastar la independencia entre el uso de internet y el estar empleado. La tabla se construye con el siguiente código:
+
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2000.png)
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2.png)
 
@@ -55,7 +57,7 @@ Para detectar un posible efecto entre la correlación de una variable categóric
 
 
 
-### Medida de $d$ de cohen en *R*.
+### Medida de $d$ de Cohen en *R*.
 
 Deberemos instalar la librería *effsize* y usaremos la función *cohen.d()*, además crearemos una variable artificial para mostrar el uso del estadístico:
 
@@ -104,6 +106,7 @@ Para el cálculo del modelo logístico haremos uso de la función *glm()* que es
 
 Usaremos los datos *Default* que nos proporciona el paquete *ISLR*, los cuales podemos observar en la siguiente imagen:
 
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log110.png)
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log11.png)
 

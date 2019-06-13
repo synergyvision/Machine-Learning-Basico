@@ -50,7 +50,7 @@ El paquete *readr* nos permite seleccionar las siguientes opciones
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat3.png)
 
-Gracias a *readxl* podemos simplificar y mejorar los datos como representa la siguiente imagen.
+Gracias a *readxl* podemos simplificar y mejorar los datos, en la variable *skip* se coloca un valor numérico para indicar cuantas de las primera lineas se deben eliminar. Dando clic derecho sobre la variable  número 3 cambiamos el tipo que trae por defecto. A continuación se muestra la imagen.
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat4.png)
  
@@ -213,12 +213,12 @@ Pero al observar el cruce ente las variables $x_1$ y $x_3$ se puede detectar rá
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out3.png)
 
-Ahora, es claro que este método puede ser muy ineficiente a la hora de trabajar con una gran cantidad de atributos, es por eso que existe la necesidad de usar algún método cuantitativo para medir si un dato es atípico o no. Uno de los más utilizado es el método basado en la medida o distancia $D_2$ de *Mahalanobis*
+Ahora, es claro que este método puede ser muy ineficiente a la hora de trabajar con una gran cantidad de atributos, es por eso que existe la necesidad de usar algún método cuantitativo para medir si un dato es atípico o no. Uno de los más utilizado es el método basado en la medida o distancia $D_M$ de *Mahalanobis*
 
-- $D_2$ de *Mahalanobis*:  Es una medida de distancia introducida por *Prasanta Chandra Mahalanobis* y su principal uso era determinar la similitud entre dos variables aleatorias. Su gran característica es que usa la matriz de covarianza para dar un peso ponderado por esta matriz a cada variable. Su gran desventaja es que es sensible a las escalas de los datos, por lo que se sugiere escalar los datos ya sea por su media u otro criterio similar.
+- $D_M$ de *Mahalanobis*:  Es una medida de distancia introducida por *Prasanta Chandra Mahalanobis* y su principal uso era determinar la similitud entre dos variables aleatorias. Su gran característica es que usa la matriz de covarianza para dar un peso ponderado por esta matriz a cada variable. Su gran desventaja es que es sensible a las escalas de los datos, por lo que se sugiere escalar los datos ya sea por su media u otro criterio similar.
 
 
-En general, debemos tener un punto de referencia para poder medir la proximidad de los puntos que estamos midiendo, lo común es usar la media o la mediana, la ecuación que representa la distancia $D^2$ de *Mahalanobis* es:
+En general, debemos tener un punto de referencia para poder medir la proximidad de los puntos que estamos midiendo, lo común es usar la media o la mediana, la ecuación que representa la distancia $D_M$ de *Mahalanobis* es:
 
 $$\sqrt{(x-y)^{T} \Sigma^{-1}(x-y)}$$ 
 
@@ -253,9 +253,9 @@ Ahora, si realizamos el cruce de las variables $x_1$ y $x_3$ obtenemos:
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out9.png)
 
 
-Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia $D^2$ de *Mahalanobis*.
+Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia $D_M$ de *Mahalanobis*.
 
-- la distancia $D^2$ de *Mahalanobis*: Para calcular la distancia de Mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función *apply()*, la función *cov()* para calcular la matriz de covarianza y al final usamos la función *mahalanobis()* indicándole los datos a calcular. Luego usamos la función *plot()* para ver la existencia de valores atípicos.
+- la distancia $D_M$ de *Mahalanobis*: Para calcular la distancia de Mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función *apply()*, la función *cov()* para calcular la matriz de covarianza y al final usamos la función *mahalanobis()* indicándole los datos a calcular. Luego usamos la función *plot()* para ver la existencia de valores atípicos.
 
  
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out10.png)
@@ -289,7 +289,7 @@ Pero al realizar el cruce con las variables $x_2$ y $x_3$ notamos el valor atíp
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out18.png)
 
 
-- La distancia $D_2$ de *Mahalanobis*: Para calcular la distancia de *Mahalanobis* de un conjunto de datos usando *Python*, usaremos la librería Scipy la cual trae por defecto una función para calcular la distancia de Mahalanobis. Primero debemos calcular la media de las columnas, usando la función *.mean()* de *Pandas*. A diferencia de *R*, debemos calcular la inversa de la matriz de covarianza (*Python* trae por defecto las filas y columnas intercambiadas con respecto a *R*), para ello usamos la funciones *.cov()*, la cual calcula la matriz de covarianza, *.linalg()* y *.inv()* para calcular la inversa. Luego, usando la función *apply()* de *Pandas* para aplicar la función *mahalanobis()* de la libreria *Scipy* a todo el conjunto de datos. En la función *.apply()* debemos colocar el nombre de la función, *axis* para indicar si la función aplica a las columnas o filas: el valor de $0$ para las columnas y $1$ para las filas. Finalizamos con args que contiene los parámetros que necesita la función, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.
+- La distancia $D_M$ de *Mahalanobis*: Para calcular la distancia de *Mahalanobis* de un conjunto de datos usando *Python*, usaremos la librería *Scipy* la cual trae por defecto una función para calcular la distancia de Mahalanobis. Primero debemos calcular la media de las columnas, usando la función *.mean()* de *Pandas*. A diferencia de *R*, debemos calcular la inversa de la matriz de covarianza (*Python* trae por defecto las filas y columnas intercambiadas con respecto a *R*), para ello usamos la funciones *.cov()*, la cual calcula la matriz de covarianza, *.linalg()* y *.inv()* para calcular la inversa. Luego, usando la función *apply()* de *Pandas* para aplicar la función *mahalanobis()* de la libreria *Scipy* a todo el conjunto de datos. En la función *.apply()* debemos colocar el nombre de la función, *axis* para indicar si la función aplica a las columnas o filas: el valor de $0$ para las columnas y $1$ para las filas. Finalizamos con *args* que contiene los parámetros que necesita la función, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.
 
  
 
