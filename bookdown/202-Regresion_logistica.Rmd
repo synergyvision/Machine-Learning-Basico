@@ -104,7 +104,7 @@ Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar 
 
 Para el cálculo del modelo logístico haremos uso de la función *glm()* que está disponible como función base en R. Esta función tiene prácticamente la misma sintaxis que la función *lm()*, así que no describiremos en detalle sus parámetros.
 
-Usaremos los datos *Default* que nos proporciona el paquete *ISLR*, los cuales podemos observar en la siguiente imagen:
+Usaremos los datos *Default* (incumplimiento) que nos proporciona el paquete *ISLR* sobre registros de clientes con incumplimiento de pagos de una empresa de tarjetas de crédito, los cuales podemos observar en la siguiente imagen:
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log110.png)
 

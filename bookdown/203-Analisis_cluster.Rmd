@@ -52,7 +52,7 @@ Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos 
 
 Un dendograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendograma:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu.png)
+![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu.jpg)
 
 
 A partir del dendograma se puede apreciar un número apropiado de clúster.

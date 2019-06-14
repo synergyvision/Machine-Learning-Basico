@@ -28,7 +28,8 @@ Este análisis exige verificar ciertos supuestos estadísticos:
 
 ### Librerías y datos
 
-Usaremos la base de datos *USArrests* los cuales vienen por defecto en *R* y contiene información acerca de ciertos índices delictivos en EEUU.
+Usaremos la base de datos *USArrests* la cual viene por defecto en *R* y contiene información acerca de ciertos índices delictivos en EEUU.
+
 
 Al cargar los datos calcularemos las medias y varianzas de las variables para saber si es necesario normalizar los datos. Para ello empleamos el siguiente código:
 
@@ -89,12 +90,11 @@ Como este curso no es de programación, anexaremos directamente el siguiente có
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca11.png)
 
-A continuación anexamos dos gráficas, la primera con los coeficientes por componentes y la segunda con el gráfico de codo:
+A continuación anexamos el gráfico de codo:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca12.png)
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca13.png)
 
-Con el gráfico de codo podemos apreciar que con $2$ o $3$ componentes tenemos una gran catidad de varianza explicada.
+Con el gráfico de codo podemos apreciar que con $2$ o $3$ componentes tenemos una gran cantidad de varianza explicada.
 
 
