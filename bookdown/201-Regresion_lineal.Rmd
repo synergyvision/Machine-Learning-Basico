@@ -2,7 +2,7 @@
 
 La regresión lineal es un método estadístico que intenta predecir una variable de interés (dependiente) a partir de otras variables que se consideran influyentes (independientes) y se relacionan directamente con ella. Por ejemplo, hay estudios que sugieren la relacion entre el tamaño del pétalo ($P$) y el sépalo de una flor ($S$), en algunal flores se aproxima el tamaño del pétalo multiplicando por 3 el tamaño del sépalo, es decir, $P=3*S$, esta relación es un ejemplo simple de lo que es la regresión lineal de solo dos variables.
 
-En general si tenemos una variable $y$ dependiente y $n$ variables independientes $x1, x_2, ..., x_n$ un modelo de regresión lineal tiene la forma $$y=c+c_1x_1+c_2x_2+...+c_nx_n$$ donde los coeficientes $c_j$ son los coeficientes del modelo y $c$ es el coeficiente independiente, en algunos casos es llamado intercept.
+En general si tenemos una variable $y$ dependiente y $n$ variables independientes $x_1, x_2, ..., x_n$ un modelo de regresión lineal tiene la forma $$y=c+c_1x_1+c_2x_2+...+c_nx_n$$ donde los coeficientes $c_j$ son los coeficientes del modelo y $c$ es el coeficiente independiente, en algunos casos es llamado intercept.
 
 ## Identificando relación entre variables
 
@@ -109,9 +109,12 @@ En los modelos de regresión lineal las variables categóricas no cumplen las hi
 
 ### Eliminación de variables en *R*
 
-Supongamos que tenemos en un conjunto de datos llamados *Datos* la variable *Var1* la cual deseamos eliminar. Para ello usamos el siguiente código, en el cual el símbolo *!* es el indicador para eliminar dicha variable.
+Supongamos que tenemos en un conjunto de datos llamados *mtcars* la variable *mpg* la cual deseamos eliminar. Para ello usamos el siguiente código, en el cual el símbolo *!* es el indicador para eliminar dicha variable.
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg17.png)
+
+Para recuperar la columna eliminada se vuelve a cargar la base de datos *data(mtcars)*.
+
 
 ### Eliminación de variables en *Python*
 
@@ -212,7 +215,7 @@ El *summary* en este caso nos da mucha más información que en *R*. Nos concent
 
 ![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/reg26.png)
 
-## Realizando predicciones con nuestro modelo.
+## Realizando predicciones con nuestro modelo
 
 El objetivo principal de crear modelos es usarlos para predecir valores a partir de las variables independientes. A continuación presentaremos los códigos para realizar dicha predicción:
 

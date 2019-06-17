@@ -68,7 +68,8 @@ Este método considera el porcentaje de varianza explicado en función del núme
 
 ### Método no jerárquico
 
-Veremos el método llamado *K*-medias que en resumidas palabras agrupa un número de clústeres pre-definidos a partir de los valores medios de cada clúster. Usaremos el conjunto de datos *iris*, el cual viene por defecto en *R*, también la función *kmeans()* la cual requiere dos parámetros: el conjunto de datos y el número de clústeres a crear.
+Veremos el método llamado *K-medias* que en resumidas palabras agrupa un número de clústeres pre-definidos a partir de los valores medios de cada clúster. Usaremos el conjunto de datos *iris* con información sobre tres variedades morfológicas de la especie iris, el cual viene por defecto en *R*, también la función *kmeans()* la cual requiere dos parámetros: el conjunto de datos y el número de clústeres a crear.
+
 
 Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente código:
 

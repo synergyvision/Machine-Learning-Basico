@@ -6,7 +6,7 @@ Al iniciar cualquier estudio debemos tener en cuenta que sin un buen conjunto de
 
 ## Lectura de datos
 
-En general hay tres tipos de datos basicos con los cuales nos enfrentaremos, los cuales son archivos con extensiones *.csv*, *.txt*, *xls*. Existen otras extensiones pero es muy raro que tenga que trabajar con datos provenientes de ellas, estas extensiones pueden ser: *.docx*, *.pdf*, entre otras
+En general hay tres tipos de datos básicos con los cuales nos enfrentaremos, los cuales son archivos con extensiones *.csv*, *.txt*, *xls*. Existen otras extensiones pero es muy raro que tenga que trabajar con datos provenientes de ellas, estas extensiones pueden ser: *.docx*, *.pdf*, entre otras
 
 ### Lectura de datos con *R*
 
@@ -265,7 +265,7 @@ Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muc
 
 ### Detección de outliers en Python
 
-- Visual: Para identificar outliers de manera visual en *Python* haremos uso de la librería *Matplotlib*, la cual nos brinda un sinfín de herramientas para poder llevar a cabo nuestros fines. Al igual que en la sección anterior usaremos el conjunto de datos Data con tres variables.
+- Visual: Para identificar outliers de manera visual en *Python* haremos uso de la librería *Matplotlib*, la cual nos brinda un sinfín de herramientas para poder llevar a cabo nuestros objetivos. Al igual que en la sección anterior usaremos el conjunto de datos Data con tres variables.
 
 
 Para ver la gráfica de la variable $x_1$, primero debemos seleccionar la variable, esto lo hacemos con el método *.iloc()* de *Pandas* el cual nos permite seleccionar subconjuntos de datos. Luego, usamos *plt.plot()* para generar la gráfica de los datos, el parámetro ro indica el tipo de gráfico, en nuestro caso en punteado; *plt.xlabel* para dar título al eje horizontal y *plt.ylabel* para dar título al eje vertical, finalmente usamos *plt.show* para mostrar la imagen.

@@ -57,15 +57,15 @@ plot(1:15, wss, type="b", xlab="Número de clústeres",
 
 
 
-# Creando las distancias entres observaciones
+# Creando las distancias entre observaciones
 
 d <- dist(iris[1:3], method = "euclidean")
 
 
-# Analisis jerárquicos
+# Análisis jerárquicos
 hc1 <- hclust(d, method = "complete" )
 
-# Grafica del dendograma
+# Gráfica del dendograma
 plot(hc1, cex = 0.6, hang = -1,main="Dendograma",xlab = "Observaciones", ylab="Número de división")
 
 
@@ -79,9 +79,9 @@ plot(hc1, cex = 0.6, hang = -1,main="Dendograma",xlab = "Observaciones", ylab="N
 # Escogiendo el numero de cluster
 grupos <- cutree(hc1, k = 4)
 
+# Observando la distribución por grupos
 
-
-
+table(grupos)
 
 
 datos = iris[,1:3]
@@ -192,17 +192,41 @@ df<-mtcars
 ### También cambiamos el nombre de la primera variable mpg por x
 
 colnames(df)[1]<-"x"
+
+
+
+
+
+
+
+
+
 ### Transformación x^2
 df$x=df$x^2
+## Visualizamos el cambio 
+head(df$x)
 
 ### Transformación raíz de x
 df$x=sqrt(df$x)
+## Visualizamos el cambio 
+head(df$x)
 
 ### Transformación 1/x
 df$x=1/df$x
+## Visualizamos el cambio 
+head(df$x)
 
 ###Transformación lg(x)
 df$x=log(df$x)
+## Visualizamos el cambio 
+head(df$x)
+
+
+
+
+
+
+
 
 
 
@@ -249,6 +273,22 @@ modelo_logistico <-glm(default~balance+student, data=Default, family="binomial")
 
 
 
+# Cargamos la base de datos
+
+data(mtcars)
+
+plot(mtcars$mpg,mtcars$disp, xlab = "mpg", ylab = "disp")
+
+
+
+
+?lm
+
+lm(Sepal.Length ~ Sepal.Width + Petal.Lenght + Petal.Width, data = irisP, weights = rep(1:150), na.action = na.omit, method = "qr")
+
+# o también
+
+lm(Sepal.Length ~ . , data = irisP, weights = rep(1:150), na.action = na.omit, method = "qr")
 
 
 
