@@ -3,7 +3,7 @@
 
 Para usar las herramientas estadísticas y matemáticas, los científicos de datos usan lenguajes de programación que nos ahorran el trabajo de codificar paso a paso los algoritmos de los métodos a utilizar. La comunidad científica nos proporcionan estas soluciones a través de paquetes y librerías que podemos acceder generalmente de manera gratuita. El siguiente gráfico del portal  web <https://www.paradigmadigital.com/dev/es-python-el-lenguaje-del-futuro/> muestra los lenguajes preferidos por los científicos de datos :
 
-![\label{fig:"sd"}](~/Machine-Learning-Basico/bookdown/images/languages.png)
+![\label{fig:"sd"}](images/languages.png)
 
 Sin duda *Python* y *R* son los favoritos. Ambos son de códigos abiertos (open source), Phyton es un lenguaje flexible fácil de aprender y de propósito general, adaptable a fines empresariales. Por su parte, R es un lenguaje funcional orientado a la comunidad científica que trabaja con estadísticas, disponiendo de una infinidad de librerías, siempre en crecimiento. Entre ambos lenguajes Phyton es el más utilizado, sin embargo R puede adaptarse para fines empresariales gracias a librerías como Shiny, las cuales permiten crear páginas web donde se pueden aplicar prácticamente todas las herramientas de R y ofrecer resultados adecuados a todo tipo de usuarios.
 
@@ -19,10 +19,10 @@ En principio todo aquel que trabaje con datos debe conocer ambos lenguajes y uti
 
 Al descagar estos lenguajes lo primero que veremos es: en el caso de *R*:
 
-![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/R.png)
+![\label{fig:"R"}](images/R.png)
 
 y en el caso de *Python*:
-![\label{fig:"Python"}](~/Machine-Learning-Basico/bookdown/images/python.png)
+![\label{fig:"Python"}](images/python.png)
 
 
 
@@ -30,17 +30,17 @@ Aunque es posible comenzar a trabajar en estos ambientes, lo usual es elegir ent
  
 Para R, el entorno más utilizado es RStudio el cual tiene la siguiente presentación:
 
-![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/rstudio.png)
+![\label{fig:"R"}](images/rstudio.png)
 
 Para Phyton suele utilizarse Spyder y Jupyter Notebook. Las presentaciones de estos dos entornos son los siguientes:
 
 Entorno de Spyder:
  
-![\label{fig:"spyder"}](~/Machine-Learning-Basico/bookdown/images/spyder.png)
+![\label{fig:"spyder"}](images/spyder.png)
  
 Entorno de  Jupyter notebook:
 
-![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/jupyter.png)
+![\label{fig:"R"}](images/jupyter.png)
 
 
 
@@ -54,7 +54,7 @@ Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incov
 
 Anaconda es una distribución libre y abierta que incluye los lenguajes *R* y *Python* que permite a los científicos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerías orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar *Rstudio* con un simple clik. La presentacion que veremos cuando abramos *Anaconda* es :
 
-![\label{fig:"R"}](~/Machine-Learning-Basico/bookdown/images/Anaconda.png)
+![\label{fig:"R"}](images/Anaconda.png)
 
 Se recomienda el uso de Anaconda para el público en general, para los principiantes debido a que permite un rapido inicio sin tener que descargar programas y paquetes por su propia cuenta y de esta forma concentrarse en el aprendizaje y para los avanzados ya que permite un trabajo mas centralizado y eficiente al poder tener un ambiente con todo los requerimientos que se necesiten para poder trabajar de una forma mas comoda. *Anaconda* se puede descargar en el siguiente enlace: <https://www.anaconda.com>
 
@@ -66,8 +66,8 @@ A pesar de que al descargar Anaconda vienen por defecto una gran cantidad de lib
 
 Las descargas de las librerías en *R* la haremos directamente desde *RStudio*. Para ello hacemos clic en la pestaña *Package * ubicadas en la sección inferior derecha subrayada en rojo, luego haremos clic en el botón *Install*
 
-![\label{fig:"R1"}](~/Machine-Learning-Basico/bookdown/images/packa1.png)
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa2.png)
+![\label{fig:"R1"}](images/packa1.png)
+![\label{fig:"R2"}](images/packa2.png)
 
 
 Los campos de información solicitada se refieren a: 
@@ -84,15 +84,15 @@ Los campos de información solicitada se refieren a:
 
 Descargar librerías en *Python* no es tan fácil como en *R*, pero Anaconda facilita esta tarea. En el navegador de *Anaconda* vamos a la sección *Ambientes*, en inglés *Environments*, y al lado del buscador seleccionamos la acción *Todo*, *All* en inglés, colocamos el nombre del paquete que deseamos instalar y se nos desplegará en la parte inferior derecha dos opciones: *Aplicar* o *Apply* y *Borrar* o *Clear*. Seleccionamos la opción *Apply* y se instalará el paquete deseado.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa3.png)
+![\label{fig:"R2"}](images/packa3.png)
 
 Si el paquete no está disponible en el ambiente tenemos la opción de instalarlo desde la terminal de *Anaconda*. En la sección *Environment* hacemos clic en la flecha al lado de la palabra base (root) y seleccionamos *Open terminal*, tal como se muestra en la imagen
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa4.png)
+![\label{fig:"R2"}](images/packa4.png)
 
 Se abre la consola del terminal y allí escribimos el comando *conda install "Nombre del paquete"* como se presenta a continuación
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/packa5.png)
+![\label{fig:"R2"}](images/packa5.png)
 
  
 

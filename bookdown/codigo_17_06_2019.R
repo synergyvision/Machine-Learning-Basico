@@ -215,6 +215,7 @@ hist(modelo$residuals, main="Histograma de errores", xlab=" ", ylab=" ")
 
 ####4.7 Realizando predicciones con nuestro modelo
 ###4.7.1 Realizando predicciones con R
+
 predicciones<-predict(modelo, irisP)
 predicciones
 

@@ -34,32 +34,32 @@ Usaremos la base de datos *USArrests* la cual viene por defecto en *R* y contien
 Al cargar los datos calcularemos las medias y varianzas de las variables para saber si es necesario normalizar los datos. Para ello empleamos el siguiente código:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca1.png)
+![\label{fig:"R2"}](images/pca1.png)
 
 El primer resultado es la media por variable, observándose considerables diferencias
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca3.png)
+![\label{fig:"R2"}](images/pca3.png)
 
 
 De igual manera a continuación podemos observar considerables diferencias en las varianzas entre las variables:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca2.png)
+![\label{fig:"R2"}](images/pca2.png)
 
 ### Cálculo de componentes
 
 Ahora, con la función *prcomp()* calculamos las componentes principales. Esta función recibe como parámetros los datos y la variable *scale*, la cual de ser *TRUE* normaliza los datos y de ser *FALSE* los deja en su forma original. Una vez hecho lo anterior podemos a través del atributo *rotation* ver los datos en función de las nuevas componentes.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca4.png)
+![\label{fig:"R2"}](images/pca4.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca5.png)
+![\label{fig:"R2"}](images/pca5.png)
 
 ### Funciones gráficas
 
 Ahora para escoger el número de componentes utilizaremos el gráfico de codo. Para ello debemos calcular previamente la varianza por componente. Además, usaremos el paquete $ggplot$ para obtener una gráfica más elegante. A continuación se muestra este proceso:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca6.png)
+![\label{fig:"R2"}](images/pca6.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca7.png)
+![\label{fig:"R2"}](images/pca7.png)
 
 Con el gráfico anterior podemos intuir que con tres componentes obtendremos una gran parte de la varianza explicada.
 
@@ -70,30 +70,30 @@ Con el gráfico anterior podemos intuir que con tres componentes obtendremos una
 Procederemos a construir el modelo en *Python*, primero cargaremos las librerías y datos a usar, usaremos *sklearn* para constriur el modelo y los mismos datos de la sección anterior
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca8.png)
+![\label{fig:"R2"}](images/pca8.png)
 
 ### Cálculo de componentes
 
 Procedemos a ver la estructura de los datos, usando las funciones *.mean()* y *.var()* de *Pandas* para calcular la media y varianza de cada variable del conjunto de datos.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca9.png)
+![\label{fig:"R2"}](images/pca9.png)
 
 
 Observamos que los datos tienen escalas muy diferentes, por lo que procedemos a realizar la normalización de los datos, usando la función *scale()* de *Sklear*. Una vez tenemos los datos con la misma escala, usamos las funciones *PCA()* y *.fit()* para construir el modelo. Finalizamos usando la función *.transform()* para convertir los datos originales a las nuevas componentes calculadas.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca10.png)
+![\label{fig:"R2"}](images/pca10.png)
 
 ### Funciones Gráficas
 
 Como este curso no es de programación, anexaremos directamente el siguiente código sin  mayores detalles, con el proposito de realizar las gráficas correspondientes del modelo:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca11.png)
+![\label{fig:"R2"}](images/pca11.png)
 
 A continuación anexamos el gráfico de codo:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/pca13.png)
+![\label{fig:"R2"}](images/pca13.png)
 
 Con el gráfico de codo podemos apreciar que con $2$ o $3$ componentes tenemos una gran cantidad de varianza explicada.
 

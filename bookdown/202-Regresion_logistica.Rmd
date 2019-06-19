@@ -17,7 +17,7 @@ Una de las primeras cosas que debemos revisar es la independencia entre las vari
 Una tabla de contingencia es la forma más fácil de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contingencia
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log.jpg)
+![\label{fig:"R2"}](images/log.jpg)
 
 En las columnas la variable hace referencia al uso del internet y en las filas las variables hacen referencia al sexo.
 
@@ -25,9 +25,9 @@ Para detectar si dos variables están o no correlacionadas usaremos la prueba *c
 
 En la siguiente imagen se muestra una tabla de contingencia, a la cual le aplicaremos la prueba *chi-cuadrado*, para contrastar la independencia entre el uso de internet y el estar empleado. La tabla se construye con el siguiente código:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2000.png)
+![\label{fig:"R2"}](images/log2000.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log2.png)
+![\label{fig:"R2"}](images/log2.png)
 
 
 
@@ -37,7 +37,7 @@ En la siguiente imagen se muestra una tabla de contingencia, a la cual le aplica
 
 Para realizar la prueba usamos la función *chisq.test()* y obtenemos el siguiente resultado
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log3.png)
+![\label{fig:"R2"}](images/log3.png)
 
 El valor que  interesa es el *$p$-valor*, el cual al ser mayor a 0.05 indica una posible relación entre las variables. En general, si el *$p$-valor* es cercano a uno podemos pensar en una posible relación entre las variables.
 
@@ -47,7 +47,7 @@ El valor que  interesa es el *$p$-valor*, el cual al ser mayor a 0.05 indica una
   
 Para realizar la prueba *chi-cuadrado* en Python usaremos la librería *scipy* y usaremos la función *.chi2_contingency()*. A continuación mostramos como hacerlo
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log4.png)
+![\label{fig:"R2"}](images/log4.png)
 
 
 ## Detectar correlación entre variables categóricas y variables cuantitativas
@@ -61,9 +61,9 @@ Para detectar un posible efecto entre la correlación de una variable categóric
 
 Deberemos instalar la librería *effsize* y usaremos la función *cohen.d()*, además crearemos una variable artificial para mostrar el uso del estadístico:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log5.png)
+![\label{fig:"R2"}](images/log5.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log6.png)
+![\label{fig:"R2"}](images/log6.png)
 
 Podemos notar que el valor del estadístico *$d$ de Cohen* es alto mostrando un posible efecto de las variables categóricas en la variable continua.
 
@@ -71,7 +71,7 @@ Podemos notar que el valor del estadístico *$d$ de Cohen* es alto mostrando un 
 
 En *Python* no existe una función para calcular la *$d$ de Cohen* de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías *statistics* y *math* las cuales nos permitirán calcular las métricas que necesita el estadístico de *Cohen*.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log7.png)
+![\label{fig:"R2"}](images/log7.png)
 
 ## Codificando variables categóricas
 
@@ -81,11 +81,11 @@ Una variable categórica no puede ser ingresada directamente al modelo, pues se 
 
 Debemos descargar y usar la librería *fastDummies*, la cual tiene la función del mismo nombre *dummy_cols()*. Esta función es la que crea las variables auxiliares. Por ejemplo, supongamos que tenemos la variable color, la cual está compuesta por: (“azul”,“rojo”,“amarillo”,“blanco”,“amarillo”, “azul”,“azul”,“rojo”), en la cual tenemos 4 categorías. Para aplicar la función *dummy_cols()* realizaremos el siguiente código:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log8.png)
+![\label{fig:"R2"}](images/log8.png)
 
 Y obtenemos como resultado:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log9.png)
+![\label{fig:"R2"}](images/log9.png)
 
 Observamos que en el séptimo registro tenemos una fila de números ceros, por lo ya señalado esto significa que el atributo de esta observación es azul.
 
@@ -94,7 +94,7 @@ Observamos que en el séptimo registro tenemos una fila de números ceros, por l
 
 Para crear variables auxiliares en *Python*, utilizaremos función *get_dummies()* del paquete Pandas. A continuación mostramos el código y el resultado.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log10.png)
+![\label{fig:"R2"}](images/log10.png)
 
 ## Aplicando el modelo de regresión logística
 
@@ -106,19 +106,19 @@ Para el cálculo del modelo logístico haremos uso de la función *glm()* que es
 
 Usaremos los datos *Default* (incumplimiento) que nos proporciona el paquete *ISLR* sobre registros de clientes con incumplimiento de pagos de una empresa de tarjetas de crédito, los cuales podemos observar en la siguiente imagen:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log110.png)
+![\label{fig:"R2"}](images/log110.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log11.png)
+![\label{fig:"R2"}](images/log11.png)
 
 Si queremos crear un modelo logístico para predecir el incumplimiento de pago de los estudiantes que tenga variables independientes *balance*, *income* y variable dependiente *default* debemos usar el siguiente código
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log12.png)
+![\label{fig:"R2"}](images/log12.png)
 
 tenemos un parámetro adicional llamado *Family* el cual hace referencia a la distribución de la variable que en nuestro caso es la binomial.
 
 Al realizar un resumen del modelo con la función *summary*, obtenemos:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log13.png)
+![\label{fig:"R2"}](images/log13.png)
 
 La imagen anterior es una presentación del resumen del modelo un poco diferente a la del capítulo anterior. Vale la pena describir la variable *AIC*, este estadístico nos da información acerca de la bondad del modelo con respecto a las variables introducidas, es decir, permite comparar distintos modelos estadísticos, buscando un valor lo más pequeño posible de esta variable.
 
@@ -127,7 +127,7 @@ Un error típico en el que se suele caer al crear un modelo de regresión logís
 A continuación presentamos el código para realizar la predicción:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log14.png)
+![\label{fig:"R2"}](images/log14.png)
 
 En la imagen anterior el resultado es $0.14$ significa que la probabilidad de ocurrencia del evento es $0.14$.
 
@@ -135,15 +135,15 @@ En la imagen anterior el resultado es $0.14$ significa que la probabilidad de oc
 
 Para crear el modelo cargaremos la librería *pandas* y *statsmodels*. Usaremos los mismos datos de la parte anterior. A diferencia de *R* debemos separar la variable dependiente de las independientes y verificar que las variables categóricas estén compuestas por valores numéricos. Estos cambios son hechos con la función *.replace()*. Recordemos que por defecto no se calcula la variable intercept en el modelo, por lo cual debemos incorporarla con la función *sm.add_constant()*. A continuación se muestra este procedimiento:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log15.png)
+![\label{fig:"R2"}](images/log15.png)
 
 Ahora, procedemos al cálculo del modelo. Primero lo creamos usando la función *sm.logit()* y luego lo entrenamos usando la función *.fit()*. Para ver el resumen del modelo usamos la función *.summary()*, la cual nos da prácticamente la misma información que la función *summary* en *R*.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log16.png)
+![\label{fig:"R2"}](images/log16.png)
 
 
 Para concluir, realizamos predicciones usando nuestro modelo, recordando que la observación usada para predecir debe tener la misma estructura de la variable independiente. Debemos tener en cuenta que dependiendo de si se agregó o no el intercept, tendremos que agregar la variable constante usando la función *sm.add_constant()*. A continuación se muestra este procedimiento:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/log17.png)
+![\label{fig:"R2"}](images/log17.png)

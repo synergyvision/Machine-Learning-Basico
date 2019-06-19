@@ -52,7 +52,7 @@ Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos 
 
 Un dendograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendograma:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu.jpg)
+![\label{fig:"R2"}](images/clu.jpg)
 
 
 A partir del dendograma se puede apreciar un número apropiado de clúster.
@@ -61,7 +61,7 @@ A partir del dendograma se puede apreciar un número apropiado de clúster.
 
 Este método considera el porcentaje de varianza explicado en función del número de conglomerados: Se debe elegir un número de clústeres que optimice el modelado, de modo que la mejora sea insignificante si se intenta añadir otro clúster. En otros términos, si se traza el porcentaje de varianza explicado por los clústeres contra el número de clústeres, los primeros clústeres añadirán mucha información (explican mucha varianza), pero en algún momento la ganancia marginal producto de añadir clústeres adicionales caerá, mostrando un ángulo en el gráfico. El número de grupos se elige justo hasta este punto, de ahí el “criterio del codo”. Este “codo” no siempre puede ser identificado inequívocamente. La siguiente imagen nos proporciona una muestra de un gráfico de codo:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu1.png)
+![\label{fig:"R2"}](images/clu1.png)
 
 
 ## Análisis de clúster en *R*
@@ -74,21 +74,21 @@ Veremos el método llamado *K-medias* que en resumidas palabras agrupa un númer
 Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente código:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu7.png)
+![\label{fig:"R2"}](images/clu7.png)
 
 Obteniendo la siguiente imagen:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu6.png)
+![\label{fig:"R2"}](images/clu6.png)
 
 
 A partir de este gráfico podemos intuir que el número de clústeres adecuados es 3, luego para construir los grupos usaremos el siguiente código:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu2.png)
+![\label{fig:"R2"}](images/clu2.png)
 
 Para tener una visión gráfica de los clústeres hacemos proyecciones en pares de variables, obteniendo el siguiente gráfico:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu4.png)
+![\label{fig:"R2"}](images/clu4.png)
 
 
 ### Método jerárquico
@@ -98,14 +98,14 @@ Para construir los grupos, primero debemos crear las distancias entre observacio
 
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu9.png)
+![\label{fig:"R2"}](images/clu9.png)
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu8.png)
+![\label{fig:"R2"}](images/clu8.png)
 
 Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos. Para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu10.png)
+![\label{fig:"R2"}](images/clu10.png)
 
 ## Análisis de clúster en *Python*
 
@@ -114,32 +114,32 @@ Con este dendograma podemos apreciar una posible separación de la variable de e
 
 Realizaremos la construcción de los grupos usando el método *kmeans* con el mismo conjunto datos. No describiremos en detalle las librerías a utilizar, solo describiremos su uso general, utilizando la librería *sklearn* para crear el modelo y *seaborn*, *matplotlib* y *mpl_toolkits* para la parte gráfica.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu11.png)
+![\label{fig:"R2"}](images/clu11.png)
 
 Ahora construiremos el gráfico de codos para poder determinar el número apropiado de clústeres. Usaremos la función *Kmeans* de la librería *sklearn* para construir los modelos por número de clústeres. Seguidamente se muestra el siguiente código para este propósito. 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu12.png)
+![\label{fig:"R2"}](images/clu12.png)
 
 Obteniendo el siguiente resultado:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu13.png)
+![\label{fig:"R2"}](images/clu13.png)
 
 A partir de este gráfico creamos unos número de tres grupos, con la función *kmean().* Con *.predicts()* identificamos el grupo al cual pertenece cada observación.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu14.png)
+![\label{fig:"R2"}](images/clu14.png)
 
 ### Método jerárquico.
 
 Para el cálculo de los grupos usaremos el mismo conjunto de datos, una vez cargados construimos el dendograma, para lo cual usaremos la función *.dendogram()* de la librería *scipy*. En este ejemplo usaremos el método de *ward*. A continuación mostramos el código:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu15.png)
+![\label{fig:"R2"}](images/clu15.png)
 
 Este código nos da como resultado :
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu16.png)
+![\label{fig:"R2"}](images/clu16.png)
 
 Al observar el dendograma observamos la existencia de tres grupos posibles. Para obtenerlos usaremos la función *AgglomerativeClusterin()* de la librería *sklear*  y finalmente *.fit_predict()* para obtener los grupos. El procedimiento a seguir se presenta a continuación:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/clu17.png)
+![\label{fig:"R2"}](images/clu17.png)

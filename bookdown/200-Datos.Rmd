@@ -16,7 +16,7 @@ En general hay tres tipos de datos básicos con los cuales nos enfrentaremos, lo
 
 + Archivos *csv* o *txt*: Primero buscamos en las opciones que se encuentran disponibles en la parte superior de *RStudio* y selecionamos *archivo* o *file*, luego se desplegaran varias opciones de las cuales debemos seleccionar *Import Dataset* o *importar datos*, recomendamos utilizar la opción *From Text (readr)...*, debido a su alta variedad de opciones para cargar los datos.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat.png)
+![\label{fig:"R2"}](images/dat.png)
 
 El paquete *readr* nos permite seleccionar las siguientes opciones 
 
@@ -42,17 +42,17 @@ El paquete *readr* nos permite seleccionar las siguientes opciones
 (x) Identificar de alguna forma en particular los valores *Na*  
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat1.png)
+![\label{fig:"R2"}](images/dat1.png)
 
 
 
 + Archivos *.xls (MS-Excel)*: Para cargar archivos *.xls* debemos seleccionar la opción *From Excel* que se encuentra en la misma ubicación de las anteriores. Ésta opción usa el paquete *readxl*. La ventaja de este paquete es que posee prácticamente las mismas opciones que los paquetes de *R* básico para importar archivos de *Excel*, pero además permite seleccionar la hoja de cálculo a usar del documento *Excel*. La siguiente imagen representa lo que en general encontraremos al cargar un archivo *Excel*:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat3.png)
+![\label{fig:"R2"}](images/dat3.png)
 
 Gracias a *readxl* podemos simplificar y mejorar los datos, en la variable *skip* se coloca un valor numérico para indicar cuantas de las primera lineas se deben eliminar. Dando clic derecho sobre la variable  número 3 cambiamos el tipo que trae por defecto. A continuación se muestra la imagen.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat4.png)
+![\label{fig:"R2"}](images/dat4.png)
  
 La importación de datos CSV o TXT puede hacerse directamente desde el R básico con paquetes especialmente diseñados para esta tarea como se muestra en el Apéndice.   
 
@@ -91,7 +91,7 @@ A diferencia de *RStudio* no hay una forma en común para cargar los archivos, s
 - *dtype*: Tipo de dato de cada columna, por ejemplo {‘a’: np.float64, ‘b’: np.int32, ‘c’: ‘Int64’}.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat5.png)
+![\label{fig:"R2"}](images/dat5.png)
 
 
 (ii) Leer archivos .*xlx* con *pandas.read_excel()*: Usa prácticamente los mismos parámetros que la función anterior, con la diferencia de que no acepta el parámetro *sep* y usa un parámetro adicional llamado *sheet_name*, este parámetro debe ser una lista con los números de columnas a usar o con los nombres de dichas columnas.
@@ -110,7 +110,7 @@ Estos valores suelen generarse por diversas razones, entre las cuales se encuent
 (i) Missing values en *R*: Para trabajar con datos faltantes en *R* lo primero es contarlos. Para ello usaremos la función *sapply()* la cual permite aplicar funciones a columnas de manera explícita. En nuestro caso aplicaremos la función *is.na()* la cual cuenta la cantidad de valores faltantes por columnas, la función *sum()* que suma todos estos valores y nos da el resultado final, y la función *dim()* la cual nos da las dimensiones de los datos.
  
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat9.png)
+![\label{fig:"R2"}](images/dat9.png)
 
 En general, los valores faltantes tienden a eliminarse, pero esto no se puede hacer a la ligera, en otros casos suelen sustituirse por un valor común del conjunto de datos (esto se hace cuando tenemos distintas entradas para un individuo y alguna característica está vacía). También se debe chequear si la distribución de datos faltantes es aleatoria. Sería muy extraño que cada 100 datos exactamente exista un dato faltante en un lugar en específico. Este último tipo de comportamiento hace pensar en que estamos en presencia errores sistemáticos.
 
@@ -121,47 +121,47 @@ Para eliminar los datos faltantes sin riesgo a perder información vital, lo pri
 Para eliminar los valores faltantes de la data por filas, usamos la función *na.omit()*, si queremos eliminar por columnas usamos la función *t()* la cual nos traspone los datos, el problema es que modificará el índice. Solventamos este problema con la función *rownames()*. Otro detalle es que la función *na.omit()* cambia el formato de los datos, por lo que usaremos la función *as.data.frame()* para corregir el problema.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat10.png)
+![\label{fig:"R2"}](images/dat10.png)
 
 
 
 * Sustitución por la media: Cuando los datos poseen un comportamiento uniforme alrededor de una región del plano se suelen sustituir por el valor medio que presentan los datos.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/Rplot.png)
+![\label{fig:"R2"}](images/Rplot.png)
 
 
 Para sustituir por el valor medio se utiliza la función *mean()* para calcular el valor medio de la columna y la función *replace()* para realizar el cambio.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat14.png)
+![\label{fig:"R2"}](images/dat14.png)
 
 
 * Sustitución por la mediana: El problema de sustituir por la media es que ésta se puede ver afectada por valores atípicos (los veremos en la próxima sección de este capítulo), es por esto que debe sustituirse por la mediana que es un estimador más robusto para este propósito. Por ejemplo, el conjunto de puntos 1,2,3,1,2,1,3,1,2,1,2,1,33 tiene promedio 4, sustituir por este valor no tiene sentido, mientras que la mediana es 2. Para realizar el cambio usamos *median()*
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat15.png)
+![\label{fig:"R2"}](images/dat15.png)
 
 
 * Sustitución por la moda:   La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categóricos, recordemos que la moda no es mas que el dato que más se repite en el conjunto de datos. Para realizar el cambio usamos *mode()*
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat16.png)
+![\label{fig:"R2"}](images/dat16.png)
 
 
 (ii) Missing values en *Python*:   Para identificar valores en Python a través de la librería Pandas existen diversas funciones que nos ayudarán. Lo primero que debemos hacer es contar la cantidad de datos faltantes, esto lo hacemos con las funciones *isnull()* y *sum()* de la librería Pandas. El resultado final será el número de missing values por columnas, la primera función los identifica y la segunda función los cuenta. La siguiente imagen muestra cómo hacerlo.
 
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat6.png)
+![\label{fig:"R2"}](images/dat6.png)
 
 
 
 Ahora si decidimos eliminar los datos, realizar esto en *Python* es sencillo. Primero calculamos el porcentaje de datos faltantes usando las funciones *pandas.shape()*, *pandas.product()*. La primera nos indica la dimensión del dataframe y la segunda realiza la multiplicación para poder saber la cantidad de celdas existentes.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat7.png)
+![\label{fig:"R2"}](images/dat7.png)
 
 Luego, dependiendo como estén organizados los datos, es decir, registros por columnas o por filas, sabremos como eliminar los registros con valores faltantes. En la función *df.dropna()*, si colocamos como parámetros *axis=0* se eliminarán los registros por fila que contengan valores faltantes y *axis=1* por columnas.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat8.png)
+![\label{fig:"R2"}](images/dat8.png)
 
 
 La otra alternativa con los datos faltantes es imputarlos. Para ello seguiremos el mismo procedimiento usado con *R*, es decir imputación por la media, mediana y moda.
@@ -169,20 +169,20 @@ La otra alternativa con los datos faltantes es imputarlos. Para ello seguiremos 
 
 * Sustitución por la media:  Para sustituir por el valor medio la función *.mean()* para calcular el valor medio de la columna y la función *.replace()* para realizar el cambio. 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat11.png)
+![\label{fig:"R2"}](images/dat11.png)
 
 
 * Sustitución por la mediana: Para realizar el cambio usamos *.median()*
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat12.png)
+![\label{fig:"R2"}](images/dat12.png)
 
 
-* Sustitución por la moda:  Para realizar el cambio usamos *.median()*
+* Sustitución por la moda:  Para realizar el cambio usamos *.mode()*
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/dat13.png)
+![\label{fig:"R2"}](images/dat13.png)
 
 
-## Identificación y tratamientos de Outliers o puntos atípicos.
+## Identificación y tratamientos de Outliers o puntos atípicos
 
 Los puntos u observaciones atípicas como su nombre lo indica son observaciones que tienen un comportamiento distinto al de las demas observaciones, por ejemplo en el conjunto de datos 2, 3, 2, 4, 3, 2, 34, 3, 2, 1, 2 el valor 34 es un punto atípico. Existen varias razones fundamentales para lo cual es vital detectar estas observaciones entre las que podemos mencionar estan:
 
@@ -201,17 +201,17 @@ Estudiaremos los dos enfoques más populares: el visual y el cuantitativo
 - Visual: Como su nombre lo indica consiste en analizar los datos de manera visual para identificar los valores atípicos. Por ejemplo, en la siguiente imagen podremos notar claramente un par de valores atípicos:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out.png)
+![\label{fig:"R2"}](images/out.png)
 
 El problema se complica cuando aumenta la dimensionalidad del conjunto de datos, es decir, aumentan las categorías que poseen las observaciones. Por ejemplo, supongamos que tenemos un conjunto de datos con tres categorías $x_1$, $x_2$, $x_3$, $x_4$, en este caso lo usual es graficar el cruce de las variables para encontrar valores atípicos. El problema es que algunos cruces pueden no mostrar nada anormal, como es el cruce entre las variables $x_1$ y $x_2$.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out2.png)
+![\label{fig:"R2"}](images/out2.png)
 
 Pero al observar el cruce ente las variables $x_1$ y $x_3$ se puede detectar rápidamente el punto atípico.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out3.png)
+![\label{fig:"R2"}](images/out3.png)
 
 Ahora, es claro que este método puede ser muy ineficiente a la hora de trabajar con una gran cantidad de atributos, es por eso que existe la necesidad de usar algún método cuantitativo para medir si un dato es atípico o no. Uno de los más utilizado es el método basado en la medida o distancia $D_M$ de *Mahalanobis*
 
@@ -229,28 +229,28 @@ Donde $y$ es el punto fijo de referencia, $x$ es el punto al que le estamos calc
 - Visual: Supongamos que tenemos el conjunto Data previamente cargado y compuesto por tres variables $x_1$, $x_2$ y $x_3$. Usaremos la función $plot()$, para observar la variable $x_1$. Usamos el siguiente comando:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out5.png)
+![\label{fig:"R2"}](images/out5.png)
 
 Dando como resultado:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out4.png)
+![\label{fig:"R2"}](images/out4.png)
 
 A primera vista no hay ningún valor atípico, sin embargo, si generamos el mismo gráfico para la variable $x_3$, obtenemos claramente un outlier:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out6.png)
+![\label{fig:"R2"}](images/out6.png)
 
 Ahora si queremos hacer el cruce de variables, usamos igual el mismo comando, por ejemplo,  el de las variables $x_1$ y $x_2$, hacemos:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out7.png)
+![\label{fig:"R2"}](images/out7.png)
 
 Aparentemente no se observan outliers, como muestra la siguiente imagen.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out8.png)
+![\label{fig:"R2"}](images/out8.png)
 
 Ahora, si realizamos el cruce de las variables $x_1$ y $x_3$ obtenemos:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out9.png)
+![\label{fig:"R2"}](images/out9.png)
 
 
 Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia $D_M$ de *Mahalanobis*.
@@ -258,10 +258,10 @@ Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muc
 - la distancia $D_M$ de *Mahalanobis*: Para calcular la distancia de Mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función *apply()*, la función *cov()* para calcular la matriz de covarianza y al final usamos la función *mahalanobis()* indicándole los datos a calcular. Luego usamos la función *plot()* para ver la existencia de valores atípicos.
 
  
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out10.png)
+![\label{fig:"R2"}](images/out10.png)
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out11.png)
+![\label{fig:"R2"}](images/out11.png)
 
 ### Detección de outliers en Python
 
@@ -272,32 +272,32 @@ Para ver la gráfica de la variable $x_1$, primero debemos seleccionar la variab
 
 Al graficar la variable $x_1$, se observa que carece de valores atípicos:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out14.png)
+![\label{fig:"R2"}](images/out14.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out16.png)
+![\label{fig:"R2"}](images/out16.png)
 
 Pero cuando generamos el gráfico de la variable $x_3$ notamos el valor atípico:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out15.png)
+![\label{fig:"R2"}](images/out15.png)
 
 Para realizar el gráfico del cruce de variables, simplemente agregamos la variable adicional como parámetro en *plt.plot()*.En este caso tampoco se observan valores atípicos.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out17.png)
+![\label{fig:"R2"}](images/out17.png)
 
 Pero al realizar el cruce con las variables $x_2$ y $x_3$ notamos el valor atípico.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out18.png)
+![\label{fig:"R2"}](images/out18.png)
 
 
 - La distancia $D_M$ de *Mahalanobis*: Para calcular la distancia de *Mahalanobis* de un conjunto de datos usando *Python*, usaremos la librería *Scipy* la cual trae por defecto una función para calcular la distancia de Mahalanobis. Primero debemos calcular la media de las columnas, usando la función *.mean()* de *Pandas*. A diferencia de *R*, debemos calcular la inversa de la matriz de covarianza (*Python* trae por defecto las filas y columnas intercambiadas con respecto a *R*), para ello usamos la funciones *.cov()*, la cual calcula la matriz de covarianza, *.linalg()* y *.inv()* para calcular la inversa. Luego, usando la función *apply()* de *Pandas* para aplicar la función *mahalanobis()* de la libreria *Scipy* a todo el conjunto de datos. En la función *.apply()* debemos colocar el nombre de la función, *axis* para indicar si la función aplica a las columnas o filas: el valor de $0$ para las columnas y $1$ para las filas. Finalizamos con *args* que contiene los parámetros que necesita la función, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.
 
  
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out21.png)
+![\label{fig:"R2"}](images/out21.png)
 
 Podremos notar claramente un valor atípico en la siguiente imagen.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/out20.png)
+![\label{fig:"R2"}](images/out20.png)
 
 
 

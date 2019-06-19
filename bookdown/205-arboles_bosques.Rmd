@@ -1,7 +1,7 @@
 # Árboles de decisión y bosques aleatorios
 
 
-## Arboles de decisión
+## Árboles de decisión
 
 Los árboles de decisión son una herramienta muy útil a la hora de elegir entre varias
 alternativas, cuando estas son escalonadas, es decir, que los resultados (positivos
@@ -11,41 +11,43 @@ o negativos) dependen de una decisión tomada anteriormente. Independientemente 
 Un árbol de decisión es, para quien va a tomar la decisión, un modelo esquemático de las alternativas disponibles y de las posibles consecuencias de cada una. El nombre de la herramienta proviene de la forma que adopta el modelo, el cual semeja un árbol. El modelo está conformado por múltiples nodos cuadrados que representan puntos de decisión. De estos puntos surgen ramas  (que deben leerse de izquierda a derecha), las cuales representan las distintas alternativas. Las ramas que provienen de los nodos circulares o causales representan los eventos. A continuación presentamos un ejemplo gráfico de un árbol de decisión: 
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb1.jpg)
+![\label{fig:"R2"}](images/arb1.jpg)
 
 
-### Arboles de decisión en *R*
+### Árboles de decisión en *R*
 
 Para realizar la construcción de árboles de decisión usaremos la librería *C50*, junto con la función *C5.0()* con una sintaxis  similar a la de la regresión lineal, es decir, ingresamos la variable a predecir seguida de las variables independientes. El segundo parámetro son los datos que se usarán. A continuación se muestra este proceso:
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb3.png)
+![\label{fig:"R2"}](images/arb3.png)
 
-Al usar la función *plot()* obtenemos la gráfica del arbol de decisión calculado.
+Al usar la función *plot()* obtenemos la gráfica del árbol de decisión calculado.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/Arb2.png)
+![\label{fig:"R2"}](images/Arb2.png)
 
-Para hacer predicciones, usaremos la función *predict()* la cual necesita como argumentos el nombre del modelo y los datos a predecir, como en el siguiente ejemplo:
+Para hacer predicciones, usaremos la función *predict()* la cual necesita como argumentos el nombre del modelo y los datos a predecir.
+
+Para ello construimos unos posibles datos para predecir los resultsdos del modelo *"Arbol"*, como se muestra en el siguiente ejemplo:
 
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb4.png)
+![\label{fig:"R2"}](images/arb4.png)
 
-### Arboles de decisión en *Python*
+### Árboles de decisión en *Python*
 
 Usaremos la librería *sklearn* y los datos *iris*. Se debe separar la variable a predecir de la variable independiente antes de realizar la construcción del modelo.
 
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb5.png)
+![\label{fig:"R2"}](images/arb5.png)
 
 
 Construimos el modelo usando usando la función *DecisionTreeClassifier()* y luego lo entrenamos usando usando la función *.fit()* agregando como parámetros la variable independiente y las variables independientes.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb6.png)
+![\label{fig:"R2"}](images/arb6.png)
 
 Para realizar predicciones usamos la función *.predict()*
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb7.png)
+![\label{fig:"R2"}](images/arb7.png)
 
 
 
@@ -59,39 +61,42 @@ Bosques aleatorios es una herramienta que combina árboles de decisión, selecci
 
 Para realizar bosques aleatorios en *R* usaremos la librería *randomForest* la cual facilita la sintaxis necesaria para construir el modelo. Los datos corresponden a la base de datos *iris* y se debe separar la variable independiente de las dependientes para luego usar la función *randomForest()* para construir el modelo. Ésta función necesita como parámetros las variables independientes y la variable dependiente junto al número de árboles a promediar. Anexamos el código para este proceso:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb8.png)
+![\label{fig:"R2"}](images/arb8.png)
 
-Al realizar el *print* modelo obtenemos:
-
-
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb9.png)
+Al realizar el *print* del modelo obtenemos:
 
 
+![\label{fig:"R2"}](images/arb9.png)
 
 
-Aqui obtenemos la información sobre como se construyo el modelo y de la clasificación de los datos con los que se construyo el modelo, en nuestro ejemplo podemos notar que el modelo es muy preciso. Para realizar prediciones con el modelo lo hacemos de la manera habitual, usando la función *predict()* alimentandola con los parámetro correspondoentes al nombre del modelo y el conjunto de datos a predecir.
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/arb10.png)
+
+
+Aquí obtenemos la información sobre cómo se construyó el modelo y la clasificación de los datos. En el ejemplo notamos que el modelo es muy preciso. Las predicciones la hacemos de la manera habitual, usando la función *predict()* incorporando los parámetros correspondientes al nombre del modelo y al conjunto de nuevos datos:
+
+
+![\label{fig:"R2"}](images/arb10.png)
 
 
 ## Bosques aleatorios en *Python*
 
 Usaremos de igual manera la librería *sklear*, a modo de conocimiento cargaremos los datos *iris* desde *sklear*, pero tendremos que hacerles unas modificaciones previas, de la siguiente forma:
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos5.png)
+![\label{fig:"R2"}](images/bos5.png)
 
-Debemos separar las variables independientes, en otra variable que llamaremos *predictores*. Los datos vienen sin la variable *species* por lo que se la debemos agregar realizaremos este procedimiento de la siguiente forma::
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos1.png)
+Debemos separar las variables independientes, en otra variable que llamaremos *predictores*. Como los datos carecen de la variable *species* la agregaremos de la siguiente forma:
 
-Antes de crear el modelo debemos asegurarnos que la variable sea del tipo numérico, con la función *factorize* realizamos este cambio.
+![\label{fig:"R2"}](images/bos1.png)
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos2.png)
+Antes de construir el modelo, aseguramos que la variable sea del tipo numérico con la función *factorize*: 
+
+![\label{fig:"R2"}](images/bos2.png)
 
 Para crear el modelo usamos la función *RandomForestClasifier()* y *.fit()* para entrenar el modelo.
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos3.png)
+![\label{fig:"R2"}](images/bos3.png)
 
 Finalmente, con *.predict()* realizamos predicciones con nuestro modelo.
 
-![\label{fig:"R2"}](~/Machine-Learning-Basico/bookdown/images/bos4.png)
+![\label{fig:"R2"}](images/bos4.png)
 
 
 
