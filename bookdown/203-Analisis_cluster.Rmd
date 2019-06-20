@@ -46,16 +46,16 @@ La idea central de la mayoría de estos procedimientos es elegir alguna partici�
 
 ## Elección del número de grupos
 
-Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos óptimos para segmentar la data? Usaremos básicamente dos formas visuales para escoger dicho número: el *dendograma* y el *gráfico de codo*.
+Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos óptimos para segmentar la data? Usaremos básicamente dos formas visuales para escoger dicho número: el *dendrograma* y el *gráfico de codo*.
 
-### Dendograma
+### Dendrograma
 
-Un dendograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendograma:
+Un dendrograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendrograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendrogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendrograma:
 
 ![\label{fig:"R2"}](images/clu.jpg)
 
 
-A partir del dendograma se puede apreciar un número apropiado de clúster.
+A partir del dendrograma se puede apreciar un número apropiado de clúster.
 
 ### Gráfico de codo
 
@@ -93,7 +93,7 @@ Para tener una visión gráfica de los clústeres hacemos proyecciones en pares 
 
 ### Método jerárquico
 
-Para construir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función *dist()*. Esta función tiene como parámetros el conjunto de datos y la manera en cómo se medirán los datos, en nuestro caso con la distancia euclídea. Luego con la función *hclust()* creamos el proceso de agrupación entre individuos, ésta función necesita dos parámetros: las distancias calculadas y el método de agrupación entre los individuos. En nuestro caso usaremos el método “*complete*”. A continuación realizaremos el gráfico de dendograma. Veamos esto en el siguiente código:
+Para construir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función *dist()*. Esta función tiene como parámetros el conjunto de datos y la manera en cómo se medirán los datos, en nuestro caso con la distancia euclídea. Luego con la función *hclust()* creamos el proceso de agrupación entre individuos, ésta función necesita dos parámetros: las distancias calculadas y el método de agrupación entre los individuos. En nuestro caso usaremos el método “*complete*”. A continuación realizaremos el gráfico de dendrograma. Veamos esto en el siguiente código:
 
 
 
@@ -103,7 +103,7 @@ Para construir los grupos, primero debemos crear las distancias entre observacio
 
 ![\label{fig:"R2"}](images/clu8.png)
 
-Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos. Para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento:
+Con este dendrograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos. Para obtener estos grupos, usaremos la función *cutree()* la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento:
 
 ![\label{fig:"R2"}](images/clu10.png)
 
@@ -129,9 +129,9 @@ A partir de este gráfico creamos unos número de tres grupos, con la función *
 
 ![\label{fig:"R2"}](images/clu14.png)
 
-### Método jerárquico.
+### Método jerárquico
 
-Para el cálculo de los grupos usaremos el mismo conjunto de datos, una vez cargados construimos el dendograma, para lo cual usaremos la función *.dendogram()* de la librería *scipy*. En este ejemplo usaremos el método de *ward*. A continuación mostramos el código:
+Para el cálculo de los grupos usaremos el mismo conjunto de datos, una vez cargados construimos el dendrograma, para lo cual usaremos la función *.dendrogram()* de la librería *scipy*. En este ejemplo usaremos el método de *ward*. A continuación mostramos el código:
 
 ![\label{fig:"R2"}](images/clu15.png)
 
@@ -139,7 +139,7 @@ Este código nos da como resultado :
 
 ![\label{fig:"R2"}](images/clu16.png)
 
-Al observar el dendograma observamos la existencia de tres grupos posibles. Para obtenerlos usaremos la función *AgglomerativeClusterin()* de la librería *sklear*  y finalmente *.fit_predict()* para obtener los grupos. El procedimiento a seguir se presenta a continuación:
+Al observar el dendrograma observamos la existencia de tres grupos posibles. Para obtenerlos usaremos la función *AgglomerativeClustering()* de la librería *sklear*  y finalmente *.fit_predict()* para obtener los grupos. El procedimiento a seguir se presenta a continuación:
 
 
 ![\label{fig:"R2"}](images/clu17.png)

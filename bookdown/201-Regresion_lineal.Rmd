@@ -103,7 +103,7 @@ Otra hipótesis importante antes de realizar el modelo de regresión, es la no c
 La forma de identificar colinealidad es exactamente igual a la forma de encontrar correlaciones entre las variables vistas al principio de este capítulo. Primero calculamos el índice de correlación entre variables, si se encuentra una alta correlación entre un par de variables independientes se procede a revisar la gráfica del cruce de dichas variable, y si se observa una clara relación lineal procedemos a eliminar alguna de ellas.
 
 
-## Eliminación de las variables categoricas
+## Eliminación de las variables categóricas
 
 En los modelos de regresión lineal las variables categóricas no cumplen las hipótesis del modelo, pues no satisfacen el supuesto de normalidad. Recordemos que una variable categórica es una variable que toma unos valores fijos ya conocidos, por ejemplo, la variable que toma los valores 1,2,3,4,5,6 que representa los posibles valores que toma el lanzamiento de un dado, es una variable categórica, o la variable que toma los valores de Si o No que se refiere al consumo de un producto específico. Por lo tanto debemos saber cómo eliminar variables de nuestro conjunto de datos.
 
@@ -121,7 +121,7 @@ Para recuperar la columna eliminada se vuelve a cargar la base de datos *data(mt
 
 De igual manera suponiendo que tenemos el mismo conjunto de datos y la misma variable a eliminar en *Python*, usamos la función *.drop()* para eliminar la variable, y denotamos *axis=1* para indicar que estamos eliminando una columna
 
-![\label{fig:"R2"}](images/reg18.png)
+![\label{fig:"R2"}](images/reg18+.png)
 
 
 
@@ -176,7 +176,7 @@ Para crear el modelo usando la librería *StatsModels*, debemos importar la libr
 
 ![\label{fig:"R2"}](images/reg22.png)
 
-## Como interpretar los resultados del modelo
+## Cómo interpretar los resultados del modelo
 
 Ya vimos que una vez construido el modelo usando funciones con el nombre de *summary* obtenemos información sobre características de los modelos. Describiremos las más importantes y como entender su efecto en el modelo.
  
@@ -203,7 +203,7 @@ Ya vimos que una vez construido el modelo usando funciones con el nombre de *sum
 
 - *$F$-statistic*: Nos presenta el valor del estadístico $F$, luego los grados de libertad y por último el $p$-valor de la prueba de hipótesis que resulta de contrastar el modelo resultante con el modelo que únicamente consta de un término intercept
 
-### Interpretar con *summary* en *Python*: 
+### Interpretar con *summary* en *Python*
 
 El *summary* en este caso nos da mucha más información que en *R*. Nos concentraremos en las mismas variables del *summary* y mencionaremos algunas otras que pueden ser de utilidad. Este *summary* se divide en dos cuadros:
 

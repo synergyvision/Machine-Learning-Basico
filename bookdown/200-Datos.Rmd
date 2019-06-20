@@ -74,12 +74,6 @@ A diferencia de *RStudio* no hay una forma en común para cargar los archivos, s
 
 + header: Se usa para identificar en que posición se encuentra la fila que será usada como los nombres de las columnas.
 
-- filepath_or_buffer: Ruta del archivo o dirección web.
-
-- Sep: valor que separa los datos, por defecto es una coma
-
--header: Se usa para identificar en qué posición se encuentra la fila que será usada como los nombres de las columnas.
-
 - *names*: Lista con el nombre de las columnas a usar.
 
 - *index_col*: Columna que será usada por defecto como índice
@@ -193,7 +187,7 @@ Los puntos u observaciones atípicas como su nombre lo indica son observaciones 
 - Para evitar estimaciones incorrectas en algunos modelos estadísticos: Algunos modelos estadisticos tienen fuertes restricciones en las hipotesis, es por esto que la eliminacion de algunos puntos atípicos puede mejorar de manera significativa nuestros resultados.
 
 
-### Identificación de puntos atípicos.
+### Identificación de puntos atípicos
 
 Estudiaremos los dos enfoques más populares: el visual y el cuantitativo
 
@@ -284,7 +278,7 @@ Para realizar el gráfico del cruce de variables, simplemente agregamos la varia
 
 ![\label{fig:"R2"}](images/out17.png)
 
-Pero al realizar el cruce con las variables $x_2$ y $x_3$ notamos el valor atípico.
+Pero al realizar el cruce con las variables $x_1$ y $x_3$ notamos el valor atípico.
 
 ![\label{fig:"R2"}](images/out18.png)
 

@@ -67,7 +67,7 @@ Deberemos instalar la librería *effsize* y usaremos la función *cohen.d()*, ad
 
 Podemos notar que el valor del estadístico *$d$ de Cohen* es alto mostrando un posible efecto de las variables categóricas en la variable continua.
 
-### Medida de $d$ de cohen en *Python*.
+### Medida de $d$ de Cohen en *Python*
 
 En *Python* no existe una función para calcular la *$d$ de Cohen* de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías *statistics* y *math* las cuales nos permitirán calcular las métricas que necesita el estadístico de *Cohen*.
 
@@ -100,7 +100,7 @@ Para crear variables auxiliares en *Python*, utilizaremos función *get_dummies(
 
 Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar la construcción del modelo como tal. Iniciaremos con el lenguaje *R*:
 
-### Modelo logístico en R.
+### Modelo logístico en R
 
 Para el cálculo del modelo logístico haremos uso de la función *glm()* que está disponible como función base en R. Esta función tiene prácticamente la misma sintaxis que la función *lm()*, así que no describiremos en detalle sus parámetros.
 
@@ -131,7 +131,7 @@ A continuación presentamos el código para realizar la predicción:
 
 En la imagen anterior el resultado es $0.14$ significa que la probabilidad de ocurrencia del evento es $0.14$.
 
-### Modelo logístico en *Python*.
+### Modelo logístico en *Python*
 
 Para crear el modelo cargaremos la librería *pandas* y *statsmodels*. Usaremos los mismos datos de la parte anterior. A diferencia de *R* debemos separar la variable dependiente de las independientes y verificar que las variables categóricas estén compuestas por valores numéricos. Estos cambios son hechos con la función *.replace()*. Recordemos que por defecto no se calcula la variable intercept en el modelo, por lo cual debemos incorporarla con la función *sm.add_constant()*. A continuación se muestra este procedimiento:
 
