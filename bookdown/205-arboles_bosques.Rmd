@@ -79,8 +79,8 @@ Aquí obtenemos la información sobre cómo se construyó el modelo y la clasifi
 
 ## Bosques aleatorios en *Python*
 
-Usaremos de igual manera la librería *sklear*, a modo de conocimiento cargaremos los datos *iris* desde *sklear*, pero tendremos que hacerles unas modificaciones previas, de la siguiente forma:
 
+Usaremos de igual manera la librería *sklearn*, a modo de conocimiento cargaremos los datos *iris* desde *sklearçn*, pero tendremos que hacerles unas modificaciones previas, de la siguiente forma:
 ![\label{fig:"R2"}](images/bos5.png)
 
 Debemos separar las variables independientes, en otra variable que llamaremos *predictores*. Como los datos carecen de la variable *species* la agregaremos de la siguiente forma:
