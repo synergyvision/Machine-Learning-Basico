@@ -12,7 +12,7 @@ Una de las primeras cosas a verificar antes de realizar el análisis de regresi�
 
 
 
-![\label{fig:"R2"}](images/reg.svg)
+![\label{fig:"R2"}](images/reg.png)
 
 
 - Cuantitativa: Una manera cuantitativa de medir la relación entre variables es usar el índice de correlacion, el cual varía entre -1 y 1. Entre más cerca de -1 o 1 esté el índice de correlación entre variables, mayor es su relación, en general, decimos que existe correlación lineal entre las variables independientes si el índice de correlación entre las variables es mayor a 0.5 o menor a -0.5.  
