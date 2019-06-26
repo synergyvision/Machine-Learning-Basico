@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Capítulo 2 Ambientes de trabajo para el cientifico de datos | Machine Learning Básico</title>
-  <meta name="description" content="Capítulo 2 Ambientes de trabajo para el cientifico de datos | Machine Learning Básico">
+  <title>Capítulo 2 Ambientes de trabajo para el científico de datos | Machine Learning Básico</title>
+  <meta name="description" content="Capítulo 2 Ambientes de trabajo para el científico de datos | Machine Learning Básico>
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 2 Ambientes de trabajo para el cientifico de datos | Machine Learning Básico" />
+  <meta property="og:title" content="Capítulo 2 Ambientes de trabajo para el científico de datos | Machine Learning Básico />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
   <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Ambientes de trabajo para el cientifico de datos | Machine Learning Básico" />
+  <meta name="twitter:title" content="Capítulo 2 Ambientes de trabajo para el científico de datos | Machine Learning Básico />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-05-30">
+<meta name="date" content="2019-06-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,41 +52,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -109,17 +135,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acerca-del-autor"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
-<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el científico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primer-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primer encuentro con los lenguajes</a></li>
 <li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
-<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerías</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerías en <em>R</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerías en <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
@@ -132,14 +157,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
-<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
-<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Detección de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Detección de outliers en Python</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
 <li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
-<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
@@ -151,46 +176,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
-<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresión lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresión lineal en <em>Python</em>:</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
 <li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
 <li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo"><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo</a><ul>
 <li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
 <li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
-<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
-<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica"><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes"><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes</a></li>
 <li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
 <li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r."><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>R</em>.</a></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas"><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></a></li>
 <li class="chapter" data-level="5.4.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-python."><i class="fa fa-check"></i><b>5.4.2</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-castegoricas."><i class="fa fa-check"></i><b>5.5</b> Codificando variables castegóricas.</a><ul>
+<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-categoricas"><i class="fa fa-check"></i><b>5.5</b> Codificando variables categóricas</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-r"><i class="fa fa-check"></i><b>5.5.1</b> Creación de variables auxiliares en <em>R</em></a></li>
 <li class="chapter" data-level="5.5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-python"><i class="fa fa-check"></i><b>5.5.2</b> Creación de variables auxiliares en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica."><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística.</a><ul>
+<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica"><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística</a><ul>
 <li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
+<li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
-<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de clúster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuestos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuestos del análisis de clúster.</a></li>
 <li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+<li class="chapter" data-level="6.3" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos-y-no-jerarquicos"><i class="fa fa-check"></i><b>6.3</b> Métodos jerárquicos y no jerárquicos</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos"><i class="fa fa-check"></i><b>6.3.1</b> Métodos jerárquicos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-no-jerarquicos"><i class="fa fa-check"></i><b>6.3.2</b> Metódos no jerárquicos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#eleccion-del-numero-de-grupos"><i class="fa fa-check"></i><b>6.4</b> Elección del número de grupos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#dendograma"><i class="fa fa-check"></i><b>6.4.1</b> Dendograma</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#grafico-de-codo"><i class="fa fa-check"></i><b>6.4.2</b> Gráfico de codo</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-r"><i class="fa fa-check"></i><b>6.5</b> Análisis de clúster en <em>R</em></a><ul>
+<li class="chapter" data-level="6.5.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico"><i class="fa fa-check"></i><b>6.5.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.5.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico"><i class="fa fa-check"></i><b>6.5.2</b> Método jerárquico</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-python"><i class="fa fa-check"></i><b>6.6</b> Análisis de clúster en <em>Python</em></a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico-1"><i class="fa fa-check"></i><b>6.6.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico."><i class="fa fa-check"></i><b>6.6.2</b> Método jerárquico.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html"><i class="fa fa-check"></i><b>7</b> Análisis de Componentes Principales</a><ul>
+<li class="chapter" data-level="7.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#correlacion-o-covarianza"><i class="fa fa-check"></i><b>7.1</b> Correlación o Covarianza:</a></li>
+<li class="chapter" data-level="7.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#supuestos-estadisticos"><i class="fa fa-check"></i><b>7.2</b> Supuestos estadísticos</a></li>
+<li class="chapter" data-level="7.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-r"><i class="fa fa-check"></i><b>7.3</b> <em>PCA</em> en <em>R</em></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos"><i class="fa fa-check"></i><b>7.3.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.3.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes"><i class="fa fa-check"></i><b>7.3.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.3.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas"><i class="fa fa-check"></i><b>7.3.3</b> Funciones gráficas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-python"><i class="fa fa-check"></i><b>7.4</b> <em>PCA</em> en <em>Python</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos-1"><i class="fa fa-check"></i><b>7.4.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes-1"><i class="fa fa-check"></i><b>7.4.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.4.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas-1"><i class="fa fa-check"></i><b>7.4.3</b> Funciones Gráficas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html"><i class="fa fa-check"></i><b>8</b> Árboles de decisión y bosques aleatorios</a><ul>
+<li class="chapter" data-level="8.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision"><i class="fa fa-check"></i><b>8.1</b> Arboles de decisión</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-r"><i class="fa fa-check"></i><b>8.1.1</b> Arboles de decisión en <em>R</em></a></li>
+<li class="chapter" data-level="8.1.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-python"><i class="fa fa-check"></i><b>8.1.2</b> Arboles de decisión en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios"><i class="fa fa-check"></i><b>8.2</b> Bosques aleatorios</a></li>
+<li class="chapter" data-level="8.3" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-r"><i class="fa fa-check"></i><b>8.3</b> Bosques aleatorios en <em>R</em></a></li>
+<li class="chapter" data-level="8.4" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-python"><i class="fa fa-check"></i><b>8.4</b> Bosques aleatorios en <em>Python</em></a></li>
 </ul></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
-<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
-<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
-<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
-<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+<li class="chapter" data-level="A" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html"><i class="fa fa-check"></i><b>A</b> Herramientas de software</a><ul>
+<li class="chapter" data-level="A.1" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#r-y-paquetes-de-r"><i class="fa fa-check"></i><b>A.1</b> <em>R</em> y paquetes de <em>R</em></a></li>
+<li class="chapter" data-level="A.2" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -214,86 +279,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="ambientes-de-trabajo-para-el-cientifico-de-datos" class="section level1">
-<h1><span class="header-section-number">Capítulo 2</span> Ambientes de trabajo para el cientifico de datos</h1>
-<p>Para poder trabajar y usar todas las herramientas y métodos que nos proporciona los conocimientos provenientes de la estadística y la matemática, los científicos de datos usan lenguajes de programación que estan orientados o que permiten debido a su arquitectura ahorrarnos el trabajo de programar paso por pasos los algoritmos que aplicarán los métodos a usar, esto es debido a que la comunidad que integra y usa activamente estos lenguajes ya lo han hecho y nos los proporcionan a traves de paquetes y librerias a las que podemos acceder generalmente de manera gratiuta. En una encuesta hecha en el portal web sobre los lenguajes preferidos por los cientificos de datos se obtuvieron los siguientes resultados.</p>
+<h1><span class="header-section-number">Capítulo 2</span> Ambientes de trabajo para el científico de datos</h1>
+<p>Para usar las herramientas estadísticas y matemáticas, los científicos de datos usan lenguajes de programación que nos ahorran el trabajo de codificar paso a paso los algoritmos de los métodos a utilizar. La comunidad científica nos proporcionan estas soluciones a través de paquetes y librerías que podemos acceder generalmente de manera gratuita. El siguiente gráfico del portal web <a href="https://www.paradigmadigital.com/dev/es-python-el-lenguaje-del-futuro/" class="uri">https://www.paradigmadigital.com/dev/es-python-el-lenguaje-del-futuro/</a> muestra los lenguajes preferidos por los científicos de datos :</p>
 <div class="figure">
-<img src="images/languages.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/languages.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Los lenguajes preferidos por esta comunidad fue <em>Python</em> y <em>R</em>. Ambos son open source, <em>Python</em> por un lado es un lenguaje facil de aprender flexible y de proposito general, generalmente el mas usado por ser el mas adaptable a propositos industriales, por otro lado <em>R</em> es un lenjuega funcional orientado a la comunidad científica que trabaja con estadística, <em>R</em> a diferencia de python tiene infinidad de librerias dispuesta para los científicos de datos, pero debido a su enfoque, no es tan adaptable a propositos industriales, sin embargo, la comunidad ha hecho intentos por mejorar esto, librias como <em>Shiny</em> permiten crear páginas web en los cuales podemos aplicar practicamente todas las herramientas que nos ofrece <em>R</em> y ofrecer resultados adecuados para los usuarios.</p>
-<p>Todo científico de datos debe conocer estos dos lenguajes y usar dependiendo se sus necesidades el que mejor se adapte, por ejemplo, si el enfoque de trabajo es mas investigativo, divulgativo o académico se recomienda usar el lenguaje <em>R</em>, si el enfoque es mas empresarial, industrial o orientado a diseño de software que usen métodos estadísticos <em>Python</em> es la mejor opción. Ambos lenjuages se pueden conseguir en la siguietes enlaces: <a href="https://www.python.org" class="uri">https://www.python.org</a> y <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a></p>
-<div id="primero-encuentro-con-los-lenguajes" class="section level2">
-<h2><span class="header-section-number">2.1</span> Primero encuentro con los lenguajes</h2>
-<p>Al descagar estos lenguajes lo primero que veremos es: en el caso de <em>Python</em></p>
+<p>Sin duda <em>Python</em> y <em>R</em> son los favoritos. Ambos son de códigos abiertos (open source), Phyton es un lenguaje flexible fácil de aprender y de propósito general, adaptable a fines empresariales. Por su parte, R es un lenguaje funcional orientado a la comunidad científica que trabaja con estadísticas, disponiendo de una infinidad de librerías, siempre en crecimiento. Entre ambos lenguajes Phyton es el más utilizado, sin embargo R puede adaptarse para fines empresariales gracias a librerías como Shiny, las cuales permiten crear páginas web donde se pueden aplicar prácticamente todas las herramientas de R y ofrecer resultados adecuados a todo tipo de usuarios.</p>
+<p>En principio todo aquel que trabaje con datos debe conocer ambos lenguajes y utilizarlos de acuerdo a sus necesidades. En los ámbitos académicos, divulgativos o de investigación, es recomendable usar R. Phyton es una mejor opción si las necesidades son del campo empresarial, industrial o para el diseño de software en el cual se usen métodos estadísticos. Los dos lenguajes pueden descargarse en los siguientes enlaces:</p>
+<ul>
+<li><p><em>R</em>: <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a></p></li>
+<li><p><em>Python</em>: <a href="https://www.python.org" class="uri">https://www.python.org</a></p></li>
+</ul>
+<div id="primer-encuentro-con-los-lenguajes" class="section level2">
+<h2><span class="header-section-number">2.1</span> Primer encuentro con los lenguajes</h2>
+<p>Al descagar estos lenguajes lo primero que veremos es: en el caso de <em>R</em>:</p>
 <div class="figure">
-<img src="images/python.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/R.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>y en el caso de <em>R</em></p>
+<p>y en el caso de <em>Python</em>:
+<img src="~/Machine-Learning-Basico/bookdown/images/python.png" alt="" /></p>
+<p>Aunque es posible comenzar a trabajar en estos ambientes, lo usual es elegir entornos más amigables.</p>
+<p>Para R, el entorno más utilizado es RStudio el cual tiene la siguiente presentación:</p>
 <div class="figure">
-<img src="images/R.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/rstudio.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Con esto ya los científicos de datos pueden empezar a trabajar, pero existen entornos de desarrollo que nos permiten trabajar de forma mas amigable con en estos lenguajes, las mas famosas son: para <em>Python</em>: <em>Spyder, Jupyter notebook</em> y para <em>R</em>: <em>RStudio</em>. Las cuales tienen la siguiente presentación:</p>
+<p>Para Phyton suele utilizarse Spyder y Jupyter Notebook. Las presentaciones de estos dos entornos son los siguientes:</p>
+<p>Entorno de Spyder:</p>
 <div class="figure">
-<img src="images/spyder.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/spyder.png" alt="" />
 <p class="caption"></p>
 </div>
+<p>Entorno de Jupyter notebook:</p>
 <div class="figure">
-<img src="images/jupyter.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/jupyter.png" alt="" />
 <p class="caption"></p>
 </div>
-<div class="figure">
-<img src="images/rstudio.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incoveniente de que muchas de las librerias para la ciencia de los datos, debemos instalarlas por nuestra cuenta, este problema se solventa con la existencia de ambientes de desarrollo para cientificos de datos que incluyan todos estos factores.</p>
+<p>Aunque con estos entornos se nos facilita mucho el trabajo seguimos con el incoveniente de que muchas de las librerías para la ciencia de los datos debemos instalarlas por nuestra cuenta, este problema se solventa con la existencia de ambientes de desarrollo para científicos de datos que incluyan todos estos factores.</p>
 </div>
 <div id="anaconda" class="section level2">
 <h2><span class="header-section-number">2.2</span> Anaconda</h2>
-<p>Anaconda es una distribución libre y abierta que incluye los lenguajes <em>R</em> y <em>Python</em> que permite a los cientificos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerias orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar <em>Rstudio</em> con un simple clik. La presentacion que veremos cuando abramos <em>Anaconda</em> es :</p>
+<p>Anaconda es una distribución libre y abierta que incluye los lenguajes <em>R</em> y <em>Python</em> que permite a los científicos de datos poder trabajar de una manera mas comoda y centralizada. Ananconda trae por defecto una gran cantidad de librerías orientadas a la ciencia de datos y projectos de Machine Learning, ademas nos permite descargar <em>Rstudio</em> con un simple clik. La presentacion que veremos cuando abramos <em>Anaconda</em> es :</p>
 <div class="figure">
-<img src="images/anaconda.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/Anaconda.png" alt="" />
 <p class="caption"></p>
 </div>
 <p>Se recomienda el uso de Anaconda para el público en general, para los principiantes debido a que permite un rapido inicio sin tener que descargar programas y paquetes por su propia cuenta y de esta forma concentrarse en el aprendizaje y para los avanzados ya que permite un trabajo mas centralizado y eficiente al poder tener un ambiente con todo los requerimientos que se necesiten para poder trabajar de una forma mas comoda. <em>Anaconda</em> se puede descargar en el siguiente enlace: <a href="https://www.anaconda.com" class="uri">https://www.anaconda.com</a></p>
 </div>
 <div id="librerias" class="section level2">
-<h2><span class="header-section-number">2.3</span> Librerias</h2>
-<p>A pesar de que al descargar <em>Anaconda</em> vienen por defecto una gran cantidad de librerias o paquetes, podremos estar interesados en instalar un paquete en particular que por no ser tan común o por alguna disposición técnica de los creadores de <em>Anaconda</em> no venga instalada por defecto necesitemos usar. Por lo tanto en esta sección enseñaremos como instalar paquetes de forma rapida y sencilla.</p>
+<h2><span class="header-section-number">2.3</span> Librerías</h2>
+<p>A pesar de que al descargar Anaconda vienen por defecto una gran cantidad de librerías o paquetes, podríamos estar interesados en instalar alguno que tal vez no lo esté. En esta sección enseñaremos como instalar paquetes de forma rápida y sencilla.</p>
 <div id="instalando-librerias-en-r" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Instalando librerias en R</h3>
-<p>Para descargar librerias en <em>R</em> lo haremos directamente desde <em>RStudio</em>. Haremos click en la pestaña <em>Package</em> subrayada en rojo (se encuentra en la seccion inferior derecha), luego haremos click la palabra <em>Install</em></p>
-<div class="figure">
-<img src="images/packa1.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>A continuación se desplegara un cuadro en el cual se pedirá la siguiente información:</p>
+<h3><span class="header-section-number">2.3.1</span> Instalando librerías en <em>R</em></h3>
+<p>Las descargas de las librerías en <em>R</em> la haremos directamente desde <em>RStudio</em>. Para ello hacemos clic en la pestaña <em>Package </em> ubicadas en la sección inferior derecha subrayada en rojo, luego haremos clic en el botón <em>Install</em></p>
+<p><img src="~/Machine-Learning-Basico/bookdown/images/packa1.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/packa2.png" alt="" /></p>
+<p>Los campos de información solicitada se refieren a:</p>
 <ul>
-<li><p><em>Install From</em>: Para instalar paquetes desde la base de datos oficial de <em>R</em> o de algun archivo en especifico (para lo cual debemos establecer la ruta del archivo)</p></li>
+<li><em>Install From</em>: Se utiliza para instalar paquetes desde la base de datos oficial de R o desde algún archivo específico. En este último caso es necesario indicar la ruta del archivo.</li>
 <li><p><em>Package</em>: Debemos colocar el nombre del paquete que vamos a instalar. Si deseamos instalar varios paquetes a la vez, debemos colocar sus nombres y separarlos por comas o puntos y comas.</p></li>
-<li><p><em>Install to library</em>: Ruta donde estara guardado el paquete una vez instalado (Se recomienda dejar el valor por defecto).</p></li>
-<li><p><em>Install dependencies</em>: Algunos paquetes necesitan del uso de otros paquetes para su correcto funcionamiento, al tildar esta opción estamos dandole permiso a <em>RStudio</em> para que instale las librerias que necita el paquete que deseamos instalar.</p></li>
+<li><p><em>Install to library</em>: Ruta donde estará guardado el paquete una vez instalado. Se recomienda dejar el valor por defecto.</p></li>
+<li><p><em>Install dependencies</em>: Algunos paquetes necesitan del uso de otros paquetes para su correcto funcionamiento. Al tildar esta opción estamos otorgándole permiso a RStudio para que instale las librerías que necesita el paquete que deseamos instalar.</p></li>
 </ul>
-<div class="figure">
-<img src="images/packa2.png" alt="" />
-<p class="caption"></p>
-</div>
 </div>
 <div id="instalando-librerias-en-python" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> Instalando librerias en python</h3>
-<p>Descargar librerias en python no estan facil como en <em>R</em> pero gracias a <em>Anaconda</em> se facilita esta tarea. En el navegador de <em>Anaconda</em> vamos a la sección <em>Envoirements</em> y al lado del buscador seleccionamos la ación <em>All</em>, una vez ahi colocamos el nombre del paquete que deseamos instalar se nos desplegara en la parte inferior derecha dos opciones <em>Apply</em> y <em>Clear</em>. Selecionamos la opcion <em>Apply</em> y se instalara el paquete.</p>
+<h3><span class="header-section-number">2.3.2</span> Instalando librerías en <em>Python</em></h3>
+<p>Descargar librerías en <em>Python</em> no es tan fácil como en <em>R</em>, pero Anaconda facilita esta tarea. En el navegador de <em>Anaconda</em> vamos a la sección <em>Ambientes</em>, en inglés <em>Environments</em>, y al lado del buscador seleccionamos la acción <em>Todo</em>, <em>All</em> en inglés, colocamos el nombre del paquete que deseamos instalar y se nos desplegará en la parte inferior derecha dos opciones: <em>Aplicar</em> o <em>Apply</em> y <em>Borrar</em> o <em>Clear</em>. Seleccionamos la opción <em>Apply</em> y se instalará el paquete deseado.</p>
 <div class="figure">
-<img src="images/packa3.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/packa3.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>En el caso de que el paquete no este disponible en el abiente tenemos la opción de intentar instalarlo desde la terminal que nos ofrece <em>Anaconda</em>, en la sección <em>Enviroment</em> hacemos click en la flecha al lado de la palabara <em>base</em> y seleccionamos <em>Open terminal</em>, una vez en la consola esribimos el comando <em>conda install “Nombre del paquete”</em></p>
+<p>Si el paquete no está disponible en el ambiente tenemos la opción de instalarlo desde la terminal de <em>Anaconda</em>. En la sección <em>Environment</em> hacemos clic en la flecha al lado de la palabra base (root) y seleccionamos <em>Open terminal</em>, tal como se muestra en la imagen</p>
 <div class="figure">
-<img src="images/packa4.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/packa4.png" alt="" />
 <p class="caption"></p>
 </div>
+<p>Se abre la consola del terminal y allí escribimos el comando <em>conda install “Nombre del paquete”</em> como se presenta a continuación</p>
 <div class="figure">
-<img src="images/packa5.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/packa5.png" alt="" />
 <p class="caption"></p>
 </div>
 
@@ -362,7 +427,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

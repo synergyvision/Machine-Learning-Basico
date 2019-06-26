@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Capítulo 6 Análisis de cluster | Machine Learning Básico</title>
-  <meta name="description" content="Capítulo 6 Análisis de cluster | Machine Learning Básico">
+  <title>Capítulo 6 Análisis de clúster | Machine Learning Básico</title>
+  <meta name="description" content="Capítulo 6 Análisis de clúster | Machine Learning Básico>
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 6 Análisis de cluster | Machine Learning Básico" />
+  <meta property="og:title" content="Capítulo 6 Análisis de clúster | Machine Learning Básico />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
   <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 6 Análisis de cluster | Machine Learning Básico" />
+  <meta name="twitter:title" content="Capítulo 6 Análisis de clúster | Machine Learning Básico />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-05-30">
+<meta name="date" content="2019-06-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="regresion-logistica.html">
-<link rel="next" href="software-tools.html">
+<link rel="next" href="analisis-de-componentes-principales.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -52,41 +52,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -109,17 +135,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acerca-del-autor"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
-<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el científico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primer-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primer encuentro con los lenguajes</a></li>
 <li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
-<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerías</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerías en <em>R</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerías en <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
@@ -132,14 +157,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
-<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
-<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Detección de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Detección de outliers en Python</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
 <li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
-<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
@@ -151,46 +176,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
-<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresión lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresión lineal en <em>Python</em>:</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
 <li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
 <li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo"><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo</a><ul>
 <li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
 <li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
-<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
-<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica"><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes"><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes</a></li>
 <li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
 <li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r."><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>R</em>.</a></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas"><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></a></li>
 <li class="chapter" data-level="5.4.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-python."><i class="fa fa-check"></i><b>5.4.2</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-castegoricas."><i class="fa fa-check"></i><b>5.5</b> Codificando variables castegóricas.</a><ul>
+<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-categoricas"><i class="fa fa-check"></i><b>5.5</b> Codificando variables categóricas</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-r"><i class="fa fa-check"></i><b>5.5.1</b> Creación de variables auxiliares en <em>R</em></a></li>
 <li class="chapter" data-level="5.5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-python"><i class="fa fa-check"></i><b>5.5.2</b> Creación de variables auxiliares en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica."><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística.</a><ul>
+<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica"><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística</a><ul>
 <li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
+<li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
-<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de clúster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuestos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuestos del análisis de clúster.</a></li>
 <li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+<li class="chapter" data-level="6.3" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos-y-no-jerarquicos"><i class="fa fa-check"></i><b>6.3</b> Métodos jerárquicos y no jerárquicos</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos"><i class="fa fa-check"></i><b>6.3.1</b> Métodos jerárquicos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-no-jerarquicos"><i class="fa fa-check"></i><b>6.3.2</b> Metódos no jerárquicos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#eleccion-del-numero-de-grupos"><i class="fa fa-check"></i><b>6.4</b> Elección del número de grupos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#dendograma"><i class="fa fa-check"></i><b>6.4.1</b> Dendograma</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#grafico-de-codo"><i class="fa fa-check"></i><b>6.4.2</b> Gráfico de codo</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-r"><i class="fa fa-check"></i><b>6.5</b> Análisis de clúster en <em>R</em></a><ul>
+<li class="chapter" data-level="6.5.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico"><i class="fa fa-check"></i><b>6.5.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.5.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico"><i class="fa fa-check"></i><b>6.5.2</b> Método jerárquico</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-python"><i class="fa fa-check"></i><b>6.6</b> Análisis de clúster en <em>Python</em></a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico-1"><i class="fa fa-check"></i><b>6.6.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico."><i class="fa fa-check"></i><b>6.6.2</b> Método jerárquico.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html"><i class="fa fa-check"></i><b>7</b> Análisis de Componentes Principales</a><ul>
+<li class="chapter" data-level="7.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#correlacion-o-covarianza"><i class="fa fa-check"></i><b>7.1</b> Correlación o Covarianza:</a></li>
+<li class="chapter" data-level="7.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#supuestos-estadisticos"><i class="fa fa-check"></i><b>7.2</b> Supuestos estadísticos</a></li>
+<li class="chapter" data-level="7.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-r"><i class="fa fa-check"></i><b>7.3</b> <em>PCA</em> en <em>R</em></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos"><i class="fa fa-check"></i><b>7.3.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.3.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes"><i class="fa fa-check"></i><b>7.3.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.3.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas"><i class="fa fa-check"></i><b>7.3.3</b> Funciones gráficas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-python"><i class="fa fa-check"></i><b>7.4</b> <em>PCA</em> en <em>Python</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos-1"><i class="fa fa-check"></i><b>7.4.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes-1"><i class="fa fa-check"></i><b>7.4.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.4.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas-1"><i class="fa fa-check"></i><b>7.4.3</b> Funciones Gráficas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html"><i class="fa fa-check"></i><b>8</b> Árboles de decisión y bosques aleatorios</a><ul>
+<li class="chapter" data-level="8.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision"><i class="fa fa-check"></i><b>8.1</b> Arboles de decisión</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-r"><i class="fa fa-check"></i><b>8.1.1</b> Arboles de decisión en <em>R</em></a></li>
+<li class="chapter" data-level="8.1.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-python"><i class="fa fa-check"></i><b>8.1.2</b> Arboles de decisión en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios"><i class="fa fa-check"></i><b>8.2</b> Bosques aleatorios</a></li>
+<li class="chapter" data-level="8.3" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-r"><i class="fa fa-check"></i><b>8.3</b> Bosques aleatorios en <em>R</em></a></li>
+<li class="chapter" data-level="8.4" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-python"><i class="fa fa-check"></i><b>8.4</b> Bosques aleatorios en <em>Python</em></a></li>
 </ul></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
-<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
-<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
-<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
-<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+<li class="chapter" data-level="A" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html"><i class="fa fa-check"></i><b>A</b> Herramientas de software</a><ul>
+<li class="chapter" data-level="A.1" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#r-y-paquetes-de-r"><i class="fa fa-check"></i><b>A.1</b> <em>R</em> y paquetes de <em>R</em></a></li>
+<li class="chapter" data-level="A.2" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -214,26 +279,153 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="analisis-de-cluster" class="section level1">
-<h1><span class="header-section-number">Capítulo 6</span> Análisis de cluster</h1>
-<p>El análisis de cluster o análisis de conglomerados es un método estadístico no parámetrico, es decir, no se basa en el cálculo de parámetros como la regresión lineal, el cual tiene como objetivo hallar grupos que a partir de los datos y que estos grupos estén claramente divididos.</p>
-<p>Para poder agrupar las observaciones se deben compararusando alguna medida de distacia o similitud, esto dependera de como sean los datos en si, por ejemplo no es el mismo problema comparar oservaciones en que todas las variables son cuantitativas a variables que possen variables categóricas.</p>
-<div id="supuetos-del-analisis-de-cluster." class="section level2">
-<h2><span class="header-section-number">6.1</span> Supuetos del análisis de cluster.</h2>
-<p>Debido a que el análisis de cluster como ya se menciono es un metódo no parámetrico, no posee hipotesis estadísticas tan fuertes como es el caso e la regresión lineal, pero si debemos gaarantizar que cada variable a usar sea significativa y tengamos en mente que esta puede dividir de algún modo nuestro conjunto de datos.</p>
-<p>El análisis de cluster es sensible a los valores atípicos, mas aún, se puede suponer que es indispensable corroborar la existencia de datos atípicos, pues podremos tener resuldos significativamente diferentes al no eliminarlos. Por lo que aconsejamos siempre iniciar haciendo un estudio de los valores atípicos.</p>
+<h1><span class="header-section-number">Capítulo 6</span> Análisis de clúster</h1>
+<p>El análisis de clúster o análisis de conglomerados es un método estadístico no paramétrico, que tiene como objetivo hallar grupos a partir de los datos y que estos grupos estén claramente divididos. Se dice que el análisis de clúster es no paramétrico, porque no requiere que la distribución de la población sea caracterizada por ciertos parámetros, como en cambio sí ocurre con métodos como las regresiones lineal y logística.</p>
+<p>Para agrupar las observaciones en un análisis de clúster, se deben comparar usando alguna medida de distancia o similitud entre ellas, según como sean los datos. Así existirán diferencias de enfoque en la metodología dependiendo de si las variables son cuantitativas o categóricas.</p>
+<div id="supuestos-del-analisis-de-cluster." class="section level2">
+<h2><span class="header-section-number">6.1</span> Supuestos del análisis de clúster.</h2>
+<p>Como el análisis de clúster es un método no paramétrico, las hipótesis estadísticas requeridas son menos exigentes que en el caso de una regresión lineal. Ahora bien, es necesario garantizar que cada variable a usar sea significativa y tener siempre presente que éstas pueden dividir de algún modo al conjunto de datos.</p>
+<p>El análisis de clúster es sensible a los valores atípicos, por lo cual es indispensable corroborar o no la existencia de este tipo de datos, y en caso de detectar su presencia, manejarlos e interpretar adecuadamente su efecto en los resultados. Por lo tanto es recomendable iniciar siempre el análisis de clúster haciendo un estudio de los valores atípicos.</p>
 </div>
 <div id="medidas-o-similitudes" class="section level2">
 <h2><span class="header-section-number">6.2</span> Medidas o similitudes</h2>
-<p>Una vez hemos hecho una adecuada selección de las variables a considerar, cada uno de los individuos sujetos al análisis nos vendrá representado por los valores que tomen estas variables en cada uno de ellos. Este es el punto de partida de la clasificación. Para clasificar adecuadamente los individuos deberemos determinar lo similares o disimilares (divergentes) que son entre sí, en función de lo diferentes que resulten ser sus representaciones en el espacio de las variables.</p>
-<p>Para medir lo similares ( o disimilares) que son los individuos existe una enorme cantidad de índices de similaridad y de disimilaridad o divergencia. Todos ellos tienen propiedades y utilidades distintas y habrá que ser consciente de ellas para su correcta aplicación al caso que nos ocupe.</p>
-<p>La mayor parte de estos índices serán o bien, indicadores basados en la distancia (considerando a los individuos como vectores en el espacio de las variables) (en este sentido un elevado valor de la distancia entre dos individuos nos indicará un alto grado de disimilaridad entre ellos); o bien, indicadores basados en coeficientes de correlación ; o bien basados en tablas de datos de posesión o no de una serie de atributos.</p>
-
+<p>Realizada la apropiada selección de las variables, los individuos bajo análisis vendrán representados por el conjunto de valores que tomen dichas variables en cada uno de ellos. Este es el punto de partida del análisis de clúster. Para clasificar adecuadamente los individuos es necesario determinar el grado de similaridad o disimilaridad (divergencia) entre ellos, de acuerdo a sus representaciones en el espacio de las variables.
+Existe una enorme cantidad de índices de similaridad y de disimilaridad o divergencia. Todos tienen propiedades y utilidades distintas que debemos conocer para aplicarlas correctamente a cada caso.
+La mayor parte de estos índices serán indicadores basados:</p>
+<ul>
+<li><p>En la distancia: considerando a los individuos como vectores en el espacio de las variables. En este sentido un elevado valor de la distancia entre dos individuos indicará un alto grado de disimilaridad entre ellos.</p></li>
+<li><p>En coeficientes de correlación.</p></li>
+<li><p>En tablas de datos de posesión o no de una serie de atributos.</p></li>
+</ul>
+</div>
+<div id="metodos-jerarquicos-y-no-jerarquicos" class="section level2">
+<h2><span class="header-section-number">6.3</span> Métodos jerárquicos y no jerárquicos</h2>
+<p>Dependiendo de cómo se realicen las agrupaciones, tendremos dos tipos de análisis de clúster: jerárquicos y no jerárquicos:</p>
+<div id="metodos-jerarquicos" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Métodos jerárquicos</h3>
+<p>Los llamados métodos jerárquicos tienen por objetivo agrupar clústeres para formar uno nuevo o separar alguno ya existente para dar origen a otros dos. Si sucesivamente se va efectuando el proceso de aglomeración o división, se minimizará alguna distancia o bien se maximizará alguna medida de similitud. Los métodos jerárquicos se subdividen en: aglomerativos y disociativos. Cada una de estas categorías presenta una gran diversidad de variantes</p>
+<ul>
+<li><p>Métodos aglomerativos: también conocidos como ascendentes, comienzan el análisis con tantos grupos como individuos haya. A partir de estas unidades iniciales se van formando grupos, de forma ascendente, hasta que al final del proceso todos los casos tratados están englobados en un mismo conglomerado.</p></li>
+<li><p>Métodos disociativos: también llamados descendentes, constituyen el proceso inverso al anterior. Comienzan con un conglomerado que engloba a todos los casos tratados y, a partir de este grupo inicial, a través de sucesivas divisiones, se van formando grupos cada vez más pequeños. Al final del proceso se tienen tantas agrupaciones como casos han sido tratados.</p></li>
+</ul>
+</div>
+<div id="metodos-no-jerarquicos" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Metódos no jerárquicos</h3>
+<p>Los métodos jerárquicos para un conjunto de <span class="math inline">\(m\)</span> individuos parten de <span class="math inline">\(m\)</span> clústeres de un miembro cada uno hasta construir un solo clúster de m miembros (métodos aglomerativos), o viceversa (métodos disociativos). Los métodos que se presentan a continuación están diseñados para clasificar individuos (no son válidos para variables) en una clasificación de <span class="math inline">\(K\)</span> clústeres, donde <span class="math inline">\(K\)</span> se especifica a priori o bien se determina como una parte del proceso.</p>
+<p>La idea central de la mayoría de estos procedimientos es elegir alguna partición inicial de individuos y después intercambiar los miembros de estos clústeres para obtener una mejor partición. Los diversos algoritmos existentes se diferencian sobre todo en lo que se entiende por una mejor partición y en los métodos que deben usarse para conseguir mejoras.</p>
+</div>
+</div>
+<div id="eleccion-del-numero-de-grupos" class="section level2">
+<h2><span class="header-section-number">6.4</span> Elección del número de grupos</h2>
+<p>Una pregunta natural es: ¿Cómo elegir de manera adecuada el número de grupos óptimos para segmentar la data? Usaremos básicamente dos formas visuales para escoger dicho número: el <em>dendograma</em> y el <em>gráfico de codo</em>.</p>
+<div id="dendograma" class="section level3">
+<h3><span class="header-section-number">6.4.1</span> Dendograma</h3>
+<p>Un dendograma es un tipo de representación gráfica en forma de árbol que organiza y agrupa los datos en subcategorías según su similitud, dada por alguna medida de distancia. Los objetos similares se representan en el dendograma por medio de un enlace cuya posición está determinada por el nivel de similitud entre los objetos o grupos de objetos. Dadas estas características, hace que los dendogramas sean un tipo de diagrama muy útil para estudiar las agrupaciones de objetos; es decir, para estudiar los clústeres que pueden darse en un conjunto de datos. A continuación vemos el siguiente ejemplo de dendograma:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu.jpg" alt="" />
+<p class="caption"></p>
+</div>
+<p>A partir del dendograma se puede apreciar un número apropiado de clúster.</p>
+</div>
+<div id="grafico-de-codo" class="section level3">
+<h3><span class="header-section-number">6.4.2</span> Gráfico de codo</h3>
+<p>Este método considera el porcentaje de varianza explicado en función del número de conglomerados: Se debe elegir un número de clústeres que optimice el modelado, de modo que la mejora sea insignificante si se intenta añadir otro clúster. En otros términos, si se traza el porcentaje de varianza explicado por los clústeres contra el número de clústeres, los primeros clústeres añadirán mucha información (explican mucha varianza), pero en algún momento la ganancia marginal producto de añadir clústeres adicionales caerá, mostrando un ángulo en el gráfico. El número de grupos se elige justo hasta este punto, de ahí el “criterio del codo”. Este “codo” no siempre puede ser identificado inequívocamente. La siguiente imagen nos proporciona una muestra de un gráfico de codo:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu1.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="analisis-de-cluster-en-r" class="section level2">
+<h2><span class="header-section-number">6.5</span> Análisis de clúster en <em>R</em></h2>
+<div id="metodo-no-jerarquico" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> Método no jerárquico</h3>
+<p>Veremos el método llamado <em>K-medias</em> que en resumidas palabras agrupa un número de clústeres pre-definidos a partir de los valores medios de cada clúster. Usaremos el conjunto de datos <em>iris</em> con información sobre tres variedades morfológicas de la especie iris, el cual viene por defecto en <em>R</em>, también la función <em>kmeans()</em> la cual requiere dos parámetros: el conjunto de datos y el número de clústeres a crear.</p>
+<p>Lo primero que haremos es calcular un diagrama de codo para poder tener una primera impresión del número de grupos a utilizar, esto lo haremos con el siguiente código:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu7.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Obteniendo la siguiente imagen:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu6.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>A partir de este gráfico podemos intuir que el número de clústeres adecuados es 3, luego para construir los grupos usaremos el siguiente código:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu2.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Para tener una visión gráfica de los clústeres hacemos proyecciones en pares de variables, obteniendo el siguiente gráfico:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu4.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="metodo-jerarquico" class="section level3">
+<h3><span class="header-section-number">6.5.2</span> Método jerárquico</h3>
+<p>Para construir los grupos, primero debemos crear las distancias entre observaciones, esto lo haremos con la función <em>dist()</em>. Esta función tiene como parámetros el conjunto de datos y la manera en cómo se medirán los datos, en nuestro caso con la distancia euclídea. Luego con la función <em>hclust()</em> creamos el proceso de agrupación entre individuos, ésta función necesita dos parámetros: las distancias calculadas y el método de agrupación entre los individuos. En nuestro caso usaremos el método “<em>complete</em>”. A continuación realizaremos el gráfico de dendograma. Veamos esto en el siguiente código:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu9.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu8.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Con este dendograma podemos apreciar una posible separación de la variable de entre 3 o 4 grupos. Para obtener estos grupos, usaremos la función <em>cutree()</em> la cual recibe como parámetros el modelo y el número de grupos a escoger, a continuación se muestra este procedimiento:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu10.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+</div>
+<div id="analisis-de-cluster-en-python" class="section level2">
+<h2><span class="header-section-number">6.6</span> Análisis de clúster en <em>Python</em></h2>
+<div id="metodo-no-jerarquico-1" class="section level3">
+<h3><span class="header-section-number">6.6.1</span> Método no jerárquico</h3>
+<p>Realizaremos la construcción de los grupos usando el método <em>kmeans</em> con el mismo conjunto datos. No describiremos en detalle las librerías a utilizar, solo describiremos su uso general, utilizando la librería <em>sklearn</em> para crear el modelo y <em>seaborn</em>, <em>matplotlib</em> y <em>mpl_toolkits</em> para la parte gráfica.</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu11.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Ahora construiremos el gráfico de codos para poder determinar el número apropiado de clústeres. Usaremos la función <em>Kmeans</em> de la librería <em>sklearn</em> para construir los modelos por número de clústeres. Seguidamente se muestra el siguiente código para este propósito.</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu12.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Obteniendo el siguiente resultado:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu13.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>A partir de este gráfico creamos unos número de tres grupos, con la función <em>kmean().</em> Con <em>.predicts()</em> identificamos el grupo al cual pertenece cada observación.</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu14.png" alt="" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="metodo-jerarquico." class="section level3">
+<h3><span class="header-section-number">6.6.2</span> Método jerárquico.</h3>
+<p>Para el cálculo de los grupos usaremos el mismo conjunto de datos, una vez cargados construimos el dendograma, para lo cual usaremos la función <em>.dendogram()</em> de la librería <em>scipy</em>. En este ejemplo usaremos el método de <em>ward</em>. A continuación mostramos el código:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu15.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Este código nos da como resultado :</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu16.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Al observar el dendograma observamos la existencia de tres grupos posibles. Para obtenerlos usaremos la función <em>AgglomerativeClusterin()</em> de la librería <em>sklear</em> y finalmente <em>.fit_predict()</em> para obtener los grupos. El procedimiento a seguir se presenta a continuación:</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/clu17.png" alt="" />
+<p class="caption"></p>
+</div>
 
 </div>
 </div>
-
-
-
+</div>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
@@ -246,7 +438,7 @@ ga('send', 'pageview');
         </div>
       </div>
 <a href="regresion-logistica.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="software-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="analisis-de-componentes-principales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -296,7 +488,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

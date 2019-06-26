@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Capítulo 5 Regresión logística | Machine Learning Básico</title>
-  <meta name="description" content="Capítulo 5 Regresión logística | Machine Learning Básico">
+  <meta name="description" content="Capítulo 5 Regresión logística | Machine Learning Básico>
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 5 Regresión logística | Machine Learning Básico" />
+  <meta property="og:title" content="Capítulo 5 Regresión logística | Machine Learning Básico />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
   <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 Regresión logística | Machine Learning Básico" />
+  <meta name="twitter:title" content="Capítulo 5 Regresión logística | Machine Learning Básico />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-06-01">
+<meta name="date" content="2019-06-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,13 +34,13 @@
   
 <link rel="prev" href="regresion-lineal.html">
 <link rel="next" href="analisis-de-cluster.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -51,6 +51,69 @@
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -72,17 +135,16 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acerca-del-autor"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
-<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el científico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primer-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primer encuentro con los lenguajes</a></li>
 <li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
-<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerías</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerías en <em>R</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerías en <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
@@ -95,14 +157,14 @@
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
-<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
-<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Detección de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Detección de outliers en Python</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
 <li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
-<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
@@ -114,47 +176,86 @@
 <li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
-<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresión lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresión lineal en <em>Python</em>:</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
 <li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
 <li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo"><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo</a><ul>
 <li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
 <li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
-<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
-<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica"><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes"><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes</a></li>
 <li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
 <li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r."><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>R</em>.</a></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas"><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></a></li>
 <li class="chapter" data-level="5.4.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-python."><i class="fa fa-check"></i><b>5.4.2</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-castegoricas."><i class="fa fa-check"></i><b>5.5</b> Codificando variables castegóricas.</a><ul>
+<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-categoricas"><i class="fa fa-check"></i><b>5.5</b> Codificando variables categóricas</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-r"><i class="fa fa-check"></i><b>5.5.1</b> Creación de variables auxiliares en <em>R</em></a></li>
 <li class="chapter" data-level="5.5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-python"><i class="fa fa-check"></i><b>5.5.2</b> Creación de variables auxiliares en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica."><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística.</a><ul>
+<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica"><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística</a><ul>
 <li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
 <li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
-<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de clúster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuestos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuestos del análisis de clúster.</a></li>
 <li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+<li class="chapter" data-level="6.3" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos-y-no-jerarquicos"><i class="fa fa-check"></i><b>6.3</b> Métodos jerárquicos y no jerárquicos</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos"><i class="fa fa-check"></i><b>6.3.1</b> Métodos jerárquicos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-no-jerarquicos"><i class="fa fa-check"></i><b>6.3.2</b> Metódos no jerárquicos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#eleccion-del-numero-de-grupos"><i class="fa fa-check"></i><b>6.4</b> Elección del número de grupos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#dendograma"><i class="fa fa-check"></i><b>6.4.1</b> Dendograma</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#grafico-de-codo"><i class="fa fa-check"></i><b>6.4.2</b> Gráfico de codo</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-r"><i class="fa fa-check"></i><b>6.5</b> Análisis de clúster en <em>R</em></a><ul>
+<li class="chapter" data-level="6.5.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico"><i class="fa fa-check"></i><b>6.5.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.5.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico"><i class="fa fa-check"></i><b>6.5.2</b> Método jerárquico</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-python"><i class="fa fa-check"></i><b>6.6</b> Análisis de clúster en <em>Python</em></a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico-1"><i class="fa fa-check"></i><b>6.6.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico."><i class="fa fa-check"></i><b>6.6.2</b> Método jerárquico.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html"><i class="fa fa-check"></i><b>7</b> Análisis de Componentes Principales</a><ul>
+<li class="chapter" data-level="7.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#correlacion-o-covarianza"><i class="fa fa-check"></i><b>7.1</b> Correlación o Covarianza:</a></li>
+<li class="chapter" data-level="7.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#supuestos-estadisticos"><i class="fa fa-check"></i><b>7.2</b> Supuestos estadísticos</a></li>
+<li class="chapter" data-level="7.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-r"><i class="fa fa-check"></i><b>7.3</b> <em>PCA</em> en <em>R</em></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos"><i class="fa fa-check"></i><b>7.3.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.3.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes"><i class="fa fa-check"></i><b>7.3.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.3.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas"><i class="fa fa-check"></i><b>7.3.3</b> Funciones gráficas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-python"><i class="fa fa-check"></i><b>7.4</b> <em>PCA</em> en <em>Python</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos-1"><i class="fa fa-check"></i><b>7.4.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes-1"><i class="fa fa-check"></i><b>7.4.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.4.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas-1"><i class="fa fa-check"></i><b>7.4.3</b> Funciones Gráficas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html"><i class="fa fa-check"></i><b>8</b> Árboles de decisión y bosques aleatorios</a><ul>
+<li class="chapter" data-level="8.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision"><i class="fa fa-check"></i><b>8.1</b> Arboles de decisión</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-r"><i class="fa fa-check"></i><b>8.1.1</b> Arboles de decisión en <em>R</em></a></li>
+<li class="chapter" data-level="8.1.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-python"><i class="fa fa-check"></i><b>8.1.2</b> Arboles de decisión en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios"><i class="fa fa-check"></i><b>8.2</b> Bosques aleatorios</a></li>
+<li class="chapter" data-level="8.3" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-r"><i class="fa fa-check"></i><b>8.3</b> Bosques aleatorios en <em>R</em></a></li>
+<li class="chapter" data-level="8.4" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-python"><i class="fa fa-check"></i><b>8.4</b> Bosques aleatorios en <em>Python</em></a></li>
 </ul></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
-<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
-<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
-<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
-<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+<li class="chapter" data-level="A" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html"><i class="fa fa-check"></i><b>A</b> Herramientas de software</a><ul>
+<li class="chapter" data-level="A.1" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#r-y-paquetes-de-r"><i class="fa fa-check"></i><b>A.1</b> <em>R</em> y paquetes de <em>R</em></a></li>
+<li class="chapter" data-level="A.2" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -179,145 +280,153 @@
             <section class="normal" id="section-">
 <div id="regresion-logistica" class="section level1">
 <h1><span class="header-section-number">Capítulo 5</span> Regresión logística</h1>
-<p>La regresión logística nos da respuesta a la siguiente interrogante, ¿Que hacer cuando la variable dependiente es dicotómica?. Claramente en los modelos lineales esto no se puede aplicar pues la variable dependiente debe ser continua. De igual manera la otra interrogante importante es ¿Que hacer cuando las variables independiente son categóricas?. La regresión logística nos da la flexibilidad necesaria para incluir este tipo de variables. La regresión logística a diferencia de la regresión lineal no calcula directamente el valor de la variable categórica, sino la probilidad de que el evento ocurra, por ejemplo, si estamos interesados en el evento cara o cruz, un modelo logístico para este tipo de modelos nos dará la probabilida de que ocurra cara o cruz.</p>
-<div id="supuestos-de-la-regresion-logistica." class="section level2">
-<h2><span class="header-section-number">5.1</span> Supuestos de la regresión logística.</h2>
-<p>La regresión logística es flexible con respecto a supuestos como normalidad o la continuidad de las variables. Una de las hipotesis que debemos verificar es la de no existencia de multicolinealidad entre las distintas variables continuas y la correlación entre las variables independientes y la variable dependiente. A continuación veremos como responder a estas interrogativas.</p>
+<p>La regresión logística nos da respuesta a la siguiente interrogante, ¿Qué hacer cuando la variable dependiente es dicotómica? Claramente en los modelos lineales esto es inaplicable pues la variable dependiente debe ser continua. De igual manera la otra interrogante importante es ¿Qué hacer cuando las variables independientes son categóricas? La regresión logística da la flexibilidad necesaria para incluir este tipo de variables. La regresión logística calcula la probabilidad de que el evento ocurra, y en esto se diferencia de la regresión lineal en la cual se calculaba directamente el valor de la variable. Por ejemplo, si estamos interesados en el evento cara o cruz, un modelo logístico para este tipo de modelos nos dará la probabilidad de que ocurra cara o cruz.</p>
+<div id="supuestos-de-la-regresion-logistica" class="section level2">
+<h2><span class="header-section-number">5.1</span> Supuestos de la regresión logística</h2>
+<p>La regresión logística es flexible con respecto a supuestos como normalidad o la continuidad de las variables. Una de las hipótesis que debemos verificar es la inexistencia de multicolinealidad entre las distintas variables continuas y la correlación entre las variables independientes y la variable dependiente. A continuación veremos cómo responder a estas interrogantes.</p>
 </div>
-<div id="multicolinealidas-entre-variables-independientes." class="section level2">
-<h2><span class="header-section-number">5.2</span> Multicolinealidas entre variables independientes.</h2>
-<p>Al igual que en la regresión lineal debemos evitar, variables independientes con alta correlación. Debemos realizar el mismo procedimiento visto en el capítulo anterior.</p>
+<div id="multicolinealidas-entre-variables-independientes" class="section level2">
+<h2><span class="header-section-number">5.2</span> Multicolinealidas entre variables independientes</h2>
+<p>Al igual que en la regresión lineal debemos evitar variables independientes con alta correlación. Para ello debemos realizar el mismo procedimiento visto en el capítulo anterior.</p>
 </div>
 <div id="detectar-correlacion-entre-variables-categoricas" class="section level2">
 <h2><span class="header-section-number">5.3</span> Detectar correlación entre variables categóricas</h2>
-<p>Una de las primeras cosas que debemos ver es la independecia entre las variables independientes categoricas y la dependencia entre la variable dependiente y las variables categóricas independientes. Para ver esto haremos uso de las tablas de contigencia.</p>
-<p>Una tabla de contogencia es la forma mas facíl de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contigencia.</p>
+<p>Una de las primeras cosas que debemos revisar es la independencia entre las variables independientes categóricas y la dependencia entre la variable dependiente y las variables categóricas independientes. Para ello haremos uso de las tablas de contingencia.</p>
+<p>Una tabla de contingencia es la forma más fácil de detectar relaciones entre variables categóricas, en estas tablas se definen las variables en filas y columnas y se ven las distintas proporciones entre las categorías de las variables. En la siguiente imagen se muestra un ejemplo de tabla de contingencia</p>
 <div class="figure">
-<img src="images/log.jpg" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log.jpg" alt="" />
 <p class="caption"></p>
 </div>
 <p>En las columnas la variable hace referencia al uso del internet y en las filas las variables hacen referencia al sexo.</p>
-<p>Para detectar si dos variables estan o no correlacionadas usaremos la prueba chi-cuadrado que contraste la independencia entre las variables, es decir, si el <span class="math inline">\(p\)</span>-valor es bajo estamos encontrando evidencia de inpendecia entre los factores, en caso contrario podemos suponer la existencia de cierta relación entre las variables.</p>
-<p>En la siguiente imagem se muestra una tabla de contigencia, al la cual le aplicaremos la prueba chi-cuadrado, para contrastar la independencia entre el uso de internet y el estar empleado.</p>
+<p>Para detectar si dos variables están o no correlacionadas usaremos la prueba <em>chi-cuadrado</em> que contrasta la independencia entre las variables, es decir, si el <em><span class="math inline">\(p\)</span>-valor</em> es bajo estamos encontrando evidencia de independencia entre los factores, en caso contrario podemos suponer la existencia de cierta relación entre las variables.</p>
+<p>En la siguiente imagen se muestra una tabla de contingencia, a la cual le aplicaremos la prueba <em>chi-cuadrado</em>, para contrastar la independencia entre el uso de internet y el estar empleado. La tabla se construye con el siguiente código:</p>
 <div class="figure">
-<img src="images/log2.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log2000.png" alt="" />
+<p class="caption"></p>
+</div>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/log2.png" alt="" />
 <p class="caption"></p>
 </div>
 <div id="prueba-chi-cuadrado-en-r" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Prueba chi-cuadrado en <em>R</em></h3>
-<p>Para realizar la prueba usamos la función * chisq.test()* y obtenemos el siguiente resultado</p>
+<p>Para realizar la prueba usamos la función <em>chisq.test()</em> y obtenemos el siguiente resultado</p>
 <div class="figure">
-<img src="images/log3.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log3.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>El valor que nos interesa es el <span class="math inline">\(p\)</span>-valor, el cual a no ser menor a <span class="math inline">\(0.05\)</span> nos indica una posible relación entre las variables, en general, si el <span class="math inline">\(p\)</span>-valor es cercano a uno podemos pensar en la posible relación entre las variables.</p>
+<p>El valor que interesa es el <em><span class="math inline">\(p\)</span>-valor</em>, el cual al ser mayor a 0.05 indica una posible relación entre las variables. En general, si el <em><span class="math inline">\(p\)</span>-valor</em> es cercano a uno podemos pensar en una posible relación entre las variables.</p>
 </div>
 <div id="prueba-chi-cuadrado-en-python" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Prueba chi-cuadrado en <em>Python</em></h3>
-<p>Para realizar la prueba chi-cuadrado en <em>Python</em> usaremos la librería <em>scipy</em> y usaremos la función <em>.chi2_contingency()</em>. A continuación mostramos como hacerlo:</p>
+<p>Para realizar la prueba <em>chi-cuadrado</em> en Python usaremos la librería <em>scipy</em> y usaremos la función <em>.chi2_contingency()</em>. A continuación mostramos como hacerlo</p>
 <div class="figure">
-<img src="images/log4.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log4.png" alt="" />
 <p class="caption"></p>
 </div>
 </div>
 </div>
-<div id="detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas." class="section level2">
-<h2><span class="header-section-number">5.4</span> Detectar correlación entre variables categóricas y variables cuantitativas.</h2>
-<p>Para detectar un posible efecto entre la correlación de una variable categorica y una variable continua usaremos un estadístico llamado <span class="math inline">\(d\)</span> de Cohen, el cual se construye a partir de las diferencias de las medias de la segmentación a traves de la variable categórica. De pendiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa, en general si el valor es menor <span class="math inline">\(0,5\)</span> diremos que hay un efecto debil, si el valor esta entre <span class="math inline">\(0,5\)</span> y <span class="math inline">\(0,8\)</span> diremos que hay un efecto moderado y si es mayor a <span class="math inline">\(0.8\)</span> diremos que hay un efecto fuerte. En general este estadístico es util cuando la variable categórica posee dos categorias, en otro caso, el estadístico pierde utilidad, se suele usar una herramienta estadística conocida como <em>Anova</em>, no nos enficaremos en esto este curso.</p>
-<div id="medida-de-d-de-cohen-en-r." class="section level3">
-<h3><span class="header-section-number">5.4.1</span> Medida de <span class="math inline">\(d\)</span> de cohen en <em>R</em>.</h3>
-<p>Deberemos instalar la librería <em>effsize</em> y usaremos la función <em>cohen.d()</em>, crearemos una variable artificial para mostrar el uso del estadístico</p>
+<div id="detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas" class="section level2">
+<h2><span class="header-section-number">5.4</span> Detectar correlación entre variables categóricas y variables cuantitativas</h2>
+<p>Para detectar un posible efecto entre la correlación de una variable categórica y una variable continua usaremos un estadístico llamado <em><span class="math inline">\(d\)</span> de Cohen</em>, el cual se construye a partir de las diferencias de las medias de la segmentación a través de la variable categórica. Dependiendo del valor del estadístico diremos si existe o no un efecto de la variable categórica y la variable cuantitativa. En general si el valor es menor 0.5 diremos que hay un efecto débil, si el valor está entre 0.5 y 0.8 diremos que hay un efecto moderado y si es mayor a 0.8 diremos que hay un efecto fuerte. En general este estadístico es útil cuando la variable categórica posee dos categorías, en otro caso, el estadístico pierde utilidad y se suele usar una herramienta estadística conocida como <em>Anova</em>, la cual veremos en otro curso.</p>
+<div id="medida-de-d-de-cohen-en-r" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></h3>
+<p>Deberemos instalar la librería <em>effsize</em> y usaremos la función <em>cohen.d()</em>, además crearemos una variable artificial para mostrar el uso del estadístico:</p>
 <div class="figure">
-<img src="images/log5.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log5.png" alt="" />
 <p class="caption"></p>
 </div>
 <div class="figure">
-<img src="images/log6.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log6.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Podemos notar que el valor del estadístico <span class="math inline">\(d\)</span> de Cohen es alto mostrando un posible efecto de las variables categóricas en la variable continua.</p>
+<p>Podemos notar que el valor del estadístico <em><span class="math inline">\(d\)</span> de Cohen</em> es alto mostrando un posible efecto de las variables categóricas en la variable continua.</p>
 </div>
 <div id="medida-de-d-de-cohen-en-python." class="section level3">
 <h3><span class="header-section-number">5.4.2</span> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</h3>
-<p>En <em>Python</em> no existe una función para calcular la <span class="math inline">\(d\)</span> de cohen de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías <em>statistics</em> y <em>math</em> las cuales nos permitirán calcular las métricas que necesita el estadístico de Cohen.</p>
+<p>En <em>Python</em> no existe una función para calcular la <em><span class="math inline">\(d\)</span> de Cohen</em> de manera directa por lo que tendremos que programarla por nuestra cuenta, para ello usaremos las librerías <em>statistics</em> y <em>math</em> las cuales nos permitirán calcular las métricas que necesita el estadístico de <em>Cohen</em>.</p>
 <div class="figure">
-<img src="images/log7.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log7.png" alt="" />
 <p class="caption"></p>
 </div>
 </div>
 </div>
-<div id="codificando-variables-castegoricas." class="section level2">
-<h2><span class="header-section-number">5.5</span> Codificando variables castegóricas.</h2>
-<p>Antes de ingresar una variable categórica no podemos simplemente ingresarla al modelo, pues se sobre entendera que esta variable es continua dando una interpretación erronea del comportamiento de la variable, el procedimiento estandar es crear variables auxiliares binarias que nos indique la presencia o no de cierto atributo. Por ejemplo, si tenemos una variable categórica con tres categorias: rojo, azul y verde, deberiamos crear dos variables auxiliares: la primera que este compuesta por 0 si es roja 1 si no, la segundo que este compuesta por 1 si es azul 0 si no, no hace falta crear una tercera variable para el color verde, pues se entiende que si las primeras variables son 0 y 0, se concluye que debe ser verde, por lo que si una variable categórica esta compuesta por <span class="math inline">\(n\)</span> categorias deberemos crear <span class="math inline">\(n-1\)</span> variables auxiliares, en algunas fuentes esto tambien se conoce como creación de variables <em>Dummies</em></p>
+<div id="codificando-variables-categoricas" class="section level2">
+<h2><span class="header-section-number">5.5</span> Codificando variables categóricas</h2>
+<p>Una variable categórica no puede ser ingresada directamente al modelo, pues se asume que es una variable continua, por lo cual arrojará una interpretación errónea del comportamiento de la variable. El procedimiento estándar es crear variables auxiliares binarias que nos indiquen la presencia o no de cierto atributo. Por ejemplo, si tenemos una variable categórica con tres categorías: rojo, azul y verde, debemos crear dos variables auxiliares: la primera que esté compuesta por 0 si es roja, 1 si no; la segunda que esté compuesta por 1 si es azul 0 si no. Es innecesario crear una tercera variable para el color verde, pues se entiende que si las primeras variables son 0 y 0, se concluye que debe ser verde. En general si una variable categórica está compuesta por <span class="math inline">\(n\)</span> categorías debemos crear <span class="math inline">\(n−1\)</span> variables auxiliares, en algunas fuentes esto también se conoce como creación de variables <em>Dummies</em></p>
 <div id="creacion-de-variables-auxiliares-en-r" class="section level3">
 <h3><span class="header-section-number">5.5.1</span> Creación de variables auxiliares en <em>R</em></h3>
-<p>Debemos descargar y usar la librería <em>fastDummies</em>, la cual tiene la función del mismo nombre <em>dummy_cols()</em> esta función es la que crea las variables auxiliares. Por ejemplo, supongamos que tenemos la variable color, la cual esta compuesta por: (“azul”,“rojo”,“amarillo”,“blanco”,“amarillo”, “azul”,“azul”,“rojo”), en la cual tenemos 4 categorías. Para aplicar la función <em>dummy_cols()</em> realizaremos el siguiente código:</p>
+<p>Debemos descargar y usar la librería <em>fastDummies</em>, la cual tiene la función del mismo nombre <em>dummy_cols()</em>. Esta función es la que crea las variables auxiliares. Por ejemplo, supongamos que tenemos la variable color, la cual está compuesta por: (“azul”,“rojo”,“amarillo”,“blanco”,“amarillo”, “azul”,“azul”,“rojo”), en la cual tenemos 4 categorías. Para aplicar la función <em>dummy_cols()</em> realizaremos el siguiente código:</p>
 <div class="figure">
-<img src="images/log8.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log8.png" alt="" />
 <p class="caption"></p>
 </div>
 <p>Y obtenemos como resultado:</p>
 <div class="figure">
-<img src="images/log9.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log9.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Por ejemplo el septimo registro observamos que tenemos una fila de números ceros, por lo dicho anteriormente esto significa que el atributo de esta observación es azul.</p>
+<p>Observamos que en el séptimo registro tenemos una fila de números ceros, por lo ya señalado esto significa que el atributo de esta observación es azul.</p>
 </div>
 <div id="creacion-de-variables-auxiliares-en-python" class="section level3">
 <h3><span class="header-section-number">5.5.2</span> Creación de variables auxiliares en <em>Python</em></h3>
-<p>Para crear variables auxiliares en python, podremos realizar esto directamente con el paquete pandas, usando la función <em>get_dummies</em>, acontinuación mostramos el código y el resultado.</p>
+<p>Para crear variables auxiliares en <em>Python</em>, utilizaremos función <em>get_dummies()</em> del paquete Pandas. A continuación mostramos el código y el resultado.</p>
 <div class="figure">
-<img src="images/log10.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log10.png" alt="" />
 <p class="caption"></p>
 </div>
 </div>
 </div>
-<div id="aplicando-el-modelo-de-regresion-logistica." class="section level2">
-<h2><span class="header-section-number">5.6</span> Aplicando el modelo de regresión logística.</h2>
+<div id="aplicando-el-modelo-de-regresion-logistica" class="section level2">
+<h2><span class="header-section-number">5.6</span> Aplicando el modelo de regresión logística</h2>
 <p>Una vez realizado un paseo por los pasos anteriores debemos proceder a realizar la construcción del modelo como tal. Iniciaremos con el lenguaje <em>R</em>:</p>
 <div id="modelo-logistico-en-r." class="section level3">
 <h3><span class="header-section-number">5.6.1</span> Modelo logístico en R.</h3>
-<p>Para el cálculo del modelo logístico haremos uso de la función <em>glm()</em> que esta disponible como función base en <em>R</em>, esta función tiene practicamente la misma sintaxis que la función <em>lm()</em> asi que no describiremos en detalle sus parámetros.</p>
-<p>Usaremos los datos <em>Default</em> que nos proporciona el paquete <em>ISLR</em>, los cuales podemos observar en la siguiente imagen:</p>
+<p>Para el cálculo del modelo logístico haremos uso de la función <em>glm()</em> que está disponible como función base en R. Esta función tiene prácticamente la misma sintaxis que la función <em>lm()</em>, así que no describiremos en detalle sus parámetros.</p>
+<p>Usaremos los datos <em>Default</em> (incumplimiento) que nos proporciona el paquete <em>ISLR</em> sobre registros de clientes con incumplimiento de pagos de una empresa de tarjetas de crédito, los cuales podemos observar en la siguiente imagen:</p>
 <div class="figure">
-<img src="images/log11.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log110.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Si queremos crear un modelo logistico que tenga variables independientes <em>balance</em> y <em>income</em> y variable dependiente <em>default</em> debemos usar el siguiente código.</p>
 <div class="figure">
-<img src="images/log12.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log11.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>tenemos un parámetro adicional llamado <em>Family</em> el cual hace referencia a la distribución de la variable, en nuestro caso la distribucion es binomial.</p>
+<p>Si queremos crear un modelo logístico para predecir el incumplimiento de pago de los estudiantes que tenga variables independientes <em>balance</em>, <em>income</em> y variable dependiente <em>default</em> debemos usar el siguiente código</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/log12.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>tenemos un parámetro adicional llamado <em>Family</em> el cual hace referencia a la distribución de la variable que en nuestro caso es la binomial.</p>
 <p>Al realizar un resumen del modelo con la función <em>summary</em>, obtenemos:</p>
 <div class="figure">
-<img src="images/log13.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log13.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>En la imagen anterior una presentación del resumen del modelo un poco diferente a la del capítulo anterior, solo vale la pena describir la variable <em>AIC</em>, esta estadístico nos da información acerca de la bondad modelo con respecto a las variables introducidas, es decir, nos permite comparar distintos modelos estadísticos, se busca un valor la mas pequeño posible de esta variable.</p>
-<p>Un error tipo en el que se suele caer al crear un modelo de regresión logística es la de pensar que este modelo nos dara como predicción alguna variable cartegórica en especifico, en realidad el modelo nos proporciona la probabilidad de ocuerrecia del evento con los datos en específico. Así, la predicción esperada será un número entre <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>.</p>
+<p>La imagen anterior es una presentación del resumen del modelo un poco diferente a la del capítulo anterior. Vale la pena describir la variable <em>AIC</em>, este estadístico nos da información acerca de la bondad del modelo con respecto a las variables introducidas, es decir, permite comparar distintos modelos estadísticos, buscando un valor lo más pequeño posible de esta variable.</p>
+<p>Un error típico en el que se suele caer al crear un modelo de regresión logística es pensar que este modelo dará como predicción alguna variable categórica especifica. En realidad el modelo proporciona la probabilidad de ocurrencia del evento con los datos específicos. Así, la predicción esperada será un número entre 0 y 1.</p>
 <p>A continuación presentamos el código para realizar la predicción:</p>
 <div class="figure">
-<img src="images/log14.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log14.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>En la imagen anterior el resultado es <span class="math inline">\(0.14\)</span> esto significa que la probabilidad de ocurrencia del evento es <span class="math inline">\(0.14\)</span>.</p>
+<p>En la imagen anterior el resultado es <span class="math inline">\(0.14\)</span> significa que la probabilidad de ocurrencia del evento es <span class="math inline">\(0.14\)</span>.</p>
 </div>
 <div id="modelo-logistico-en-python." class="section level3">
 <h3><span class="header-section-number">5.6.2</span> Modelo logístico en <em>Python</em>.</h3>
-<p>Para crear el modelo cargaremos la librería <em>pandas</em> y <em>statsmodels</em>, usaremos los mismos datos de la parte anterior. A diferencia de <em>R</em> debemos separar la variable dependiente de las independientes, y verificar que la variables categoricas esten compuestas por valores numéricos, estos cambios son hechos con la función <span class="math inline">\(.replace()\)</span>. Recordemos que por defecto no se cslcula la variable <em>intercept</em> en el modelo, por lo cual debemos incorporarla con la funcióm <em>sm.add_costant()</em>. A continuación se muestra este procedimiento:</p>
+<p>Para crear el modelo cargaremos la librería <em>pandas</em> y <em>statsmodels</em>. Usaremos los mismos datos de la parte anterior. A diferencia de <em>R</em> debemos separar la variable dependiente de las independientes y verificar que las variables categóricas estén compuestas por valores numéricos. Estos cambios son hechos con la función <em>.replace()</em>. Recordemos que por defecto no se calcula la variable intercept en el modelo, por lo cual debemos incorporarla con la función <em>sm.add_constant()</em>. A continuación se muestra este procedimiento:</p>
 <div class="figure">
-<img src="images/log15.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log15.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Ahora, procedemos al cálculo del model, primero lo creamos usando la función <em>sm.logit()</em> y luego lo entrenamos usando la función <em>.fit()</em>. Para ver el resumen del modelo usamos la función <em>.summary()</em>, la cual nos da practicamente la misma información que la función <em>summary</em> en <em>R</em>.</p>
+<p>Ahora, procedemos al cálculo del modelo. Primero lo creamos usando la función <em>sm.logit()</em> y luego lo entrenamos usando la función <em>.fit()</em>. Para ver el resumen del modelo usamos la función <em>.summary()</em>, la cual nos da prácticamente la misma información que la función <em>summary</em> en <em>R</em>.</p>
 <div class="figure">
-<img src="images/log16.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log16.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Para concluir, realizamos predicciones usando nuestro modelo, recordando que la observaxión usada para predecir debe tener la misma estructura de la variable independiente, debemos tener en cuenta que dependiendo si se agrego o no el <em>intercept</em> tendremos que agregar la variable constante usando la función <em>sm.add_constant()</em>. A continuación se muestra este procedimiento:</p>
+<p>Para concluir, realizamos predicciones usando nuestro modelo, recordando que la observación usada para predecir debe tener la misma estructura de la variable independiente. Debemos tener en cuenta que dependiendo de si se agregó o no el intercept, tendremos que agregar la variable constante usando la función <em>sm.add_constant()</em>. A continuación se muestra este procedimiento:</p>
 <div class="figure">
-<img src="images/log17.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/log17.png" alt="" />
 <p class="caption"></p>
 </div>
 
@@ -339,13 +448,13 @@ ga('send', 'pageview');
 <a href="analisis-de-cluster.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -386,7 +495,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
