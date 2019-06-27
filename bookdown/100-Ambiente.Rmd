@@ -22,6 +22,7 @@ Al descagar estos lenguajes lo primero que veremos es: en el caso de *R*:
 ![\label{fig:"R"}](images/R.png)
 
 y en el caso de *Python*:
+
 ![\label{fig:"Python"}](images/python.png)
 
 

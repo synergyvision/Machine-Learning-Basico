@@ -55,7 +55,7 @@ La versión en línea de este libro se comparte bajo la licencia [Creative Commo
 
 ## ¿Por qué  leer este libro? {-}
 
-Este libro aspira a que las empresas iberoamericanas tengan un acceso fácil y en su propio idioma a una tecnología que les permitirá el manejo estratégico de sus datos para soportar mejor la toma de decisiones sobre sus negocios. Para ello, el libro aportará con ejemplos muy diversos del mundo empresarial, las herramientas básicas del Machine Learning, haciendo énfasis en las aplicaciones prácticas con ayuda de los softwares R y Phyton, sin requerir mayores complicaciones matemáticas o computacionales. Los lenguajes de programación Python y R, son sin duda, los más utilizados a la hora de construir modelos de inteligencia artificial. 
+Este libro aspira a que las empresas iberoamericanas tengan un acceso fácil y en su propio idioma a una tecnología que les permitirá el manejo estratégico de sus datos para soportar mejor la toma de decisiones sobre sus negocios. Para ello, el libro aportará con ejemplos muy diversos del mundo empresarial, científico y de la administración pública, las herramientas básicas del Machine Learning, haciendo énfasis en las aplicaciones prácticas con ayuda de los softwares R y Phyton, sin requerir mayores complicaciones matemáticas o computacionales. Los lenguajes de programación Python y R, son sin duda, los más utilizados a la hora de construir modelos de inteligencia artificial. 
 
 El material expuesto en el libro se concentra en precisar las técnicas más comunes usadas en Machine Learning, para que las empresas o individuos interesados, tengan un punto de partida sólido sobre el cual ir construyendo un conjunto de herramientas que puedan utilizar en cualquier momento. El lector podrá aprender las principales librerías y dominar la sintaxis para la construcción de modelos.
 
@@ -67,7 +67,8 @@ Contar con este conocimiento es una gran ventaja, pues el gran avance de interne
 
 Este libro se divide en 7 capítulos, en los cuales se especificarán las instrucciones técnicas para poder acceder a los programas y funciones a utilizar. Cada sección estará compuesta por una sección teórica, seguida de la sintaxis requerida para la construcción de los modelos. En la mayoría de los casos está información es proporcionada a través de imágenes donde el lector observará cómo aplicar la sintaxis de forma adecuada.
 
-La secuencia de ejemplos de uso de las herramientas siempre se presentará primero en R y luego en Phyton.  
+La secuencia de ejemplos de uso de las herramientas siempre se presentará primero en R y luego en Phyton. Los resultados podrán diferir del presentado en las imágenes en vista de la constante actualización y liberación de nuevas versiones de estos programas y sus librerías.
+  
 El propósito de este material es ofrecer una experiencia de aprendizaje distinta y enfocada en el estudiante de forma que realmente aprenda y practique con mucha intensidad. La idea es cambiar el modelo de clases magistrales y ofrecer una experiencia más centrada en el estudiante y menos centrado en el profesor. Para los temas más técnicos y avanzados es necesario trabajar de la mano con el estudiante y asistirlo en el proceso de aprendizaje con prácticas guiadas, material en línea e interactivo, videos, evaluación continua de brechas y entendimiento, entre otros, para procurar el dominio de la materia.
 
 
