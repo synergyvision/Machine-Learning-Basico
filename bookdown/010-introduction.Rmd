@@ -38,11 +38,4 @@ Algunas de las bases de datos utilizadas fueron creadas directamente para emplea
 
 Tabla 1. Descripción de las bases de datos utilizadas en el libro
 
-|       Nombre      |                                 Librería o ubicación                                 |                                                                  Descripción                                                                 |
-|:-----------------:|:------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------:|
-|      Default      |                                         ISLR                                         |                            Registros de clientes con incumplimiento de pagos de una empresa de tarjetas de crédito                           |
-| Employee Salaries | https://data.montgomerycountymd.gov/api/views/2qd6-mr43/rows.csv?accessType=DOWNLOAD |                                                 Salarios de empleados del Condado Montgomery                                                 |
-|    Iris- IrisP    |                               Distribución básica de R                               |                                     Variedades morfológicas de la flor Iris de tres especies relacionadas                                    |
-|       mtcars      |                               Distribución básica de R                               | Consumo de combustible, caballos de fuerza y otra información sobre 32 automóviles.,Son datos extraídos de la revista Motor Trend US de 1974 |
-|      slsummar     |              http://www.fns.usda.gov/sites/default/files/pd/slsummar.xls             |                    Participación y almuerzos servidos de 1969 a 2018 por el Programa Nacional de Almuerzo Escolar de EEUU                    |
-|      USArrest     |                               Distribución básica de R                               |                                  Estadísticas de delitos por cada 100.000 residentes en 50 estados de EE.UU.                                 |
+![\label{fig:"R2"}](images/base.png)
