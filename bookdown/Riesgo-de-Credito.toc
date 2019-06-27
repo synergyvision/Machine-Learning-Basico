@@ -1,0 +1,97 @@
+\babel@toc {spanish}{}
+\contentsline {fm}{\'{I}ndice de cuadros}{\es@scroman {vii}}{chapter*.1}
+\contentsline {fm}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.2}
+\contentsline {fm}{Prefacio}{\es@scroman {xiii}}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Clasificaci\IeC {\'o}n de los Aprendizajes}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Organizaci\IeC {\'o}n del texto}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Conjunto de Bases de Datos utilizadas}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}Ambientes de trabajo para el cient\IeC {\'\i }fico de datos}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Primer encuentro con los lenguajes}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Anaconda}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Librer\IeC {\'\i }as}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Instalando librer\IeC {\'\i }as en \emph {R}}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Instalando librer\IeC {\'\i }as en \emph {Python}}{15}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Uso y preparaci\IeC {\'o}n de los datos}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lectura de datos}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Lectura de datos con \emph {R}}{17}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Lectura de datos con \emph {Python}}{20}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Tratamiento previo de los datos}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Missing Values o valores faltantes}{23}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Identificaci\IeC {\'o}n y tratamientos de Outliers o puntos at\IeC {\'\i }picos}{29}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Identificaci\IeC {\'o}n de puntos at\IeC {\'\i }picos}{29}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Detecci\IeC {\'o}n de outliers en R}{32}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Detecci\IeC {\'o}n de outliers en Python}{35}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}Regresi\IeC {\'o}n Lineal}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Identificando relaci\IeC {\'o}n entre variables}{41}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Identificando relaci\IeC {\'o}n entre variables con \emph {R}}{43}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Identificando relaci\IeC {\'o}n entre variables con \emph {Python}}{45}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Transformando variables}{47}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Aplicando transformaciones de variables en \emph {R}}{48}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Aplicando transformaciones de variables en \emph {Python}}{48}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Eliminando el efecto de colinealidad entre variables independientes.}{50}{section.4.3}
+\contentsline {section}{\numberline {4.4}Eliminaci\IeC {\'o}n de las variables categ\IeC {\'o}ricas}{51}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Eliminaci\IeC {\'o}n de variables en \emph {R}}{51}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Eliminaci\IeC {\'o}n de variables en \emph {Python}}{51}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Aplicando el modelo de regresi\IeC {\'o}n lineal}{52}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Aplicando el modelo de regresi\IeC {\'o}n lineal en \emph {R}}{52}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Aplicando el modelo de regresi\IeC {\'o}n lineal en \emph {Python}:}{54}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}C\IeC {\'o}mo interpretar los resultados del modelo}{56}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Interpretar con \emph {summary} en \emph {R}:}{56}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Interpretar con \emph {summary} en \emph {Python}}{58}{subsection.4.6.2}
+\contentsline {section}{\numberline {4.7}Realizando predicciones con nuestro modelo}{59}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Realizando predicciones con \emph {R}}{59}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Realizando predicciones con \emph {Python}}{59}{subsection.4.7.2}
+\contentsline {chapter}{\numberline {5}Regresi\IeC {\'o}n log\IeC {\'\i }stica}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Supuestos de la regresi\IeC {\'o}n log\IeC {\'\i }stica}{61}{section.5.1}
+\contentsline {section}{\numberline {5.2}Multicolinealidas entre variables independientes}{62}{section.5.2}
+\contentsline {section}{\numberline {5.3}Detectar correlaci\IeC {\'o}n entre variables categ\IeC {\'o}ricas}{62}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Prueba chi-cuadrado en \emph {R}}{63}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Prueba chi-cuadrado en \emph {Python}}{64}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Detectar correlaci\IeC {\'o}n entre variables categ\IeC {\'o}ricas y variables cuantitativas}{64}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Medida de \(d\) de Cohen en \emph {R}}{65}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Medida de \(d\) de Cohen en \emph {Python}}{65}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Codificando variables categ\IeC {\'o}ricas}{66}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Creaci\IeC {\'o}n de variables auxiliares en \emph {R}}{66}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Creaci\IeC {\'o}n de variables auxiliares en \emph {Python}}{67}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Aplicando el modelo de regresi\IeC {\'o}n log\IeC {\'\i }stica}{68}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Modelo log\IeC {\'\i }stico en R}{68}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Modelo log\IeC {\'\i }stico en \emph {Python}}{71}{subsection.5.6.2}
+\contentsline {chapter}{\numberline {6}An\IeC {\'a}lisis de cl\IeC {\'u}ster}{75}{chapter.6}
+\contentsline {section}{\numberline {6.1}Supuestos del an\IeC {\'a}lisis de cl\IeC {\'u}ster.}{75}{section.6.1}
+\contentsline {section}{\numberline {6.2}Medidas o similitudes}{76}{section.6.2}
+\contentsline {section}{\numberline {6.3}M\IeC {\'e}todos jer\IeC {\'a}rquicos y no jer\IeC {\'a}rquicos}{76}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}M\IeC {\'e}todos jer\IeC {\'a}rquicos}{77}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Met\IeC {\'o}dos no jer\IeC {\'a}rquicos}{77}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Elecci\IeC {\'o}n del n\IeC {\'u}mero de grupos}{78}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Dendrograma}{78}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Gr\IeC {\'a}fico de codo}{78}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}An\IeC {\'a}lisis de cl\IeC {\'u}ster en \emph {R}}{79}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}M\IeC {\'e}todo no jer\IeC {\'a}rquico}{79}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}M\IeC {\'e}todo jer\IeC {\'a}rquico}{82}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}An\IeC {\'a}lisis de cl\IeC {\'u}ster en \emph {Python}}{84}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}M\IeC {\'e}todo no jer\IeC {\'a}rquico}{84}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}M\IeC {\'e}todo jer\IeC {\'a}rquico}{86}{subsection.6.6.2}
+\contentsline {chapter}{\numberline {7}An\IeC {\'a}lisis de Componentes Principales}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Correlaci\IeC {\'o}n o Covarianza:}{89}{section.7.1}
+\contentsline {section}{\numberline {7.2}Supuestos estad\IeC {\'\i }sticos}{90}{section.7.2}
+\contentsline {section}{\numberline {7.3}\emph {PCA} en \emph {R}}{90}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Librer\IeC {\'\i }as y datos}{90}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}C\IeC {\'a}lculo de componentes}{91}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Funciones gr\IeC {\'a}ficas}{92}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}\emph {PCA} en \emph {Python}}{92}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Librer\IeC {\'\i }as y datos}{92}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}C\IeC {\'a}lculo de componentes}{94}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Funciones Gr\IeC {\'a}ficas}{95}{subsection.7.4.3}
+\contentsline {chapter}{\numberline {8}\IeC {\'A}rboles de decisi\IeC {\'o}n y bosques aleatorios}{97}{chapter.8}
+\contentsline {section}{\numberline {8.1}\IeC {\'A}rboles de decisi\IeC {\'o}n}{97}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}\IeC {\'A}rboles de decisi\IeC {\'o}n en \emph {R}}{97}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}\IeC {\'A}rboles de decisi\IeC {\'o}n en \emph {Python}}{99}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Bosques aleatorios}{101}{section.8.2}
+\contentsline {section}{\numberline {8.3}Bosques aleatorios en \emph {R}}{101}{section.8.3}
+\contentsline {section}{\numberline {8.4}Bosques aleatorios en \emph {Python}}{103}{section.8.4}
+\contentsline {chapter}{Ap\'{e}ndice}{107}{figure.caption.139}
+\contentsline {chapter}{\numberline {A}Herramientas de software}{107}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}\emph {R} y paquetes de \emph {R}}{107}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Pandoc}{108}{section.Alph1.2}
+\contentsline {section}{\numberline {A.3}LaTeX}{109}{section.Alph1.3}

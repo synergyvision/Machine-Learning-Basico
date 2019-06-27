@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Herramientas de software | Machine Learning Básico</title>
+  <meta name="description" content="A Herramientas de software | Machine Learning Básico>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Herramientas de software | Machine Learning Básico />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
+  <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Herramientas de software | Machine Learning Básico />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2019-06-19">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="arboles-de-decision-y-bosques-aleatorios.html">
+<link rel="next" href="referencias.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acerca-del-autor"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el científico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primer-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primer encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerías</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerías en <em>R</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerías en <em>Python</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos"><i class="fa fa-check"></i><b>3.1</b> Lectura de datos</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-r"><i class="fa fa-check"></i><b>3.1.1</b> Lectura de datos con <em>R</em></a></li>
+<li class="chapter" data-level="3.1.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#lectura-de-datos-con-python"><i class="fa fa-check"></i><b>3.1.2</b> Lectura de datos con <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#tratamiento-previo-de-los-datos"><i class="fa fa-check"></i><b>3.2</b> Tratamiento previo de los datos</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#missing-values-o-valores-faltantes"><i class="fa fa-check"></i><b>3.2.1</b> Missing Values o valores faltantes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Detección de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Detección de outliers en Python</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
+<li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.2.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-python"><i class="fa fa-check"></i><b>4.2.2</b> Aplicando transformaciones de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminando-el-efecto-de-colinealidad-entre-variables-independientes."><i class="fa fa-check"></i><b>4.3</b> Eliminando el efecto de colinealidad entre variables independientes.</a></li>
+<li class="chapter" data-level="4.4" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-las-variables-categoricas"><i class="fa fa-check"></i><b>4.4</b> Eliminación de las variables categoricas</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-r"><i class="fa fa-check"></i><b>4.4.1</b> Eliminación de variables en <em>R</em></a></li>
+<li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresión lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresión lineal en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
+<li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo"><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
+<li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica"><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes"><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes</a></li>
+<li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
+<li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas"><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></a></li>
+<li class="chapter" data-level="5.4.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-python."><i class="fa fa-check"></i><b>5.4.2</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-categoricas"><i class="fa fa-check"></i><b>5.5</b> Codificando variables categóricas</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-r"><i class="fa fa-check"></i><b>5.5.1</b> Creación de variables auxiliares en <em>R</em></a></li>
+<li class="chapter" data-level="5.5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-python"><i class="fa fa-check"></i><b>5.5.2</b> Creación de variables auxiliares en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica"><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
+<li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de clúster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuestos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuestos del análisis de clúster.</a></li>
+<li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+<li class="chapter" data-level="6.3" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos-y-no-jerarquicos"><i class="fa fa-check"></i><b>6.3</b> Métodos jerárquicos y no jerárquicos</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos"><i class="fa fa-check"></i><b>6.3.1</b> Métodos jerárquicos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-no-jerarquicos"><i class="fa fa-check"></i><b>6.3.2</b> Metódos no jerárquicos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#eleccion-del-numero-de-grupos"><i class="fa fa-check"></i><b>6.4</b> Elección del número de grupos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#dendograma"><i class="fa fa-check"></i><b>6.4.1</b> Dendograma</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#grafico-de-codo"><i class="fa fa-check"></i><b>6.4.2</b> Gráfico de codo</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-r"><i class="fa fa-check"></i><b>6.5</b> Análisis de clúster en <em>R</em></a><ul>
+<li class="chapter" data-level="6.5.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico"><i class="fa fa-check"></i><b>6.5.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.5.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico"><i class="fa fa-check"></i><b>6.5.2</b> Método jerárquico</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-python"><i class="fa fa-check"></i><b>6.6</b> Análisis de clúster en <em>Python</em></a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico-1"><i class="fa fa-check"></i><b>6.6.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico."><i class="fa fa-check"></i><b>6.6.2</b> Método jerárquico.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html"><i class="fa fa-check"></i><b>7</b> Análisis de Componentes Principales</a><ul>
+<li class="chapter" data-level="7.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#correlacion-o-covarianza"><i class="fa fa-check"></i><b>7.1</b> Correlación o Covarianza:</a></li>
+<li class="chapter" data-level="7.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#supuestos-estadisticos"><i class="fa fa-check"></i><b>7.2</b> Supuestos estadísticos</a></li>
+<li class="chapter" data-level="7.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-r"><i class="fa fa-check"></i><b>7.3</b> <em>PCA</em> en <em>R</em></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos"><i class="fa fa-check"></i><b>7.3.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.3.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes"><i class="fa fa-check"></i><b>7.3.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.3.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas"><i class="fa fa-check"></i><b>7.3.3</b> Funciones gráficas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-python"><i class="fa fa-check"></i><b>7.4</b> <em>PCA</em> en <em>Python</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos-1"><i class="fa fa-check"></i><b>7.4.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes-1"><i class="fa fa-check"></i><b>7.4.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.4.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas-1"><i class="fa fa-check"></i><b>7.4.3</b> Funciones Gráficas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html"><i class="fa fa-check"></i><b>8</b> Árboles de decisión y bosques aleatorios</a><ul>
+<li class="chapter" data-level="8.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision"><i class="fa fa-check"></i><b>8.1</b> Arboles de decisión</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-r"><i class="fa fa-check"></i><b>8.1.1</b> Arboles de decisión en <em>R</em></a></li>
+<li class="chapter" data-level="8.1.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-python"><i class="fa fa-check"></i><b>8.1.2</b> Arboles de decisión en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios"><i class="fa fa-check"></i><b>8.2</b> Bosques aleatorios</a></li>
+<li class="chapter" data-level="8.3" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-r"><i class="fa fa-check"></i><b>8.3</b> Bosques aleatorios en <em>R</em></a></li>
+<li class="chapter" data-level="8.4" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-python"><i class="fa fa-check"></i><b>8.4</b> Bosques aleatorios en <em>Python</em></a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html"><i class="fa fa-check"></i><b>A</b> Herramientas de software</a><ul>
+<li class="chapter" data-level="A.1" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#r-y-paquetes-de-r"><i class="fa fa-check"></i><b>A.1</b> <em>R</em> y paquetes de <em>R</em></a></li>
+<li class="chapter" data-level="A.2" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning Básico</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="herramientas-de-software" class="section level1">
+<h1><span class="header-section-number">A</span> Herramientas de software</h1>
+<p>Para aquellos que no están familiarizados con los paquetes de software necesarios para usar R Markdown, damos una breve introducción sobre la instalación y mantenimiento de estos paquetes.</p>
+<div id="r-y-paquetes-de-r" class="section level2">
+<h2><span class="header-section-number">A.1</span> <em>R</em> y paquetes de <em>R</em></h2>
+<p><em>R</em> puede descargarse e instalarse desde cualquier réplica de CRAN (Comprehensive R Archive Network), por ejemplo de <a href="https://cran.rstudio.com" class="uri">https://cran.rstudio.com</a> . Tenga en cuenta que existirán algunas nuevas versiones de <em>R</em> cada año, y es posible que desee actualizar <em>R</em> de vez en cuando.</p>
+<p>Para instalar el paquete <em>bookdown</em>, puede escribir en R:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</code></pre>
+<p>De esta manera se instalan todos los paquetes <em>R</em> requeridos. También puede elegir instalar todos los paquetes opcionales, si no le importa demasiado si estos paquetes serán usados realmente para compilar su libro (como <strong>htmlwidgets</strong>):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</code></pre>
+<p>Si quiere probar la versión de desarrollo de <strong>bookdown</strong> en <em>GitHub</em>, primero tiene que instalar <strong>devtools</strong>:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&#39;devtools&#39;</span>)) <span class="kw">install.packages</span>(<span class="st">&#39;devtools&#39;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&#39;rstudio/bookdown&#39;</span>)</code></pre>
+<p>Los paquetes <em>R</em> también se actualizan constantemente en <em>CRAN</em> o <em>GitHub</em>, por lo que es posible que desee actualizarlos de vez en cuando:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">update.packages</span>(<span class="dt">ask =</span> <span class="ot">FALSE</span>)</code></pre>
+<p>Aunque no es necesario, el IDE de RStudio puede hacer muchas cosas mucho más fáciles cuando se trabaja en proyectos relacionados con R. El IDE de RStudio se puede descargar desde <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a></p>
+</div>
+<div id="pandoc" class="section level2">
+<h2><span class="header-section-number">A.2</span> Pandoc</h2>
+<p>Un documento R Markdown (<em>.Rmd</em>) es primero compilado a Markdown (<em>.md</em>) a través del paquete <em>knitr</em>, y luego <em>Markdown</em> es compilado a otros formatos de salida (como <em>LaTeX</em> o <em>HTML</em>) a través de <em>Pandoc</em>. Este proceso está automatizado a través del paquete <em>rmarkdown</em>. No es necesario instalar <em>knitr</em> o <em>rmarkdown</em> por separado, ya que son los paquetes requeridos de <em>bookdown</em> y se instalarán automáticamente cuando instale <em>bookdown</em>. Sin embargo, <em>Pandoc</em> no es un paquete <em>R</em>, por lo que no se instalará automáticamente cuando instale <em>bookdown</em>. Puede seguir las instrucciones de instalación en la página principal de Pandoc (<a href="http://pandoc.org" class="uri">http://pandoc.org</a>) para instalar <em>Pandoc</em>, pero si utiliza el <em>IDE</em> de <em>RStudio</em>, no necesita instalar <em>Pandoc</em> por separado, porque <em>RStudio</em> incluye una copia de Pandoc. El número de versión de <em>Pandoc</em> se puede obtener a través de:</p>
+<pre class="sourceCode r"><code class="sourceCode r">rmarkdown<span class="op">::</span><span class="kw">pandoc_version</span>()
+<span class="co">## [1] &#39;2.3.1&#39;</span></code></pre>
+<p>Si encuentra esta versión demasiado baja y hay características de <em>Pandoc</em> sólo en una versión posterior, puede instalar la versión posterior de <em>Pandoc</em>, y <em>rmarkdown</em> llamará a la versión más reciente en lugar de su versión incorporada.</p>
+</div>
+<div id="latex" class="section level2">
+<h2><span class="header-section-number">A.3</span> LaTeX</h2>
+<p><em>LaTeX</em> es necesario sólo si desea convertir su libro a <em>PDF</em>. La elección típica de la distribución <em>LaTeX</em> depende de su sistema operativo. Los usuarios de <em>Windows</em> pueden considerar <em>MiKTeX</em> (<a href="http://miktex.org" class="uri">http://miktex.org</a>), los usuarios de <em>Mac OS X</em> pueden instalar <em>MacTeX</em> (<a href="http://www.tug.org/mactex/" class="uri">http://www.tug.org/mactex/</a>), y los usuarios de <em>Linux</em> pueden instalar <em>TeXLive</em> (<a href="http://www.tug.org/texlive" class="uri">http://www.tug.org/texlive</a>). Visite <a href="https://www.latex-project.org/get/" class="uri">https://www.latex-project.org/get/</a> para obtener más información sobre LaTeX y su instalación.</p>
+<p>La mayoría de las distribuciones <em>LaTeX</em> ofrecen un paquete mínimo/básico y un paquete completo. Puede instalar el paquete básico si tiene poco espacio de disco y sabe cómo instalar los paquetes <em>LaTeX</em> más tarde. El paquete completo es a menudo significativamente más grande en tamaño, ya que contiene todos los paquetes de <em>LaTeX</em>, y es poco probable que se encuentre con el problema de que le falten paquetes en <em>LaTeX</em>.</p>
+<p>Los mensajes de error de <em>LaTeX</em> pueden ser oscuros para los principiantes, pero puede encontrar soluciones buscando el mensaje de error en línea (tiene buenas posibilidades de terminar en <em>StackExchange</em>). De hecho, el código <em>LaTeX</em> convertido a partir de <em>R Markdown</em> debería ser lo suficientemente seguro y no debería tener problemas frecuentes con <em>LaTeX</em> a menos que haya introducido contenido <em>LaTeX</em> en bruto en sus documentos <em>Rmd</em>. El problema más común de <em>LaTeX</em> debería ser la falta de paquetes <em>LaTeX</em>, y el error puede parecerse a esto:</p>
+<pre class="sourceCode latex"><code class="sourceCode latex">! LaTeX Error: File `titling.sty&#39; not found.
+
+Type X to quit or &lt;RETURN&gt; to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+&lt;read *&gt; 
+         
+l.107 ^^M
+
+pandoc: Error producing PDF
+Error: pandoc document conversion failed with error 43
+Execution halted</code></pre>
+<p>Esto significa que usó un paquete que contiene <em>titling.sty</em>, pero no fue instalado. Los nombres de los paquetes <em>LaTeX</em> suelen ser los mismos que los de los archivos <em>.sty</em>, por lo que en este caso, puede intentar instalar el paquete de titulación. Tanto <em>MiKTeX</em> como <em>MacTeX</em> proporcionan una interfaz gráfica de usuario para gestionar paquetes. Puede encontrar el administrador de paquetes de <em>MiKTeX</em> en el menú de inicio, y el administrador de paquetes de <em>MacTeX</em> en la aplicación <em>“TeX Live Utility”</em>. Escriba el nombre del paquete o el nombre del archivo para buscar el paquete e instalarlo. <em>TeXLive</em> puede ser un poco más complicado: si usa los paquetes <em>TeXLive</em> preconstruidos de su distribución de <em>Linux</em>, necesita buscar en el repositorio de paquetes y sus palabras clave pueden coincidir con otros paquetes que no sean de <em>LaTeX</em>. A veces resulta frustrante usar las colecciones de paquetes predefinidas en <em>Linux</em>, y es mucho más fácil instalar <em>TeXLive</em> desde el código fuente, en cuyo caso puede administrar paquetes usando el comando <em>tlmgr</em>. Por ejemplo, puede buscar <em>titling.sty</em> desde el repositorio de paquetes de <em>TeXLive</em>:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">tlmgr</span> search --global --file titling.sty
+<span class="co"># titling:</span>
+<span class="co">#    texmf-dist/tex/latex/titling/titling.sty</span></code></pre>
+<p>Una vez que haya averiguado el nombre del paquete, puede instalarlo por medio de:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">tlmgr</span> install titling  # may require sudo</code></pre>
+<p>Las distribuciones y paquetes de <em>LaTeX</em> también se actualizan de vez en cuando, y puede considerar actualizarlos especialmente cuando tenga problemas con <em>LaTeX</em>. Puede encontrar la versión de su distribución LaTeX por:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system</span>(<span class="st">&#39;pdflatex --version&#39;</span>)
+<span class="co">## pdfTeX 3.14159265-2.6-1.40.19 (TeX Live 2018)</span>
+<span class="co">## kpathsea version 6.3.0</span>
+<span class="co">## Copyright 2018 Han The Thanh (pdfTeX) et al.</span>
+<span class="co">## There is NO warranty.  Redistribution of this software is</span>
+<span class="co">## covered by the terms of both the pdfTeX copyright and</span>
+<span class="co">## the Lesser GNU General Public License.</span>
+<span class="co">## For more information about these matters, see the file</span>
+<span class="co">## named COPYING and the pdfTeX source.</span>
+<span class="co">## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.</span>
+<span class="co">## Compiled with libpng 1.6.34; using libpng 1.6.34</span>
+<span class="co">## Compiled with zlib 1.2.11; using zlib 1.2.11</span>
+<span class="co">## Compiled with xpdf version 4.00</span></code></pre>
+
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="arboles-de-decision-y-bosques-aleatorios.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/400-apendice.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Riesgo-de-Credito.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

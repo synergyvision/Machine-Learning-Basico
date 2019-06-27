@@ -6,10 +6,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Capítulo 3 Uso y preparación de los datos | Machine Learning Básico</title>
-  <meta name="description" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico">
+  <meta name="description" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico>
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico" />
+  <meta property="og:title" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Riesgo-de-Credito/" />
   <meta property="og:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Riesgo-de-Credito/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico" />
+  <meta name="twitter:title" content="Capítulo 3 Uso y preparación de los datos | Machine Learning Básico />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Riesgo-de-Credito/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2019-05-30">
+<meta name="date" content="2019-06-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,41 +52,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -109,17 +135,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acerca-del-autor"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el cientifico de datos</a><ul>
-<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primero-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primero encuentro con los lenguajes</a></li>
+<li class="chapter" data-level="2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><i class="fa fa-check"></i><b>2</b> Ambientes de trabajo para el científico de datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#primer-encuentro-con-los-lenguajes"><i class="fa fa-check"></i><b>2.1</b> Primer encuentro con los lenguajes</a></li>
 <li class="chapter" data-level="2.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#anaconda"><i class="fa fa-check"></i><b>2.2</b> Anaconda</a></li>
-<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerias</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerias en R</a></li>
-<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerias en python</a></li>
+<li class="chapter" data-level="2.3" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#librerias"><i class="fa fa-check"></i><b>2.3</b> Librerías</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-r"><i class="fa fa-check"></i><b>2.3.1</b> Instalando librerías en <em>R</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="ambientes-de-trabajo-para-el-cientifico-de-datos.html"><a href="ambientes-de-trabajo-para-el-cientifico-de-datos.html#instalando-librerias-en-python"><i class="fa fa-check"></i><b>2.3.2</b> Instalando librerías en <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html"><i class="fa fa-check"></i><b>3</b> Uso y preparación de los datos</a><ul>
@@ -132,14 +157,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-y-tratamientos-de-outliers-o-puntos-atipicos."><i class="fa fa-check"></i><b>3.3</b> Identificación y tratamientos de Outliers o puntos atípicos.</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#identificacion-de-puntos-atipicos."><i class="fa fa-check"></i><b>3.3.1</b> Identificación de puntos atípicos.</a></li>
-<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Deteccion de outliers en R</a></li>
-<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Deteccion de outliers en Python</a></li>
+<li class="chapter" data-level="3.3.2" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-r"><i class="fa fa-check"></i><b>3.3.2</b> Detección de outliers en R</a></li>
+<li class="chapter" data-level="3.3.3" data-path="uso-y-preparacion-de-los-datos.html"><a href="uso-y-preparacion-de-los-datos.html#deteccion-de-outliers-en-python"><i class="fa fa-check"></i><b>3.3.3</b> Detección de outliers en Python</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="regresion-lineal.html"><a href="regresion-lineal.html"><i class="fa fa-check"></i><b>4</b> Regresión Lineal</a><ul>
 <li class="chapter" data-level="4.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables"><i class="fa fa-check"></i><b>4.1</b> Identificando relación entre variables</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-r"><i class="fa fa-check"></i><b>4.1.1</b> Identificando relación entre variables con <em>R</em></a></li>
-<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>python</em></a></li>
+<li class="chapter" data-level="4.1.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#identificando-relacion-entre-variables-con-python"><i class="fa fa-check"></i><b>4.1.2</b> Identificando relación entre variables con <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#transformando-variables"><i class="fa fa-check"></i><b>4.2</b> Transformando variables</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-transformaciones-de-variables-en-r"><i class="fa fa-check"></i><b>4.2.1</b> Aplicando transformaciones de variables en <em>R</em></a></li>
@@ -151,46 +176,86 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.4.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#eliminacion-de-variables-en-python"><i class="fa fa-check"></i><b>4.4.2</b> Eliminación de variables en <em>Python</em></a></li>
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal"><i class="fa fa-check"></i><b>4.5</b> Aplicando el modelo de regresión lineal</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresion lineal en <em>R</em></a></li>
-<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresion lineal en <em>Python</em>:</a></li>
+<li class="chapter" data-level="4.5.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-r"><i class="fa fa-check"></i><b>4.5.1</b> Aplicando el modelo de regresión lineal en <em>R</em></a></li>
+<li class="chapter" data-level="4.5.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#aplicando-el-modelo-de-regresion-lineal-en-python"><i class="fa fa-check"></i><b>4.5.2</b> Aplicando el modelo de regresión lineal en <em>Python</em>:</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="regresion-lineal.html"><a href="regresion-lineal.html#como-interpretar-los-resultados-del-modelo"><i class="fa fa-check"></i><b>4.6</b> Como interpretar los resultados del modelo</a><ul>
 <li class="chapter" data-level="4.6.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-r"><i class="fa fa-check"></i><b>4.6.1</b> Interpretar con <em>summary</em> en <em>R</em>:</a></li>
 <li class="chapter" data-level="4.6.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#interpretar-con-summary-en-python"><i class="fa fa-check"></i><b>4.6.2</b> Interpretar con <em>summary</em> en <em>Python</em>:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo."><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo.</a><ul>
+<li class="chapter" data-level="4.7" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-nuestro-modelo"><i class="fa fa-check"></i><b>4.7</b> Realizando predicciones con nuestro modelo</a><ul>
 <li class="chapter" data-level="4.7.1" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-r"><i class="fa fa-check"></i><b>4.7.1</b> Realizando predicciones con <em>R</em></a></li>
 <li class="chapter" data-level="4.7.2" data-path="regresion-lineal.html"><a href="regresion-lineal.html#realizando-predicciones-con-python"><i class="fa fa-check"></i><b>4.7.2</b> Realizando predicciones con <em>Python</em></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="regresion-logistica.html"><a href="regresion-logistica.html"><i class="fa fa-check"></i><b>5</b> Regresión logística</a><ul>
-<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica."><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística.</a></li>
-<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes."><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes.</a></li>
+<li class="chapter" data-level="5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#supuestos-de-la-regresion-logistica"><i class="fa fa-check"></i><b>5.1</b> Supuestos de la regresión logística</a></li>
+<li class="chapter" data-level="5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#multicolinealidas-entre-variables-independientes"><i class="fa fa-check"></i><b>5.2</b> Multicolinealidas entre variables independientes</a></li>
 <li class="chapter" data-level="5.3" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas"><i class="fa fa-check"></i><b>5.3</b> Detectar correlación entre variables categóricas</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Prueba chi-cuadrado en <em>R</em></a></li>
 <li class="chapter" data-level="5.3.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#prueba-chi-cuadrado-en-python"><i class="fa fa-check"></i><b>5.3.2</b> Prueba chi-cuadrado en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas."><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas.</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r."><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>R</em>.</a></li>
+<li class="chapter" data-level="5.4" data-path="regresion-logistica.html"><a href="regresion-logistica.html#detectar-correlacion-entre-variables-categoricas-y-variables-cuantitativas"><i class="fa fa-check"></i><b>5.4</b> Detectar correlación entre variables categóricas y variables cuantitativas</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Medida de <span class="math inline">\(d\)</span> de Cohen en <em>R</em></a></li>
 <li class="chapter" data-level="5.4.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#medida-de-d-de-cohen-en-python."><i class="fa fa-check"></i><b>5.4.2</b> Medida de <span class="math inline">\(d\)</span> de cohen en <em>Python</em>.</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-castegoricas."><i class="fa fa-check"></i><b>5.5</b> Codificando variables castegóricas.</a><ul>
+<li class="chapter" data-level="5.5" data-path="regresion-logistica.html"><a href="regresion-logistica.html#codificando-variables-categoricas"><i class="fa fa-check"></i><b>5.5</b> Codificando variables categóricas</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-r"><i class="fa fa-check"></i><b>5.5.1</b> Creación de variables auxiliares en <em>R</em></a></li>
 <li class="chapter" data-level="5.5.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#creacion-de-variables-auxiliares-en-python"><i class="fa fa-check"></i><b>5.5.2</b> Creación de variables auxiliares en <em>Python</em></a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica."><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística.</a><ul>
+<li class="chapter" data-level="5.6" data-path="regresion-logistica.html"><a href="regresion-logistica.html#aplicando-el-modelo-de-regresion-logistica"><i class="fa fa-check"></i><b>5.6</b> Aplicando el modelo de regresión logística</a><ul>
 <li class="chapter" data-level="5.6.1" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-r."><i class="fa fa-check"></i><b>5.6.1</b> Modelo logístico en R.</a></li>
+<li class="chapter" data-level="5.6.2" data-path="regresion-logistica.html"><a href="regresion-logistica.html#modelo-logistico-en-python."><i class="fa fa-check"></i><b>5.6.2</b> Modelo logístico en <em>Python</em>.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de cluster</a><ul>
-<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuetos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuetos del análisis de cluster.</a></li>
+<li class="chapter" data-level="6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html"><i class="fa fa-check"></i><b>6</b> Análisis de clúster</a><ul>
+<li class="chapter" data-level="6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#supuestos-del-analisis-de-cluster."><i class="fa fa-check"></i><b>6.1</b> Supuestos del análisis de clúster.</a></li>
 <li class="chapter" data-level="6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#medidas-o-similitudes"><i class="fa fa-check"></i><b>6.2</b> Medidas o similitudes</a></li>
+<li class="chapter" data-level="6.3" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos-y-no-jerarquicos"><i class="fa fa-check"></i><b>6.3</b> Métodos jerárquicos y no jerárquicos</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-jerarquicos"><i class="fa fa-check"></i><b>6.3.1</b> Métodos jerárquicos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodos-no-jerarquicos"><i class="fa fa-check"></i><b>6.3.2</b> Metódos no jerárquicos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#eleccion-del-numero-de-grupos"><i class="fa fa-check"></i><b>6.4</b> Elección del número de grupos</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#dendograma"><i class="fa fa-check"></i><b>6.4.1</b> Dendograma</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#grafico-de-codo"><i class="fa fa-check"></i><b>6.4.2</b> Gráfico de codo</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-r"><i class="fa fa-check"></i><b>6.5</b> Análisis de clúster en <em>R</em></a><ul>
+<li class="chapter" data-level="6.5.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico"><i class="fa fa-check"></i><b>6.5.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.5.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico"><i class="fa fa-check"></i><b>6.5.2</b> Método jerárquico</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#analisis-de-cluster-en-python"><i class="fa fa-check"></i><b>6.6</b> Análisis de clúster en <em>Python</em></a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-no-jerarquico-1"><i class="fa fa-check"></i><b>6.6.1</b> Método no jerárquico</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analisis-de-cluster.html"><a href="analisis-de-cluster.html#metodo-jerarquico."><i class="fa fa-check"></i><b>6.6.2</b> Método jerárquico.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html"><i class="fa fa-check"></i><b>7</b> Análisis de Componentes Principales</a><ul>
+<li class="chapter" data-level="7.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#correlacion-o-covarianza"><i class="fa fa-check"></i><b>7.1</b> Correlación o Covarianza:</a></li>
+<li class="chapter" data-level="7.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#supuestos-estadisticos"><i class="fa fa-check"></i><b>7.2</b> Supuestos estadísticos</a></li>
+<li class="chapter" data-level="7.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-r"><i class="fa fa-check"></i><b>7.3</b> <em>PCA</em> en <em>R</em></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos"><i class="fa fa-check"></i><b>7.3.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.3.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes"><i class="fa fa-check"></i><b>7.3.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.3.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas"><i class="fa fa-check"></i><b>7.3.3</b> Funciones gráficas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#pca-en-python"><i class="fa fa-check"></i><b>7.4</b> <em>PCA</em> en <em>Python</em></a><ul>
+<li class="chapter" data-level="7.4.1" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#librerias-y-datos-1"><i class="fa fa-check"></i><b>7.4.1</b> Librerías y datos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#calculo-de-componentes-1"><i class="fa fa-check"></i><b>7.4.2</b> Cálculo de componentes</a></li>
+<li class="chapter" data-level="7.4.3" data-path="analisis-de-componentes-principales.html"><a href="analisis-de-componentes-principales.html#funciones-graficas-1"><i class="fa fa-check"></i><b>7.4.3</b> Funciones Gráficas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html"><i class="fa fa-check"></i><b>8</b> Árboles de decisión y bosques aleatorios</a><ul>
+<li class="chapter" data-level="8.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision"><i class="fa fa-check"></i><b>8.1</b> Arboles de decisión</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-r"><i class="fa fa-check"></i><b>8.1.1</b> Arboles de decisión en <em>R</em></a></li>
+<li class="chapter" data-level="8.1.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#arboles-de-decision-en-python"><i class="fa fa-check"></i><b>8.1.2</b> Arboles de decisión en <em>Python</em></a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios"><i class="fa fa-check"></i><b>8.2</b> Bosques aleatorios</a></li>
+<li class="chapter" data-level="8.3" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-r"><i class="fa fa-check"></i><b>8.3</b> Bosques aleatorios en <em>R</em></a></li>
+<li class="chapter" data-level="8.4" data-path="arboles-de-decision-y-bosques-aleatorios.html"><a href="arboles-de-decision-y-bosques-aleatorios.html#bosques-aleatorios-en-python"><i class="fa fa-check"></i><b>8.4</b> Bosques aleatorios en <em>Python</em></a></li>
 </ul></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
-<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
-<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
-<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
-<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+<li class="chapter" data-level="A" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html"><i class="fa fa-check"></i><b>A</b> Herramientas de software</a><ul>
+<li class="chapter" data-level="A.1" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#r-y-paquetes-de-r"><i class="fa fa-check"></i><b>A.1</b> <em>R</em> y paquetes de <em>R</em></a></li>
+<li class="chapter" data-level="A.2" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="herramientas-de-software.html"><a href="herramientas-de-software.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -215,24 +280,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="uso-y-preparacion-de-los-datos" class="section level1">
 <h1><span class="header-section-number">Capítulo 3</span> Uso y preparación de los datos</h1>
-<p>A la hora de iniciar cualquier estudio debemos tener en cuenta que sin un buen conjunto de datos la mayoria de las técnicas que implemateremos no daran resultados óptimos, en general no prestamos atención a esto, y no entendemos por que nustros análisis no se acercan ni un poco a la realidad que representan los datos. La existendia de puntos atípicos y entradas sin datos, o con errores pueden ser una verdadera pesadilla a la iniciar nuesdtro estudio, es por esto que debemos de saber manejar de manera correcta las herramientas que nos ofrece el lenguaje en el que estemos trabajando para solucionar estos problemos. En esta sección estudiaremos lo cualquier especialista en esta área debe hacer al tener que iniciar un projecto con un conjunto de datos con los que no esta familiarizado.</p>
+<p>Al iniciar cualquier estudio debemos tener en cuenta que sin un buen conjunto de datos la mayoría de las técnicas que implementaremos darán resultados muy pobres. Si descuidamos la calidad de los datos, nuestros análisis se alejarán de la realidad que intentamos representar. La existencia de puntos atípicos, variables sin datos o con errores, pueden ser una verdadera pesadilla al iniciar nuestro estudio, por tal razón los lenguajes poseen herramientas que nos permiten manejar correctamente estas situaciones. En esta sección estudiaremos las herramientas básicas que <em>R</em> y <em>Phyton</em> ofrecen a todo analista que inicie un proyecto con datos con los cuales no esté familiarizado.</p>
 <div id="lectura-de-datos" class="section level2">
 <h2><span class="header-section-number">3.1</span> Lectura de datos</h2>
-<p>En general hay tres tipos de datos basicos con los cuales nos enfrentaremos, los cuales son archivos con extensiones <em>.csv</em>, <em>.txt</em>, <em>xls</em>. Existen otras extensiones pero es muy raro que tenga que trabajar con datos provenientes de ellas, estas extensiones pueden ser: <em>.docx</em>, <em>.pdf</em>, entre otras</p>
+<p>En general hay tres tipos de datos básicos con los cuales nos enfrentaremos, los cuales son archivos con extensiones <em>.csv</em>, <em>.txt</em>, <em>xls</em>. Existen otras extensiones pero es muy raro que tenga que trabajar con datos provenientes de ellas, estas extensiones pueden ser: <em>.docx</em>, <em>.pdf</em>, entre otras</p>
 <div id="lectura-de-datos-con-r" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Lectura de datos con <em>R</em></h3>
 <p><em>RStudio</em> nos facilita mucho esta tarea, pues tiene una opción que nos permite cargar los datos y escoger la configuracion del archivo sin tener que programar, veremos como hacer esto de forma directa y luego de manera adicional presentaremos algunas funciones que hacen esta misma tarea.</p>
 <ul>
-<li>Archivos <em>csv</em> o <em>txt</em>: Primero buscamos en las opciones que se encuentran disponibles en la parte superior de <em>RStudio</em> y selecionamos <em>archivo</em> o <em>file</em>, luego se desplegaramn varias opciones de las cuales debemos seleccionar <em>Import Dataset</em> o <em>importar datos</em>, recomendamos utilizar la opción <em>From Text (readr)…</em>, debido a su alta variedad de opciones para cargar los datos.</li>
+<li>Archivos <em>csv</em> o <em>txt</em>: Primero buscamos en las opciones que se encuentran disponibles en la parte superior de <em>RStudio</em> y selecionamos <em>archivo</em> o <em>file</em>, luego se desplegaran varias opciones de las cuales debemos seleccionar <em>Import Dataset</em> o <em>importar datos</em>, recomendamos utilizar la opción <em>From Text (readr)…</em>, debido a su alta variedad de opciones para cargar los datos.</li>
 </ul>
 <div class="figure">
-<img src="images/dat.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat.png" alt="" />
 <p class="caption"></p>
 </div>
 <p>El paquete <em>readr</em> nos permite seleccionar las siguientes opciones</p>
 <ol style="list-style-type: lower-roman">
 <li><p>Cargar archivos directamente desde una ruta de nuestro computador o de una dirección web.</p></li>
-<li><p>Seleccionar con un simple click el tipo de datos de alguna columna en particular.</p></li>
+<li><p>Seleccionar con un simple clic el tipo de datos de alguna columna en particular.</p></li>
 <li><p>Mantener o eliminar columnas.</p></li>
 <li><p>Cambiar el nombre al conjunto de datos.</p></li>
 <li><p>No usar una cantidad <span class="math inline">\(N\)</span> de las primeras filas del conjunto de datos.</p></li>
@@ -243,147 +308,140 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>Identificar de alguna forma en particular los valores <em>Na</em></p></li>
 </ol>
 <div class="figure">
-<img src="images/dat1.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat1.png" alt="" />
 <p class="caption"></p>
 </div>
 <ul>
-<li>Archivos <em>.csv</em> o <em>.txt</em> (opcion básica): <em>R</em> pase de manera predeterminada formas de leer archivos <em>.csv</em> y <em>.txt</em>, pero con menos opciones como las que nos ofrece el paquete <em>readr</em>. Aunque no paresca en algunas ocaciones desearemos usar esta opción debido a que ya hemos realizado algun análisis previo con los datos y para evitar que la versión de <em>RStudio</em> pueda cambiar algun componente de nuestros datos es preferible usar la versión base. De igual forma que la forma de cargar los datos presentados previamente tendremos varias opciones, las cuales se resentaran en la parte derecha del cuadro una vez seleccionemos la opcion <em>base</em></li>
+<li>Archivos <em>.xls (MS-Excel)</em>: Para cargar archivos <em>.xls</em> debemos seleccionar la opción <em>From Excel</em> que se encuentra en la misma ubicación de las anteriores. Ésta opción usa el paquete <em>readxl</em>. La ventaja de este paquete es que posee prácticamente las mismas opciones que los paquetes de <em>R</em> básico para importar archivos de <em>Excel</em>, pero además permite seleccionar la hoja de cálculo a usar del documento <em>Excel</em>. La siguiente imagen representa lo que en general encontraremos al cargar un archivo <em>Excel</em>:</li>
 </ul>
 <div class="figure">
-<img src="images/dat2.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat3.png" alt="" />
 <p class="caption"></p>
 </div>
-<ul>
-<li>Archivos <em>.xls</em> (excel): Para cargar archivos <em>.xls</em> debemos seleccionar la opción <em>From excel</em> que se encuentra en la misma ubucación de las anteriores. Esta opción usa el paquete <em>readxl</em>. La ventaja de este paquete es que posee practicamente las mismas opciones que los paquetes anteriores y ademas nos permite seleccionar la hoja de cálculo a usar del documento <em>excel</em>. Por ejemplo la siguiente imagen representa lo que en general encontraremos al cargar el archivo</li>
-</ul>
+<p>Gracias a <em>readxl</em> podemos simplificar y mejorar los datos, en la variable <em>skip</em> se coloca un valor numérico para indicar cuantas de las primera lineas se deben eliminar. Dando clic derecho sobre la variable número 3 cambiamos el tipo que trae por defecto. A continuación se muestra la imagen.</p>
 <div class="figure">
-<img src="images/dat3.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat4.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Gracias a <em>readxl</em> podemos simplicar y mejorar los datos como represent la siguiente imagen.</p>
-<div class="figure">
-<img src="images/dat4.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>Como vimos, <em>RStudio</em> nos permite leer archivos <em>.txt</em>, <em>.csv</em> y <em>.xlx</em> con dos paquetes <em>readr</em>, <em>readxl</em>, ahora nos concentraremos en entender como funcionan estos paquetes, existen funciones que vienen por defecto con <em>R</em> tales como: <em>read.csv</em>, <em>read.csv2</em>, <em>read.table</em>, <em>read.delim</em>, entre otras pero con los dos primeros paquetes tendremos todo lo que necesitamos para iniciar.</p>
-<ol style="list-style-type: lower-roman">
-<li><p>Leer archivos <em>.csv</em> o <em>.txt</em> con <em>readr</em>, sin la ayuda de <em>RStudio</em>: El paquete <em>readr</em> nos proporciona las funciones <em>read_csv()</em>, <em>read_delim()</em>. La funcion <em>read_csv()</em> como su nombre lo indica su uso es para leer archivos con extensión <em>.csv</em> y la función <em>read_delim()</em> nos permite leer archivos con extensión <em>.txt</em></p></li>
-<li><p>Leer archivos <em>.xlx</em> (excel), sin la ayuda de <em>RStudio</em>: El paquete <em>readxl</em> nos ofrece la función <em>read_excel()</em> esta función, acepta practicamente los mismos parametros que las funciones anteriores con el parametro adicional “Sheet” el cual es necesario para poder saber en que hoja del documento se esta trabajando.</p></li>
-</ol>
+<p>La importación de datos CSV o TXT puede hacerse directamente desde el R básico con paquetes especialmente diseñados para esta tarea como se muestra en el Apéndice.</p>
 </div>
 <div id="lectura-de-datos-con-python" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Lectura de datos con <em>Python</em></h3>
-<p>Como se ha mencionado antes, debido a la gran variedad para lo cual esta destinado el lenguaje <em>Python</em> existe una gran cantidad de formas de leer archivos <em>.csv</em>, <em>.txt</em>, <em>.xlx</em>. En concenso con la gran mayoria de los especilistas en <em>Machine Learning</em> en este lenguaje, la libreria <em>Pandas</em> es la de uso mas comun para la manipulación de datos, es por esto que usaremos la funciones que nos ofrece pandas, mas en concreto <em>pandas.read_csv()</em> <em>pandas.read_excel()</em>. A diferencia de <em>RStudio</em> no hay una forma en común para cargar los archivos, sin que tengamos que escribir algunas lineas de codigo, a continuación mostraremos como hacerlo, ambas funciones aceptan una gran cantidad de parámetros, solo mencionaremos los mas importantes, para mayor información <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html</a> o <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html</a>.</p>
-<ol style="list-style-type: lower-roman">
-<li>Leer archivos <em>.csv</em> o <em>.txt</em> con <em>pandas.read_csv()</em>:Primero debemos saber que al cargar el archivo con pandas obtendremos un archivo del tipo pandas.Dataframe practicamente igual al que se obtiene al cargar archivos con <em>R</em>. La función acepta los siguientes parámetros:</li>
-</ol>
+<p>La variedad de propósitos para los cuales se usa el lenguaje Python ha conducido a la existencia de una gran cantidad de formas de leer archivos <em>.csv</em>, <em>.txt</em>, <em>.xlx</em>. Sin embargo la gran mayoría de los especialistas en Machine Learning que utiliza este lenguaje, optan por la librería <em>Pandas</em> para la manipulación de datos. Por esta razón usaremos la funciones que nos ofrece <em>Pandas</em>: <em>pandas.read_csv()</em> y <em>pandas.read_excel()</em>.
+Ambas funciones aceptan una gran cantidad de parámetros, pero solo mencionaremos los más importantes. Una información mas detallada sobre estas funciones pueden encontrarse en:</p>
+<ul>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html</a></p></li>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html" class="uri">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html</a></p></li>
+</ul>
+<p>A diferencia de <em>RStudio</em> no hay una forma en común para cargar los archivos, sin que tengamos que escribir algunas líneas de código. A continuación mostraremos como hacerlo:</p>
 <ul>
 <li><p>filepath_or_buffer: Ruta del archivo o dirección web.</p></li>
 <li><p>Sep: valor que separa los datos, por defecto es una coma</p></li>
 <li><p>header: Se usa para identificar en que posición se encuentra la fila que será usada como los nombres de las columnas.</p></li>
-<li><p>names: Lista con el nombre de las columnas a usar.</p></li>
-<li><p>index_col: Columna que será usada por defecto como indice</p></li>
-<li><p>decimal: Caracter que sera usado como caracter decimal, por defecto es un punto</p></li>
-<li><p>usecol: este parametro nos permite decidir que número de columnas a usar.</p></li>
-<li><p>dtype: Tipo de dato de cada columna, por ejemplo {‘a’: np.float64, ‘b’: np.int32, ‘c’: ‘Int64’}</p></li>
+<li><p>filepath_or_buffer: Ruta del archivo o dirección web.</p></li>
+<li><p>Sep: valor que separa los datos, por defecto es una coma</p></li>
+</ul>
+<p>-header: Se usa para identificar en qué posición se encuentra la fila que será usada como los nombres de las columnas.</p>
+<ul>
+<li><p><em>names</em>: Lista con el nombre de las columnas a usar.</p></li>
+<li><p><em>index_col</em>: Columna que será usada por defecto como índice</p></li>
+<li><p><em>decimal</em>: Carácter que será usado como carácter decimal, por defecto es un punto</p></li>
+<li><p><em>usecol</em>: Este parámetro nos permite decidir qué número de columnas usar.</p></li>
+<li><p><em>dtype</em>: Tipo de dato de cada columna, por ejemplo {‘a’: np.float64, ‘b’: np.int32, ‘c’: ‘Int64’}.</p></li>
 </ul>
 <div class="figure">
-<img src="images/dat5.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat5.png" alt="" />
 <p class="caption"></p>
 </div>
 <ol start="2" style="list-style-type: lower-roman">
-<li>Leer archivos <em>.xlx</em> con <em>pandas.read_excel()</em>: Practicamente usa los mismos parametros que la función anterior, con la diferencia de que no acepta el parametro <em>sep</em> y usa un parametro adicional llamado <em>sheet_name</em>, este parametro debe ser una lista con los números de columnas a usar o con los nombres.</li>
+<li>Leer archivos .<em>xlx</em> con <em>pandas.read_excel()</em>: Usa prácticamente los mismos parámetros que la función anterior, con la diferencia de que no acepta el parámetro <em>sep</em> y usa un parámetro adicional llamado <em>sheet_name</em>, este parámetro debe ser una lista con los números de columnas a usar o con los nombres de dichas columnas.</li>
 </ol>
 </div>
 </div>
 <div id="tratamiento-previo-de-los-datos" class="section level2">
 <h2><span class="header-section-number">3.2</span> Tratamiento previo de los datos</h2>
-<p>A la hora de cargar los datos es que puede empezar la verdadera pesadilla para poder intentar aplicar los métodos, esto es debido a que existen factores que pueden causar problemas a la hora de escribir los datos, entre los mas comunes estan errores de medición, problemas de codificación y errores humanos. En general clasificaremos estos problemas en dos grupos <em>Missing Values</em> y <em>Outliers</em></p>
+<p>Luego de cargar los datos puede empezar la verdadera pesadilla para aplicar los métodos, debido a factores como errores de medición, problemas de codificación y errores humanos. En general clasificaremos estos problemas en dos grupos: <em>Valores Faltantes</em> o <em>Missing Values</em> y <em>Valores Atípico</em> más conocidos por el término en inglés <em>Outliers</em>.</p>
 <div id="missing-values-o-valores-faltantes" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Missing Values o valores faltantes</h3>
-<p>Estos valores suelen generarse por diversas razones, entre las cuales se encuentran: problemas de codificación con los datos, errores de medición, errores humanos, etc. En algunos casos pueden generarse por problemas con la función que este encargada de leer los datos, esto se debe a que capaz no se esta leyendo bien los parametros o simplemente el archivo no es compatible. En esta sección veremos cuales son las técnicas mas usuales para solucionar estos problemas.</p>
+<p>Estos valores suelen generarse por diversas razones, entre las cuales se encuentran: problemas de codificación con los datos, errores de medición y errores humanos, entre otros. En algunos casos pueden generarse por problemas con la función que esté encargada de leer los datos, sea porque no lee bien los parámetros o simplemente por incompatibilidad del archivo. En esta sección veremos cuáles son las técnicas más usuales para solucionar estos problemas.</p>
 <ol style="list-style-type: lower-roman">
-<li>Missing values en <em>Python</em>: Para identificar valores en python a traves de ls libreria pandas existen diversas funciones que nos ayudaran. Lo primero que debemos hacer es contar la cantidad de datos faltantes, esto lo hacemos con las funciónes isnull() y sum() de la libreria <em>pandas</em>, el resultado final será el numero de missing values por columnas, la primera función los identifica y la segunda función los cuenta,en la siguiente imagen se muestra como hacerlo.</li>
+<li>Missing values en <em>R</em>: Para trabajar con datos faltantes en <em>R</em> lo primero es contarlos. Para ello usaremos la función <em>sapply()</em> la cual permite aplicar funciones a columnas de manera explícita. En nuestro caso aplicaremos la función <em>is.na()</em> la cual cuenta la cantidad de valores faltantes por columnas, la función <em>sum()</em> que suma todos estos valores y nos da el resultado final, y la función <em>dim()</em> la cual nos da las dimensiones de los datos.</li>
 </ol>
 <div class="figure">
-<img src="images/dat6.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat9.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>En general, los valores faltantes tienden a eliminarse, pero esto no se puede hacer a la ligera, en otros cosos suelen sustituirse por un valor comun del conjunto de datos (esto se hace cuando tenemos distintas entradas para un individuo y alguna característica esta vacía). Tambien algo que se debe chequear es si la distribución de datos faltantes es aleatorio, fuera muy extraño que cada 100 datos exactamentes halla un dato faltante en un lugar en específico, este tipo de comportamiento hace pensar en que estamos en presencia de dato artificiales.</p>
-<p>Como trartar estos, depende de nuestros propositos en especificos, pues los datos faltantes tienden a segar de manera considerable muchas técnicas estadísticas. Cuando deseamos no usarlos decimos que los eliminaremos y cuando deseamos sustituirlos por un valor en específico diremos que lo imputaremos.</p>
-<p>Para eliminar los datos faltates sin riesgo a perder información vital, lo primero que debemos asegurarnos es que la proporción de estos datos con el total sea muy bajo, por ejemplo <span class="math inline">\(300:1\)</span>, si los valores faltantes representaran el <span class="math inline">\(1\)</span>% de la población no es muy recomendable que lo eliminemos, pues un ejemoplo típico es que pudieran representar un segmento de la población que por problemas de medición o de transmisión de los datos simplemente no se pudo completar el llenado de información y el eliminarlos pudiera dejar por fuera una parte importante de la población. El <span class="math inline">\(1\)</span>% no parece significativo, pero si tenemos 3 millones de datos el <span class="math inline">\(1\)</span>% representaría <span class="math inline">\(300\)</span> mil una cantidad considerable, de posibles consumidores para productos en específico.</p>
-<p>Ahora si decidimos elimar los datos, realizar esto en python es sencillo, primero calculamos el porcentaje de datos faltantes usaremos las funciones <em>pandas.shape</em>, <em>pandas.product()</em>, la primera nos dice la dimension del dataframe y la segunda realiza la multiplicación para poder saber la cantidad de celdas que existe.</p>
+<p>En general, los valores faltantes tienden a eliminarse, pero esto no se puede hacer a la ligera, en otros casos suelen sustituirse por un valor común del conjunto de datos (esto se hace cuando tenemos distintas entradas para un individuo y alguna característica está vacía). También se debe chequear si la distribución de datos faltantes es aleatoria. Sería muy extraño que cada 100 datos exactamente exista un dato faltante en un lugar en específico. Este último tipo de comportamiento hace pensar en que estamos en presencia errores sistemáticos.</p>
+<p>Como tratar estos casos, dependerá de nuestros propósitos específicos, pues los datos faltantes tienden a sesgar de manera considerable muchas técnicas estadísticas. Cuando elegimos no usarlos decimos que los eliminaremos y cuando optamos por sustituirlos por un valor en específico diremos que los imputaremos.
+Para eliminar los datos faltantes sin riesgo a perder información vital, lo primero que debemos asegurarnos es que la proporción de estos datos con el total sea muy bajo, por ejemplo 300:1, si los valores faltantes representaran el 1% de la población no es muy recomendable que los eliminemos. Un ejemplo típico es que pudieran representar un segmento de la población que por problemas de medición o de transmisión de los datos, simplemente no se pudo completar el llenado de información y el eliminarlos pudiera dejar por fuera una parte importante de la población. El 1% no parece significativo, pero si tenemos 3 millones de datos el 1% representaría 30 mil, una cantidad considerable, de posibles consumidores para un producto en específico.</p>
+<p>Para eliminar los valores faltantes de la data por filas, usamos la función <em>na.omit()</em>, si queremos eliminar por columnas usamos la función <em>t()</em> la cual nos traspone los datos, el problema es que modificará el índice. Solventamos este problema con la función <em>rownames()</em>. Otro detalle es que la función <em>na.omit()</em> cambia el formato de los datos, por lo que usaremos la función <em>as.data.frame()</em> para corregir el problema.</p>
 <div class="figure">
-<img src="images/dat7.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>Ahora, dependiendo como esten organizados los datos, es decir, registros por columnas o por filas, sabremos como eliminar los registros con valores faltantes. La función <em>df.dropna()</em>, si colocamos como parámetros <em>axis=0</em> se eliminaran los registros por fila que contengan valores faltantes y <em>axis=1</em> por columnas.</p>
-<div class="figure">
-<img src="images/dat8.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>Ahora, la otra alternativa con los datos faltantes es imputarlos, existen diversas técnicas para esto, solo veremos las mas comunes; imputacion por la media, por la mediana, por la moda. Existen técnicas para estimarlos a traves de modelos estadísticos, pero esto pudiera ser complicado y es tema de un curso mas especializado a este tópico.</p>
-<ul>
-<li>Sustitución por la media: Cuando los datos poseen un comportamiento uniforme alrededor de una region del plano se suele sustituir por el valor medio de que presentan los datos.</li>
-</ul>
-<div class="figure">
-<img src="images/Rplot.png" alt="" />
-<p class="caption"></p>
-</div>
-<p>Para sustituir por el valor medio la función <em>.mean()</em> para calcular el valor medio de la columna y la función <em>.replace()</em> para realizar el cambio.</p>
-<div class="figure">
-<img src="images/dat11.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat10.png" alt="" />
 <p class="caption"></p>
 </div>
 <ul>
-<li>Sustitución por la mediana:</li>
+<li>Sustitución por la media: Cuando los datos poseen un comportamiento uniforme alrededor de una región del plano se suelen sustituir por el valor medio que presentan los datos.</li>
 </ul>
-<p>El problema de sustituir por la media es que esta se puede ver afectada por valores atípicos (los veremos en la proxima sección de este capítulo), es por esto que tiende a sustituirse por la mediana que es un estimador mas robusto para este proposito. Por ejemplo, el conujunto de puntos <span class="math inline">\(1, 2,3,1,2,1,3,1,2,1,2,1,33\)</span> tiene promedio 4, sustituir por este valor no tiene sentido, mientras que la mediana es 2.</p>
-<p>Para realizar el cambio usamos <em>.median()</em></p>
 <div class="figure">
-<img src="images/dat12.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/Rplot.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>Para sustituir por el valor medio se utiliza la función <em>mean()</em> para calcular el valor medio de la columna y la función <em>replace()</em> para realizar el cambio.</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/dat14.png" alt="" />
 <p class="caption"></p>
 </div>
 <ul>
-<li>Sustitución por la moda: La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categoricos, recordemos que la moda no es mas que el dato que mas se repite en el conjunto de datos.</li>
+<li>Sustitución por la mediana: El problema de sustituir por la media es que ésta se puede ver afectada por valores atípicos (los veremos en la próxima sección de este capítulo), es por esto que debe sustituirse por la mediana que es un estimador más robusto para este propósito. Por ejemplo, el conjunto de puntos 1,2,3,1,2,1,3,1,2,1,2,1,33 tiene promedio 4, sustituir por este valor no tiene sentido, mientras que la mediana es 2. Para realizar el cambio usamos <em>median()</em></li>
 </ul>
-<p>Para realizar el cambio usamos <em>.median()</em></p>
 <div class="figure">
-<img src="images/dat13.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat15.png" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li>Sustitución por la moda: La sustitución por la moda es especialmente útil cuando estamos en presencia de datos categóricos, recordemos que la moda no es mas que el dato que más se repite en el conjunto de datos. Para realizar el cambio usamos <em>mode()</em></li>
+</ul>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/dat16.png" alt="" />
 <p class="caption"></p>
 </div>
 <ol start="2" style="list-style-type: lower-roman">
-<li>Missing values en <em>R</em>: Ya hemos mencionado en la parte anterior como trabajar con datos perdidos, al igual que en <em>R</em> contaremos la cantidad de datos faltantes, para ello usaremos la función <em>sapply</em> la cual permite aplicar funciones columnas de manera explicita, en nuestro caso applicaremos la función <em>is.na()</em> la cual cuenta la cantidad de valores faltantes por columnas y la función <em>sum()</em> suma todos estos valores y nos de el resultado final, la función <em>dim()</em> nos da como resultado las dimensiones de la data.</li>
+<li>Missing values en <em>Python</em>: Para identificar valores en Python a través de la librería Pandas existen diversas funciones que nos ayudarán. Lo primero que debemos hacer es contar la cantidad de datos faltantes, esto lo hacemos con las funciones <em>isnull()</em> y <em>sum()</em> de la librería Pandas. El resultado final será el número de missing values por columnas, la primera función los identifica y la segunda función los cuenta. La siguiente imagen muestra cómo hacerlo.</li>
 </ol>
 <div class="figure">
-<img src="images/dat9.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat6.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Para eliminar los valores faltantes de la data por filas, usamos la función <em>na.omit()</em>, si queremos eliminar por columnas usamos la función <em>t()</em> la cual nos traspone los datos, el problema es que se nos modificara el indice por lo que debemos solventar este problema con la función <em>rownames</em>, otro detalle es que la función <em>na.omit()</em> cambia el formato de los datos, por lo que con la función <em>as.data.frame()</em> solucionamos este problema.</p>
+<p>Ahora si decidimos eliminar los datos, realizar esto en <em>Python</em> es sencillo. Primero calculamos el porcentaje de datos faltantes usando las funciones <em>pandas.shape()</em>, <em>pandas.product()</em>. La primera nos indica la dimensión del dataframe y la segunda realiza la multiplicación para poder saber la cantidad de celdas existentes.</p>
 <div class="figure">
-<img src="images/dat10.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat7.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Ahora imputaremos los datos faltantes al igual que en <em>python</em>:</p>
+<p>Luego, dependiendo como estén organizados los datos, es decir, registros por columnas o por filas, sabremos como eliminar los registros con valores faltantes. En la función <em>df.dropna()</em>, si colocamos como parámetros <em>axis=0</em> se eliminarán los registros por fila que contengan valores faltantes y <em>axis=1</em> por columnas.</p>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/dat8.png" alt="" />
+<p class="caption"></p>
+</div>
+<p>La otra alternativa con los datos faltantes es imputarlos. Para ello seguiremos el mismo procedimiento usado con <em>R</em>, es decir imputación por la media, mediana y moda.</p>
 <ul>
-<li>Sustitución por la media: En <em>R</em> el comando para calcular la media de un conjunto de datos es <em>mean()</em> y con la función <em>is.na()</em> la cual retorna las pocisiciones donde se encuentran los vaklores faltantes.</li>
+<li>Sustitución por la media: Para sustituir por el valor medio la función <em>.mean()</em> para calcular el valor medio de la columna y la función <em>.replace()</em> para realizar el cambio.</li>
 </ul>
 <div class="figure">
-<img src="images/dat14.png" alt="" />
-<p class="caption"></p>
-</div>
-<ul>
-<li>Sustitución por la mediana: De forma similar es con la mediana, solo que en este caso la función para hallar la mediana es <em>median()</em></li>
-</ul>
-<div class="figure">
-<img src="images/dat15.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat11.png" alt="" />
 <p class="caption"></p>
 </div>
 <ul>
-<li>Sustitución por la moda: En este caso no existe una función que venga por defecto en <em>R</em> que calcule la moda, sin embargo, descargando la libreria <em>moodest</em> y usando la función <em>mfv()</em> logramos nuestro proposito:</li>
+<li>Sustitución por la mediana: Para realizar el cambio usamos <em>.median()</em></li>
 </ul>
 <div class="figure">
-<img src="images/dat16.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/dat12.png" alt="" />
+<p class="caption"></p>
+</div>
+<ul>
+<li>Sustitución por la moda: Para realizar el cambio usamos <em>.median()</em></li>
+</ul>
+<div class="figure">
+<img src="~/Machine-Learning-Basico/bookdown/images/dat13.png" alt="" />
 <p class="caption"></p>
 </div>
 </div>
@@ -398,117 +456,119 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <div id="identificacion-de-puntos-atipicos." class="section level3">
 <h3><span class="header-section-number">3.3.1</span> Identificación de puntos atípicos.</h3>
-<p>Estudiaremos los dos enfoques mas populares: el visual y el cuantitativo</p>
+<p>Estudiaremos los dos enfoques más populares: el visual y el cuantitativo</p>
 <ul>
-<li>Visual: Como su nombre lo indica consiste en analisar los datos de manera visual para identificar los valores atípicos. Por ejemplo, en la siguiente imagen podremos notar claramente un par de valores atípicos:</li>
+<li>Visual: Como su nombre lo indica consiste en analizar los datos de manera visual para identificar los valores atípicos. Por ejemplo, en la siguiente imagen podremos notar claramente un par de valores atípicos:</li>
 </ul>
 <div class="figure">
-<img src="images/out.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>El problema se complica cuando aumenta la dimensionalidad del conjunto de datos, es decir, aumenta las categorias que poseen las observaciones. Por ejemplo, supongamos que tenemos un conjunto de datos con tres categorias x1, x2, x3, x4, en este caso lo estandar es graficar el cruce de las variables para encontrar valores atipicos, el problema es que algunos cruces pueden no mostrar nada anormal, como es el cruce entre las variables x1 y x2.</p>
+<p>El problema se complica cuando aumenta la dimensionalidad del conjunto de datos, es decir, aumentan las categorías que poseen las observaciones. Por ejemplo, supongamos que tenemos un conjunto de datos con tres categorías <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>, <span class="math inline">\(x_4\)</span>, en este caso lo usual es graficar el cruce de las variables para encontrar valores atípicos. El problema es que algunos cruces pueden no mostrar nada anormal, como es el cruce entre las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span>.</p>
 <div class="figure">
-<img src="images/out2.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out2.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Pero al observar el cruce ente las variables x1 y x3 se puede detectar rapidamente el punto atípico</p>
+<p>Pero al observar el cruce ente las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_3\)</span> se puede detectar rápidamente el punto atípico.</p>
 <div class="figure">
-<img src="images/out3.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out3.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Ahora, es claro que este método puede ser muy inifeciente a la hora de tener que trabajar con una gran cantidad de atributos, es por eso que existe la necesidad del uso de algun método cuantitativo para poder medir de alguna forma si un dato es atipico o no. Veremos solamente el meétodo basado en la medida o distancia <span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em></p>
+<p>Ahora, es claro que este método puede ser muy ineficiente a la hora de trabajar con una gran cantidad de atributos, es por eso que existe la necesidad de usar algún método cuantitativo para medir si un dato es atípico o no. Uno de los más utilizado es el método basado en la medida o distancia <span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em></p>
 <ul>
-<li><span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em>: Es una medida de distancia intriducida por <em>Prasanta Chandra Mahalanobis</em> y su principal uso era determinar la similitude entre dos variables aleatorias, su gran caracterísitica es que usa la matriz de covarianza para dar un peso ponderado por esta matriz a cada variable. Su gran desventaja es que es sensible a las escalas de los datos, por lo que se sugiere escalar los datos ya sea por su media o otro criterio similar.</li>
+<li><span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em>: Es una medida de distancia introducida por <em>Prasanta Chandra Mahalanobis</em> y su principal uso era determinar la similitud entre dos variables aleatorias. Su gran característica es que usa la matriz de covarianza para dar un peso ponderado por esta matriz a cada variable. Su gran desventaja es que es sensible a las escalas de los datos, por lo que se sugiere escalar los datos ya sea por su media u otro criterio similar.</li>
 </ul>
-<p>En general, debemos tener un punto de referencia para poder medir la proximidad de los puntos que estamos midiendo, lo común es usar la media o la mediana, la ecuación que representa la distancia <span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em> es :<span class="math display">\[\sqrt{(x-y)^{T} \Sigma^{-1}(x-y)}\]</span> donde <span class="math inline">\(y\)</span> es el punto fijo de referencia, <span class="math inline">\(x\)</span> es el punto al que le estamos calculando la distancia y <span class="math inline">\(\Sigma\)</span> la matriz de covarianza.</p>
+<p>En general, debemos tener un punto de referencia para poder medir la proximidad de los puntos que estamos midiendo, lo común es usar la media o la mediana, la ecuación que representa la distancia <span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em> es:</p>
+<p><span class="math display">\[\sqrt{(x-y)^{T} \Sigma^{-1}(x-y)}\]</span></p>
+<p>Donde <span class="math inline">\(y\)</span> es el punto fijo de referencia, <span class="math inline">\(x\)</span> es el punto al que le estamos calculando la distancia y <span class="math inline">\(\Sigma\)</span> la matriz de covarianza.</p>
 </div>
 <div id="deteccion-de-outliers-en-r" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Deteccion de outliers en R</h3>
+<h3><span class="header-section-number">3.3.2</span> Detección de outliers en R</h3>
 <ul>
-<li>Visual: Supongamos que tenemos el conjunto <em>Data</em> previamente cargado y compuesto por tres variables x1, x2 y x3. Usaremos la funcion <em>plot()</em>, si queremos observar la variable <em>x1</em>. Usamos el siguiente comando:</li>
+<li>Visual: Supongamos que tenemos el conjunto Data previamente cargado y compuesto por tres variables <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span> y <span class="math inline">\(x_3\)</span>. Usaremos la función <span class="math inline">\(plot()\)</span>, para observar la variable <span class="math inline">\(x_1\)</span>. Usamos el siguiente comando:</li>
 </ul>
 <div class="figure">
-<img src="images/Out5.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out5.png" alt="" />
 <p class="caption"></p>
 </div>
 <p>Dando como resultado:</p>
 <div class="figure">
-<img src="images/Out4.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out4.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>A primera vista no hay ningún valor atípico, sin embargo, si realizamos el mismo grafico para la variable x3, obtenemos claramente un outlier:</p>
+<p>A primera vista no hay ningún valor atípico, sin embargo, si generamos el mismo gráfico para la variable <span class="math inline">\(x_3\)</span>, obtenemos claramente un outlier:</p>
 <div class="figure">
-<img src="images/Out6.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out6.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Ahora si queremos hacer el cruce de variables, usamos igual el mismo comando, por ejemplo, el de las variables x1 y x2, hacemos:</p>
+<p>Ahora si queremos hacer el cruce de variables, usamos igual el mismo comando, por ejemplo, el de las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span>, hacemos:</p>
 <div class="figure">
-<img src="images/Out7.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out7.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>No se observan outliers aparentes, como muestran la siguiente imagen.</p>
+<p>Aparentemente no se observan outliers, como muestra la siguiente imagen.</p>
 <div class="figure">
-<img src="images/Out8.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out8.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Ahora, si realizamos el cruce de las variables x1 y x3 obtenemos:</p>
+<p>Ahora, si realizamos el cruce de las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_3\)</span> obtenemos:</p>
 <div class="figure">
-<img src="images/Out9.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out9.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia <span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em>.</p>
+<p>Observando claramente un outlier, que posee un valor de 30. Ahora si tenemos muchas variables, este proceso se complica, es por esto que usaremos la distancia <span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em>.</p>
 <ul>
-<li>la distancia <span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em>: Para calcular la distancia de mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función <em>apply</em>, la función <em>cov()</em> para calcular la matriz de covarianza, al final usamos la función <em>mahalanobis()</em> indicandole los datos a calcular. Luego usamos la función <em>plot()</em> para ver la existencia de valores atipicos.</li>
+<li>la distancia <span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em>: Para calcular la distancia de Mahalanobis debemos calcular primero el punto de referencia, en nuestro caso la media, usaremos la función <em>apply()</em>, la función <em>cov()</em> para calcular la matriz de covarianza y al final usamos la función <em>mahalanobis()</em> indicándole los datos a calcular. Luego usamos la función <em>plot()</em> para ver la existencia de valores atípicos.</li>
 </ul>
 <div class="figure">
-<img src="images/Out10.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out10.png" alt="" />
 <p class="caption"></p>
 </div>
 <div class="figure">
-<img src="images/Out11.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out11.png" alt="" />
 <p class="caption"></p>
 </div>
 </div>
 <div id="deteccion-de-outliers-en-python" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> Deteccion de outliers en Python</h3>
+<h3><span class="header-section-number">3.3.3</span> Detección de outliers en Python</h3>
 <ul>
-<li>Visual: Para identificar de manera visual outliers en python haremos uso de la librería <em>Matplotlib</em>, la cual nos brinda un sin fin de herramientas para poder llevar a cabo nuestros fines. Al igual que en la sección anterior usaremos el conjunto de datos <em>Data</em> con tres variables.</li>
+<li>Visual: Para identificar outliers de manera visual en <em>Python</em> haremos uso de la librería <em>Matplotlib</em>, la cual nos brinda un sinfín de herramientas para poder llevar a cabo nuestros objetivos. Al igual que en la sección anterior usaremos el conjunto de datos Data con tres variables.</li>
 </ul>
-<p>Para ver la grafica de la variable x1, primero debemos seleccionar la variable, esto lo hacemos con el método <em>.iloc()</em> de <em>Pandas</em> el cual nos permite seleccionar subconjuntos de datos. Luego usamos <em>plt.plot()</em> para realizar la grafica de los datos, el parámetro <em>ro</em> indica el tipo de grafico en nuestro caso en punteado <em>plt.xlabel</em> para dar título al eje horizontal y <em>plt.ylabel</em> para dar título al eje vertical, finalmente usamos <em>plt.show</em> para mostrar la imagen.</p>
-<p>Al graficar la variable x1 no notamos ningún valor particular</p>
+<p>Para ver la gráfica de la variable <span class="math inline">\(x_1\)</span>, primero debemos seleccionar la variable, esto lo hacemos con el método <em>.iloc()</em> de <em>Pandas</em> el cual nos permite seleccionar subconjuntos de datos. Luego, usamos <em>plt.plot()</em> para generar la gráfica de los datos, el parámetro ro indica el tipo de gráfico, en nuestro caso en punteado; <em>plt.xlabel</em> para dar título al eje horizontal y <em>plt.ylabel</em> para dar título al eje vertical, finalmente usamos <em>plt.show</em> para mostrar la imagen.</p>
+<p>Al graficar la variable <span class="math inline">\(x_1\)</span>, se observa que carece de valores atípicos:</p>
 <div class="figure">
-<img src="images/Out14.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out14.png" alt="" />
 <p class="caption"></p>
 </div>
 <div class="figure">
-<img src="images/Out16.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out16.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Pero cuando realizamos el plot de la variable x3 notamos el valor atípico:</p>
+<p>Pero cuando generamos el gráfico de la variable <span class="math inline">\(x_3\)</span> notamos el valor atípico:</p>
 <div class="figure">
-<img src="images/Out15.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out15.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Para realizar el grafico del cruce de variables, simplemente agregamos la variable adicional como parametro en <em>plt.plot()</em>, podremos notar que no se ve valor atípico.</p>
+<p>Para realizar el gráfico del cruce de variables, simplemente agregamos la variable adicional como parámetro en <em>plt.plot()</em>.En este caso tampoco se observan valores atípicos.</p>
 <div class="figure">
-<img src="images/Out17.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out17.png" alt="" />
 <p class="caption"></p>
 </div>
-<p>Pero al realizar el cruce con las variables x2 y x3 notamos el valor atípico.</p>
+<p>Pero al realizar el cruce con las variables <span class="math inline">\(x_2\)</span> y <span class="math inline">\(x_3\)</span> notamos el valor atípico.</p>
 <div class="figure">
-<img src="images/Out18.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out18.png" alt="" />
 <p class="caption"></p>
 </div>
 <ul>
-<li>la distancia <span class="math inline">\(D^2\)</span> de <em>Mahalanobis</em>: Para calcular la distancia de Mahalanobis de un conjunto de datos usando python usaremos la librería <em>Scipy</em> la cual trae por defecto un función para calcular la distancia de Mahalanobis, debemos calcular la media de las columnas, para ello usamos la función <em>.mean()</em> de <em>Pandas</em>, a diferencia de <em>R</em> debemos calcular la inversa de la matriz de covarianza, para ello usamos la funciones <em>.cov()</em> (calcula la matriz de covarianza), <em>.linalg()</em> y <em>.inv()</em> (calcula la inversa), finalizamos usando la función <em>apply</em> de <em>Pandas</em> para poder aplicar la función <em>mahalanobis()</em> de la libreria <em>Scipy</em> a todo el conjunto de datos, en la función <em>.apply()</em> debemos colocar el nombre de la función, <em>axis</em> indica si la función aplica a las columnas o filas, el valor de 0 para las columnas y 1 para las filas, finbalizamos con <em>args</em> que contiene los parametros que necesite la función a utilizar, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.</li>
+<li>La distancia <span class="math inline">\(D_M\)</span> de <em>Mahalanobis</em>: Para calcular la distancia de <em>Mahalanobis</em> de un conjunto de datos usando <em>Python</em>, usaremos la librería <em>Scipy</em> la cual trae por defecto una función para calcular la distancia de Mahalanobis. Primero debemos calcular la media de las columnas, usando la función <em>.mean()</em> de <em>Pandas</em>. A diferencia de <em>R</em>, debemos calcular la inversa de la matriz de covarianza (<em>Python</em> trae por defecto las filas y columnas intercambiadas con respecto a <em>R</em>), para ello usamos la funciones <em>.cov()</em>, la cual calcula la matriz de covarianza, <em>.linalg()</em> y <em>.inv()</em> para calcular la inversa. Luego, usando la función <em>apply()</em> de <em>Pandas</em> para aplicar la función <em>mahalanobis()</em> de la libreria <em>Scipy</em> a todo el conjunto de datos. En la función <em>.apply()</em> debemos colocar el nombre de la función, <em>axis</em> para indicar si la función aplica a las columnas o filas: el valor de <span class="math inline">\(0\)</span> para las columnas y <span class="math inline">\(1\)</span> para las filas. Finalizamos con <em>args</em> que contiene los parámetros que necesita la función, en nuestro caso el punto de referencia, el cual es la media por columnas y la inversa de la matriz de covarianza.</li>
 </ul>
 <div class="figure">
-<img src="images/Out21.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out21.png" alt="" />
 <p class="caption"></p>
 </div>
 <p>Podremos notar claramente un valor atípico en la siguiente imagen.</p>
 <div class="figure">
-<img src="images/Out20.png" alt="" />
+<img src="~/Machine-Learning-Basico/bookdown/images/out20.png" alt="" />
 <p class="caption"></p>
 </div>
 
@@ -577,7 +637,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
