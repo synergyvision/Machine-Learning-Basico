@@ -6,3 +6,12 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
+Para profundizar en el tema recomendamos las siguientes referencias
+ 
+Bruce, P., Bruce A. (2017). *Practical statistics for data scientics*. Beijing: O'Reilly 
+ 
+James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An introduction to statistical learning with applications in R*. New York: Springer.
+
+Medina Merino, R. F., & Ñique Chacón, C. I. (Enero-diciembre de 2017). *Bosques aleatorios como extensión de los árboles de clasificación con los programas R y Python*. INTERFASES, 165-189.
+
+Sugiyama, M. (2016). *Introduction to Statistical Machine Learning*. Waltham, MA, USA: Elsevier.

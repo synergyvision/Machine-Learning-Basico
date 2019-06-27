@@ -54,8 +54,7 @@ Gracias a *readxl* podemos simplificar y mejorar los datos, en la variable *skip
 
 ![\label{fig:"R2"}](images/dat4.png)
  
-La importación de datos CSV o TXT puede hacerse directamente desde el R básico con paquetes especialmente diseñados para esta tarea como se muestra en el Apéndice.   
-
+La importación de datos CSV o TXT puede hacerse directamente desde el R básico con paquetes especialmente diseñados para esta tarea.
 
 ### Lectura de datos con *Python*
 
