@@ -37,5 +37,4 @@ Algunas de las bases de datos utilizadas fueron creadas directamente para emplea
 
 
 Tabla 1. Descripción de las bases de datos utilizadas en el libro
-
 ![\label{fig:"R2"}](images/base.png)
