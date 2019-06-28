@@ -46,7 +46,6 @@
 
 ###3.2.1 Missing Values o valores faltantes
 #Missing values en R
-library(sapply)
 library(readr)
 
 train<-read_csv("train.txt", col_types=cols(id=col_skip()))
@@ -95,6 +94,8 @@ train$'0'[is.na(train$'0')]<-moda
 ###3.3.2 Detección de outliers en R
 ##Visual
 #Para observar la variable x1
+#Cargamos el conjunto data.csv
+data=read.csv("data")
 plot(data$x1, xlab="Variable x1", ylab="Rango", main="Única variable")
 
 #Para la variable x3
@@ -171,7 +172,7 @@ head(df)
 
 
 ##Transformación lg
-df$x=log(df$x)(x)
+df$x=log(df$x)
 
 #Visualizamos el último cambio
 head(df)
@@ -191,6 +192,8 @@ head(mtcars)
 
 ####4.5 Aplicando el modelo de regresión lineal
 ###4.5.1 Aplicando el modelo de regresión lineal en R
+# Subimos la base de datos irisP
+irisP=read_csv("irisP.csv")
 
 lm(Sepal.Length~Sepal.Width+Petal.Length+Petal.Width, data=irisP, weights=rep(1,150), na.action=na.omit, method="qr")
 
@@ -269,7 +272,6 @@ colorD
 ####5.6 Aplicando el modelo de regresión logística.
 ###5.6.1 Modelo logístico en R
 #Usaremos los datos Default del paquete ISLR 
-library(tidyverse)
 library(ISLR)
 head(Default)
 
